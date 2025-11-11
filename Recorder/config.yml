@@ -1,7 +1,8 @@
 --- 
 id: recorder
-name: Recorder
+name: Remix's Transaction Recorder
 summary: Save a set of actions and replay and replay and replay
 level: 2
+priority: 30
 tags: 
   - Remix

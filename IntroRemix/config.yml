@@ -1,8 +1,9 @@
 ---
 id: videoIntroRemix
-name: Introdution to Remix
+name: A Video Intro to Remix
 summary: Learn how to use the Remix interface.
 level: 1
+priority: 20
 tags:
   - Solidity
   - Remix

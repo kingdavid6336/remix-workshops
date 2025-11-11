@@ -3,6 +3,7 @@ id: tokenCourse
 name: Solidity ERC20 Token Course
 summary: Learn how to create your own ERC20 tokens. Developed by the p2p learning platform https://dacade.org.
 level: 1
+priority: 40
 tags: 
   - Solidity
   - Tokens
