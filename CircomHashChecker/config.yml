@@ -1,7 +1,8 @@
 id: circom-hash-checker
-name: Hash Checker Tutorial
+name: The Circom Hash Checker Template
 summary: A tutorial on creating and understanding a Hash Checker circuit using Remix-IDE templates, including trusted setup and proof generation.
 level: 1
+priority: 70
 tags:
   - Circom
   - Remix-IDE

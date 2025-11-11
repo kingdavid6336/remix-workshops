@@ -3,6 +3,7 @@ id: multisigCourse
 name: Multisig Wallet
 summary: Learn how to create and interact with a multisig wallet. Developed by the p2p learning platform https://dacade.org.
 level: 1
+priority: 80
 tags:
   - Solidity
   - Tokens

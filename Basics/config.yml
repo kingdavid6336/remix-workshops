@@ -3,6 +3,7 @@ id: basics
 name: Basics of Remix
 summary: A typical workflow in Remix
 level: 1
+priority: 10
 tags: 
   - Remix
 steps:
