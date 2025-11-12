@@ -1,504 +1,114 @@
 [
   {
-    "_filePath": "Web3Client/config.yml",
     "id": "useofweb3js",
     "name": "Basic use of web3.js",
     "summary": "This tutorial gives a short introduction of the web3.js library, querying the block number",
     "level": 2,
-    "tags": [
-      "JS",
-      "Remix",
-      "Web3"
-    ]
+    "tags": "JS, Remix, Web3"
   },
   {
-    "_filePath": "Uniswap-Tutorial/config.yml",
     "id": "uniswapSwapCourse",
     "name": "Uniswap Swap Course",
     "summary": "Go through the Solidity code of the Uniswap V3 Swap contract. Developed by the p2p learning platform https://dacade.org.",
     "level": 2,
-    "tags": [
-      "Solidity",
-      "Tokens",
-      "Uniswap"
-    ],
-    "steps": [
-      {
-        "name": "1. Introduction",
-        "path": "1-introduction-to-uniswap"
-      },
-      {
-        "name": "2. Routers, Interfaces, and Structs",
-        "path": "2-router-interfaces-and-structs"
-      },
-      {
-        "name": "3. Single Hop Swaps",
-        "path": "3-single-hop-swaps"
-      },
-      {
-        "name": "4. Multi-Hop Swaps",
-        "path": "4-multi-hop-swaps"
-      },
-      {
-        "name": "5. Erc20 and Weth Interfaces",
-        "path": "5-erc20-weth-interfaces"
-      }
-    ]
+    "tags": "Solidity, Tokens, Uniswap"
   },
   {
-    "_filePath": "SolidityBeginnerCourse/config.yml",
     "id": "soliditybeginner",
     "name": "Solidity Beginner Course",
     "summary": "Solidity Beginner Course based on the popular https://solidity-by-example.org/ contracts. Developed by the p2p learning platform https://dacade.org.",
     "level": 1,
-    "tags": [
-      "Solidity"
-    ],
-    "steps": [
-      {
-        "name": "1. Introduction",
-        "path": "introduction"
-      },
-      {
-        "name": "2. Basic Syntax",
-        "path": "basic-syntax"
-      },
-      {
-        "name": "3. Primitive Data Types",
-        "path": "primitive-data-types"
-      },
-      {
-        "name": "4. Variables",
-        "path": "variables"
-      },
-      {
-        "name": "5.1 Functions - Reading and Writing to a State Variable",
-        "path": "functions-reading-and-writing"
-      },
-      {
-        "name": "5.2 Functions - View and Pure",
-        "path": "functions-view-and-pure"
-      },
-      {
-        "name": "5.3 Functions - Modifiers and Constructors",
-        "path": "functions-modifiers-and-constructors"
-      },
-      {
-        "name": "5.4 Functions - Inputs and Outputs",
-        "path": "functions-inputs-and-outputs"
-      },
-      {
-        "name": "6. Visibility",
-        "path": "visibility"
-      },
-      {
-        "name": "7.1 Control Flow - If/Else",
-        "path": "control-flow-if-else"
-      },
-      {
-        "name": "7.2 Control Flow - Loops",
-        "path": "control-flow-loops"
-      },
-      {
-        "name": "8.1 Data Structures - Arrays",
-        "path": "data-structures-arrays"
-      },
-      {
-        "name": "8.2 Data Structures - Mappings",
-        "path": "data-structures-mappings"
-      },
-      {
-        "name": "8.3 Data Structures - Structs",
-        "path": "data-structures-structs"
-      },
-      {
-        "name": "8.4 Data Structures - Enums",
-        "path": "data-structures-enums"
-      },
-      {
-        "name": "9. Data Locations",
-        "path": "data-locations"
-      },
-      {
-        "name": "10.1 Transactions - Ether and Wei",
-        "path": "transactions-ether-and-wei"
-      },
-      {
-        "name": "10.2 Transactions - Gas and Gas Price",
-        "path": "transactions-gas-and-gas-price"
-      },
-      {
-        "name": "10.3 Transactions - Sending Ether",
-        "path": "transactions-sending-ether"
-      }
-    ]
+    "tags": "Solidity"
   },
   {
-    "_filePath": "Recorder/config.yml",
     "id": "recorder",
     "name": "Recorder",
     "summary": "Save a set of actions and replay and replay and replay",
     "level": 2,
-    "tags": [
-      "Remix"
-    ]
+    "tags": "Remix"
   },
   {
-    "_filePath": "ProxyContract/config.yml",
     "id": "proxycontract",
     "name": "All about Proxy Contracts",
     "summary": "This tutorial gives a short introduction of the web3.js library, querying the block number",
     "level": 3,
-    "tags": [
-      "Remix",
-      "Solidity",
-      "Code Patterns"
-    ]
+    "tags": "Remix, Solidity, Code Patterns"
   },
   {
-    "_filePath": "OpcodesInTheDebugger/config.yml",
     "id": "opcodesdebug",
     "name": "Opcodes in the Debugger",
     "summary": "Using the Debugger, we'll check out what the CODECOPY opcode does and how it is used by the EVM during contract creation.",
     "level": 3,
-    "tags": [
-      "Remix",
-      "Debugging",
-      "EVM",
-      "Opcodes"
-    ]
+    "tags": "Remix, Debugging, EVM, Opcodes"
   },
   {
-    "_filePath": "NFTTokenCourse/config.yml",
     "id": "nftTokenCourse",
     "name": "Solidity NFT Course",
     "summary": "Learn how to create your own NFT tokens. Developed by the p2p learning platform https://dacade.org.",
     "level": 1,
-    "tags": [
-      "Solidity",
-      "Tokens",
-      "NFT"
-    ],
-    "steps": [
-      {
-        "name": "1. Introduction",
-        "path": "introduction"
-      },
-      {
-        "name": "2. Interface",
-        "path": "erc721-interface"
-      },
-      {
-        "name": "3. Metadata Interface",
-        "path": "erc721-interface-metadata"
-      },
-      {
-        "name": "4. Token Creation",
-        "path": "erc721-token-creation"
-      },
-      {
-        "name": "5. Metadata IPFS",
-        "path": "erc721-metadata-ipfs"
-      },
-      {
-        "name": "6. Deploy to Testnet",
-        "path": "erc721-deploy-testnet-opensea"
-      }
-    ]
+    "tags": "Solidity, Tokens, NFT"
   },
   {
-    "_filePath": "Multisig-Tutorial/config.yml",
     "id": "multisigCourse",
     "name": "Multisig Wallet",
     "summary": "Learn how to create and interact with a multisig wallet. Developed by the p2p learning platform https://dacade.org.",
     "level": 1,
-    "tags": [
-      "Solidity",
-      "Tokens",
-      "Multisig"
-    ],
-    "steps": [
-      {
-        "name": "1. Introduction",
-        "path": "1-multisig-introduction"
-      },
-      {
-        "name": "2. Initialize the Contract",
-        "path": "2-multisig-initialization"
-      },
-      {
-        "name": "3. Deposits",
-        "path": "3-multisig-deposits"
-      },
-      {
-        "name": "4. Transactions",
-        "path": "4-multisig-transactions"
-      },
-      {
-        "name": "5. Revoking Confirmations",
-        "path": "5-multisig-revoke"
-      }
-    ]
+    "tags": "Solidity, Tokens, Multisig"
   },
   {
-    "_filePath": "IntroRemix/config.yml",
     "id": "videoIntroRemix",
     "name": "Introdution to Remix",
     "summary": "Learn how to use the Remix interface.",
     "level": 1,
-    "tags": [
-      "Solidity",
-      "Remix",
-      "Video"
-    ],
-    "steps": [
-      {
-        "name": "1. Introduction",
-        "path": "1-intro-tour"
-      }
-    ]
+    "tags": "Solidity, Remix, Video"
   },
   {
-    "_filePath": "Interoperability/config.yml",
     "id": "interopCourse",
     "name": "Multichain Protocols with Axelar",
     "summary": "Learn how to build interoperable smart contracts that can send messages and assets between different blockchains using Axelar technology.",
     "level": 2,
-    "tags": [
-      "Solidity",
-      "Interoperability",
-      "Axelar"
-    ],
-    "steps": [
-      {
-        "name": "An Intro to Axelar",
-        "path": "1_Intro"
-      },
-      {
-        "name": "Axelar Gateway",
-        "path": "2_Gateway"
-      },
-      {
-        "name": "Axelar Gas Service",
-        "path": "3_GasService"
-      },
-      {
-        "name": "Axelar Executable",
-        "path": "4_Executable"
-      },
-      {
-        "name": "Interchain Messages",
-        "path": "5_InterchainMessage"
-      },
-      {
-        "name": "Interchain Token Transfers",
-        "path": "6_InterchainTokenTransfer"
-      },
-      {
-        "name": "Further Reading",
-        "path": "7_FurtherReading"
-      }
-    ]
+    "tags": "Solidity, Interoperability, Axelar"
   },
   {
-    "_filePath": "ERC721Auction/config.yml",
     "id": "er721Auction",
     "name": "NFT Auction Contract",
     "summary": "Learn how to write an ERC721 (NFT) auction contract. Developed by the p2p learning platform https://dacade.org.",
     "level": 2,
-    "tags": [
-      "Solidity",
-      "Tokens",
-      "NFT"
-    ],
-    "steps": [
-      {
-        "name": "Contract Setup",
-        "path": "auction-contract-setup"
-      },
-      {
-        "name": "Start and Bid Functions",
-        "path": "auction-start-bid"
-      },
-      {
-        "name": "Withdraw and End Functions",
-        "path": "auction-withdraw-end"
-      }
-    ]
+    "tags": "Solidity, Tokens, NFT"
   },
   {
-    "_filePath": "ERC20TokenCourse/config.yml",
     "id": "tokenCourse",
     "name": "Solidity ERC20 Token Course",
     "summary": "Learn how to create your own ERC20 tokens. Developed by the p2p learning platform https://dacade.org.",
     "level": 1,
-    "tags": [
-      "Solidity",
-      "Tokens",
-      "ERC20"
-    ],
-    "steps": [
-      {
-        "name": "1. Introduction",
-        "path": "introduction"
-      },
-      {
-        "name": "2. Interface",
-        "path": "erc20-interface"
-      },
-      {
-        "name": "3. Token Creation",
-        "path": "erc20-token-creation"
-      },
-      {
-        "name": "4. Interaction",
-        "path": "erc20-interaction"
-      },
-      {
-        "name": "5. Testnet Deployment",
-        "path": "erc20-testnet-deployment"
-      },
-      {
-        "name": "6. Extensions",
-        "path": "erc20-extensions"
-      }
-    ]
+    "tags": "Solidity, Tokens, ERC20"
   },
   {
-    "_filePath": "DeployWithLibraries/config.yml",
     "id": "deploylibraries",
     "name": "Deploy with Libraries",
     "summary": "Write, Deploy and link a Library to a Contract",
     "level": 3,
-    "tags": [
-      "Remix",
-      "Solidity"
-    ]
+    "tags": "Remix, Solidity"
   },
   {
-    "_filePath": "CircomIntro/config.yml",
     "id": "circom-intro",
     "name": "Intro to Circom",
     "summary": "A intro to using Circom for creating arithmetic circuits.",
     "level": 1,
-    "tags": [
-      "Circom",
-      "Remix-IDE"
-    ],
-    "steps": [
-      {
-        "name": "Introduction",
-        "path": "step-1"
-      },
-      {
-        "name": "Installing the Circuit-Compiler",
-        "path": "step-2"
-      },
-      {
-        "name": "Writing Your First Circom Circuit",
-        "path": "step-3"
-      },
-      {
-        "name": "Compiling the Circuit Using the Plugin",
-        "path": "step-4"
-      },
-      {
-        "name": "Performing a Trusted Setup",
-        "path": "step-5"
-      },
-      {
-        "name": "Computing the Witness",
-        "path": "step-6"
-      },
-      {
-        "name": "Generating the Proof",
-        "path": "step-7"
-      }
-    ]
+    "tags": "Circom, Remix-IDE"
   },
   {
-    "_filePath": "CircomHashChecker/config.yml",
-    "id": "circom-hash-checker",
-    "name": "Hash Checker Tutorial",
-    "summary": "A tutorial on creating and understanding a Hash Checker circuit using Remix-IDE templates, including trusted setup and proof generation.",
-    "level": 1,
-    "tags": [
-      "Circom",
-      "Remix-IDE"
-    ],
-    "steps": [
-      {
-        "name": "Introduction to the Hash Checker Circuit",
-        "path": "step-1"
-      },
-      {
-        "name": "Generating the Hash Checker Template in Remix-IDE",
-        "path": "step-2"
-      },
-      {
-        "name": "Exploring calculate_hash.circom",
-        "path": "step-3"
-      },
-      {
-        "name": "Compiling the Circuit",
-        "path": "step-4"
-      },
-      {
-        "name": "Performing a Trusted Setup",
-        "path": "step-5"
-      },
-      {
-        "name": "Compute Witness",
-        "path": "step-6"
-      },
-      {
-        "name": "Generate Proof",
-        "path": "step-7"
-      },
-      {
-        "name": "Exploring the Trusted Setup Script (Optional)",
-        "path": "step-8"
-      },
-      {
-        "name": "Exploring the Proof Generation Script (Optional)",
-        "path": "step-9"
-      }
-    ]
-  },
-  {
-    "_filePath": "Basics/config.yml",
     "id": "basics",
     "name": "Basics of Remix",
     "summary": "A typical workflow in Remix",
     "level": 1,
-    "tags": [
-      "Remix"
-    ],
-    "steps": [
-      {
-        "name": "Intro to the Interface",
-        "path": "interface_introduction"
-      },
-      {
-        "name": "Intro to Workspaces",
-        "path": "workspaces"
-      },
-      {
-        "name": "Loading & Compiling",
-        "path": "load_and_compile"
-      },
-      {
-        "name": "Deploying to the Remix VM",
-        "path": "deploy_to_the_remixvm"
-      },
-      {
-        "name": "Interacting with Functions",
-        "path": "interacting"
-      },
-      {
-        "name": "Deploying to Public Networks",
-        "path": "deploy_injected"
-      }
-    ]
+    "tags": "Remix"
+  },
+  {
+    "id": "circom-hash-checker",
+    "name": "Hash Checker Tutorial",
+    "summary": "A tutorial on creating and understanding a Hash Checker circuit using Remix-IDE templates, including trusted setup and proof generation.",
+    "level": 1,
+    "tags": "Circom, Remix-IDE"
   }
 ]

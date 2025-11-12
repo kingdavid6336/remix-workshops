@@ -27,9 +27,12 @@ async function extractConfigProperties(): Promise<void> {
 
         // Add file path for reference
         const configWithPath = {
-          _filePath: configFile,
           ...config
         };
+
+        delete (configWithPath as any)['steps'];
+
+        (configWithPath as any)['tags'] = (configWithPath as any)['tags'].join(', ');
 
         allConfigs.push(configWithPath);
         console.log(`Processed: ${configFile}`);
