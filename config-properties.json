@@ -1,0 +1,114 @@
+[
+  {
+    "id": "useofweb3js",
+    "name": "Basic use of web3.js",
+    "summary": "This tutorial gives a short introduction of the web3.js library, querying the block number",
+    "level": 2,
+    "tags": "JS, Remix, Web3"
+  },
+  {
+    "id": "uniswapSwapCourse",
+    "name": "Uniswap Swap Course",
+    "summary": "Go through the Solidity code of the Uniswap V3 Swap contract. Developed by the p2p learning platform https://dacade.org.",
+    "level": 2,
+    "tags": "Solidity, Tokens, Uniswap"
+  },
+  {
+    "id": "soliditybeginner",
+    "name": "Solidity Beginner Course",
+    "summary": "Solidity Beginner Course based on the popular https://solidity-by-example.org/ contracts. Developed by the p2p learning platform https://dacade.org.",
+    "level": 1,
+    "tags": "Solidity"
+  },
+  {
+    "id": "recorder",
+    "name": "Recorder",
+    "summary": "Save a set of actions and replay and replay and replay",
+    "level": 2,
+    "tags": "Remix"
+  },
+  {
+    "id": "proxycontract",
+    "name": "All about Proxy Contracts",
+    "summary": "This tutorial gives a short introduction of the web3.js library, querying the block number",
+    "level": 3,
+    "tags": "Remix, Solidity, Code Patterns"
+  },
+  {
+    "id": "opcodesdebug",
+    "name": "Opcodes in the Debugger",
+    "summary": "Using the Debugger, we'll check out what the CODECOPY opcode does and how it is used by the EVM during contract creation.",
+    "level": 3,
+    "tags": "Remix, Debugging, EVM, Opcodes"
+  },
+  {
+    "id": "nftTokenCourse",
+    "name": "Solidity NFT Course",
+    "summary": "Learn how to create your own NFT tokens. Developed by the p2p learning platform https://dacade.org.",
+    "level": 1,
+    "tags": "Solidity, Tokens, NFT"
+  },
+  {
+    "id": "multisigCourse",
+    "name": "Multisig Wallet",
+    "summary": "Learn how to create and interact with a multisig wallet. Developed by the p2p learning platform https://dacade.org.",
+    "level": 1,
+    "tags": "Solidity, Tokens, Multisig"
+  },
+  {
+    "id": "videoIntroRemix",
+    "name": "Introdution to Remix",
+    "summary": "Learn how to use the Remix interface.",
+    "level": 1,
+    "tags": "Solidity, Remix, Video"
+  },
+  {
+    "id": "interopCourse",
+    "name": "Multichain Protocols with Axelar",
+    "summary": "Learn how to build interoperable smart contracts that can send messages and assets between different blockchains using Axelar technology.",
+    "level": 2,
+    "tags": "Solidity, Interoperability, Axelar"
+  },
+  {
+    "id": "er721Auction",
+    "name": "NFT Auction Contract",
+    "summary": "Learn how to write an ERC721 (NFT) auction contract. Developed by the p2p learning platform https://dacade.org.",
+    "level": 2,
+    "tags": "Solidity, Tokens, NFT"
+  },
+  {
+    "id": "tokenCourse",
+    "name": "Solidity ERC20 Token Course",
+    "summary": "Learn how to create your own ERC20 tokens. Developed by the p2p learning platform https://dacade.org.",
+    "level": 1,
+    "tags": "Solidity, Tokens, ERC20"
+  },
+  {
+    "id": "deploylibraries",
+    "name": "Deploy with Libraries",
+    "summary": "Write, Deploy and link a Library to a Contract",
+    "level": 3,
+    "tags": "Remix, Solidity"
+  },
+  {
+    "id": "circom-intro",
+    "name": "Intro to Circom",
+    "summary": "A intro to using Circom for creating arithmetic circuits.",
+    "level": 1,
+    "tags": "Circom, Remix-IDE"
+  },
+  {
+    "id": "basics",
+    "name": "Basics of Remix",
+    "summary": "A typical workflow in Remix",
+    "level": 1,
+    "tags": "Remix"
+  },
+  {
+    "id": "circom-hash-checker",
+    "name": "Hash Checker Tutorial",
+    "summary": "A tutorial on creating and understanding a Hash Checker circuit using Remix-IDE templates, including trusted setup and proof generation.",
+    "level": 1,
+    "tags": "Circom, Remix-IDE"
+  }
+]

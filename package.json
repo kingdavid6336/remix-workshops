@@ -1,0 +1,19 @@
+{
+  "name": "remix-workshops",
+  "version": "1.0.0",
+  "description": "remix-workshops",
+  "scripts": {
+    "build": "tsc",
+    "extract": "ts-node extract-config-properties.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/js-yaml": "^4.0.5",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0"
+  },
+  "dependencies": {
+    "glob": "^10.3.0",
+    "js-yaml": "^4.1.0"
+  }
+}
