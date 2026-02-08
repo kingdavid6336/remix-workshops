@@ -2,7 +2,7 @@ In order to better understand this cross-chain bridge, we will build a simple cr
 
 > **Please note**, this is a very simple cross-chain bridge implementation and is for educational purposes only. It does not deal with some possible problems, such as transaction failure, chain reorganization, etc. In a production environment, it is recommended to use a professional cross-chain bridge solution or other fully tested and audited frameworks.
 
-### 3.1 Cross-chain token contract
+### Cross-chain token contract
 
 First, we need to deploy an ERC20 token contract, `CrossChainToken`, on the Goerli and Sepolia testnets. This contract defines the name, symbol, and total supply of the token, as well as a `bridge()` function for cross-chain transfers.
 
