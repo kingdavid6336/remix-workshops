@@ -1,0 +1,15 @@
+id: decentralized-exchange
+name: Decentralized Exchange
+summary: Build a decentralized exchange (DEX) from scratch, learning about automated market makers (AMM), liquidity pools, and token swapping mechanisms.
+level: 2
+tags:
+- solidity
+- erc20
+- Defi
+steps:
+- name: Core Concepts
+  path: core-concepts
+- name: Decentralized Exchange
+  path: decentralized-exchange
+- name: Simple Swap Contract
+  path: swap-contract
