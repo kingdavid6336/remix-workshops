@@ -129,11 +129,16 @@ In a Swap contract, users can trade one token for another. So how many units of 
 
 According to the constant product formula, before trading:
 
+```text
 $$k=x*y$$
+
+```
 
 After the transaction, there are:
 
+```text
 $$k=(x+\Delta{x})*(y+\Delta{y})$$
+```
 
 The value of $k$ remains unchanged before and after the transaction. Combining the above equations, we can get:
 
