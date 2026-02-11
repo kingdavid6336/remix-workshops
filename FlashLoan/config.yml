@@ -17,6 +17,8 @@ steps:
   - name: Uniswap V2 Test
     path: uniswap-v2-test
   - name: Uniswap V3
+    path: uniswap-v3
+  - name: Uniswap V3 Test
     path: uniswap-v3-test
   - name: Aave v3
     path: aave-v3
