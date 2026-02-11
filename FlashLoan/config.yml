@@ -4,11 +4,23 @@ summary: Master flash loans in DeFi by learning how to borrow large amounts with
 level: 2
 priority: 57
 tags:
-- solidity
-- flashloan
-- Defi
-- uniswap
-- aave
+  - solidity
+  - flashloan
+  - Defi
+  - uniswap
+  - aave
 steps:
-- name: Flash loan
-  path: step1
+  - name: Flash loan
+    path: intro
+  - name: Uniswap V2
+    path: uniswap-v2
+  - name: Uniswap V2 Test
+    path: uniswap-v2-test
+  - name: Uniswap V3
+    path: uniswap-v3-test
+  - name: Aave v3
+    path: aave-v3
+  - name: Aave v3 Test
+    path: aave-v3-test
+  - name: Summary
+    path: summary
