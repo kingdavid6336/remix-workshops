@@ -1,0 +1,11 @@
+id: contract-check-bypassing
+name: Contract Check Bypassing
+summary: Explore how attackers can bypass contract existence checks by exploiting constructor behavior. Learn secure patterns for verifying whether an address contains a contract.
+level: 2
+tags:
+  - solidity
+  - security
+  - constructor
+steps:
+  - name: Contract Check Bypassing
+    path: step1
