@@ -1,0 +1,5 @@
+On-chain front-running refers to searchers or miners inserting their own transactions ahead of others by increasing gas or using other methods to capture value. In blockchain, miners can profit by packaging, excluding, or reordering transactions in the blocks they generate, and MEV is the measure of this profit.
+
+Before a user's transaction is included in the Ethereum blockchain by miners, most transactions gather in the Mempool, where miners look for high-fee transactions to prioritize for block inclusion and maximize their profits. Generally, transactions with higher gas prices are more likely to be included. Additionally, some MEV bots search for profitable transactions in the Mempool. For example, a swap transaction with a high slippage setting in a decentralized exchange may be subject to a sandwich attack: an arbitrageur inserts a buy order before the transaction and a sell order after, profiting from it. This effectively inflates the market price.
+
+![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/Frontrun/img/S11-1.png)
