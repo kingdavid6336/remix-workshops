@@ -1,0 +1,4 @@
+This contract is modified based on the bank contract in the `S01 Reentrancy Attack` tutorial. It contains `1` state variable `balanceOf` to record the Ethereum balance of all users; and contains `3` functions:
+- `deposit()`: deposit function, deposit `ETH` into the bank contract, and update the user's balance.
+- `withdraw()`: withdrawal function, transfer the caller's balance to it. The specific steps are the same as the story above: check the balance, update the balance, and transfer. **Note: This function does not check the return value of `send()`, the withdrawal fails but the balance will be cleared!**
+- `getBalance()`: Get the `ETH` balance in the bank contract.
