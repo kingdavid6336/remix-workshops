@@ -1,25 +1,3 @@
----
-title: 50. Multisignature Wallet
-tags:
-  - Solidity
-  - call
-  - signature
-  - ABI encoding
-
----
-
-# WTF Solidity Crash Course: 50. Multisignature Wallet
-
-I am currently relearning Solidity to solidify some of the details and create a "WTF Solidity Crash Course" for beginners (advanced programmers may want to find another tutorial). I will update 1-3 lessons weekly.
-
-Twitter: [@0xAA_Science](https://twitter.com/0xAA_Science)
-
-Community: [Discord](https://discord.gg/5akcruXrsk)｜[WeChat Group](https://docs.google.com/forms/d/e/1FAIpQLSe4KGT8Sh6sJ7hedQRuIYirOoZK_85miz3dw7vA1-YjodgJ-A/viewform?usp=sf_link)｜[Official website wtf.academy](https://wtf.academy)
-
-All code and tutorials are open source on Github: [github.com/AmazingAng/WTF-Solidity](https://github.com/AmazingAng/WTF-Solidity)
-
------
-
 Vitalik once said that a multisig wallet is safer than a hardware wallet ([tweet](https://twitter.com/VitalikButerin/status/1558886893995134978?s=20&t=4WyoEWhwHNUtAuABEIlcRw)). In this lesson, we'll introduce multisig wallets and write a simple version of a multisig wallet contract. The teaching code (150 lines of code) is simplified from the Gnosis Safe contract (several thousand lines of code).
 
 ![Vitalik statement](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step20/img/50-1.png)

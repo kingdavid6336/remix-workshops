@@ -1,25 +1,3 @@
----
-title: 36. Merkle Tree
-tags:
-  - solidity
-  - application
-  - wtfacademy
-  - ERC721
-  - Merkle Tree
----
-
-# WTF Solidity Beginner's Guide: 36. Merkle Tree
-
-Recently, I have been reviewing solidity in order to consolidate some details and write a "WTF Solidity Beginner's Guide" for novices (programming experts can find other tutorials). I will update 1-3 lessons weekly.
-
-Welcome to follow me on Twitter: [@0xAA_Science](https://twitter.com/0xAA_Science)
-
-Welcome to the WTF Scientist community, which includes methods for adding WeChat groups: [link](https://discord.gg/5akcruXrsk)
-
-All code and tutorials are open source on GitHub (1024 stars will issue course certification, 2048 stars will issue community NFTs): [github.com/AmazingAng/WTF-Solidity](https://github.com/AmazingAng/WTF-Solidity)
-
------
-
 In this lecture, I will introduce the `Merkle Tree` and how to use it to distribute a `NFT` whitelist.
 
 ## `Merkle Tree`

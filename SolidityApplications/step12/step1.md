@@ -1,22 +1,3 @@
----
-title: 42. Payment Splitting
-tags:
-  - solidity
-  - application
----
-
-# WTF Solidity Crash Course: 42. Payment Splitting
-
-I have been relearning solidity recently to solidify some of the details and to create a "WTF Solidity Crash Course" for beginners (advanced programmers can seek other tutorials). New lectures will be updated every week, ranging from 1 to 3.
-
-Twitter: [@0xAA_Science](https://twitter.com/0xAA_Science)
-
-Discord: [WTF Academy](https://discord.gg/5akcruXrsk)
-
-All codes and tutorials are open-sourced on Github: [github.com/AmazingAng/WTF-Solidity](https://github.com/AmazingAng/WTF-Solidity)
-
----
-
 In this lecture, we'll introduce the payment-splitting contract, which allows the transfer of `ETH` to a group of accounts according to their respective weights for payment-splitting purposes. The code section is a simplification of the PaymentSplitter contract provided by the OpenZeppelin library, which can be found on [Github](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/finance/PaymentSplitter.sol).
 
 ## Payment Split

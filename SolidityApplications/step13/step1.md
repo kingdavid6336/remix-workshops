@@ -1,23 +1,3 @@
----
-title: 43. Linear Release
-tags:
-  - solidity
-  - application
-  - ERC20
----
-
-# WTF Simplified Solidity: 43. Linear Release
-
-I am currently re-learning Solidity to consolidate my understanding of the details and to create a "Simplified Solidity for Beginners" guide for newbies (programming experts can find other tutorials). I update this guide with 1-3 lessons per week.
-
-Twitter: [@0xAA_Science](https://twitter.com/0xAA_Science)
-
-Community: [Discord](https://discord.gg/5akcruXrsk)｜[WeChat Group](https://docs.google.com/forms/d/e/1FAIpQLSe4KGT8Sh6sJ7hedQRuIYirOoZK_85miz3dw7vA1-YjodgJ-A/viewform?usp=sf_link)｜[wtf.academy](https://wtf.academy)
-
-All code and tutorials are open-sourced on GitHub: [github.com/AmazingAng/WTF-Solidity](https://github.com/AmazingAng/WTF-Solidity)
-
----
-
 In this lesson, we will introduce token vesting clauses and write a contract for linearly releasing ERC20 tokens. The code is simplified from OpenZeppelin's VestingWallet contract.
 
 ## Token Vesting Clauses

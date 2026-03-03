@@ -1,23 +1,3 @@
----
-title: 35. Dutch Auction
-tags:
-  - solidity
-  - application
-  - wtfacademy
-  - ERC721
-  - Dutch Auction
----
-
-# WTF Solidity Beginner's Guide: 35. Dutch Auction
-
-Twitter: [@0xAA_Science](https://twitter.com/0xAA_Science) | [@WTFAcademy_](https://twitter.com/WTFAcademy_)
-
-Community: [Discord](https://discord.gg/5akcruXrsk)｜[Wechat](https://docs.google.com/forms/d/e/1FAIpQLSe4KGT8Sh6sJ7hedQRuIYirOoZK_85miz3dw7vA1-YjodgJ-A/viewform?usp=sf_link)｜[Website wtf.academy](https://wtf.academy)
-
-Codes and tutorials are open source on GitHub: [github.com/AmazingAng/WTF-Solidity](https://github.com/AmazingAng/WTF-Solidity)
-
-----
-
 In this lecture, I will introduce the Dutch Auction and explain how to issue an `NFT` using the `ERC721` standard through a simplified version of the `Azuki` Dutch Auction code.
 
 ## Dutch Auction

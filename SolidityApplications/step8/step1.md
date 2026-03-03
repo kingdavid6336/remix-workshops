@@ -1,25 +1,3 @@
----
-title: 38. NFT Exchange
-tags:
-  - solidity
-  - application
-  - wtfacademy
-  - ERC721
-  - NFT Swap
----
-
-# WTF Simplified Introduction to Solidity: 38. NFT Exchange
-
-I have been revisiting Solidity lately to review the details and create a "WTF Simplified Introduction to Solidity" for beginners (professional programmers may find other tutorials more suitable), with 1-3 updates per week.
-
-Twitter: [@0xAA_Science](https://twitter.com/0xAA_Science)
-
-Discord: [WTF Academy](https://discord.gg/5akcruXrsk)
-
-All code and tutorials are open source on Github: [github.com/AmazingAng/WTF-Solidity](https://github.com/AmazingAng/WTF-Solidity)
-
------
-
 "Opensea" is the largest NFT trading platform on Ethereum with a total trading volume of $30 billion. Opensea charges a fee of 2.5% on transactions, meaning it has made at least $750 million in profits through user transactions. Additionally, its operation is not decentralized, and it has no plans to issue coins to compensate users. NFT players have been frustrated with Opensea for a long time. Today, we use smart contracts to build a zero-fee decentralized NFT exchange: NFTSwap.
 
 ## Design Logic

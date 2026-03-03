@@ -1,24 +1,3 @@
----
-title: 41. WETH
-tags:
-  - solidity
-  - application
-  - ERC20
-  - fallback
----
-
-# WTF Solidity Crash Course: 41. WETH
-
-I am currently re-learning Solidity to refresh my knowledge and create a "WTF Solidity Crash Course" for beginners to use (advanced programmers may find other resources more suitable). A new lesson will be added each week.
-
-Twitter: [@0xAA_Science](https://twitter.com/0xAA_Science)
-
-Discord: [WTF Academy](https://discord.gg/5akcruXrsk)
-
-All code and tutorials are open-sourced on GitHub: [github.com/AmazingAng/WTF-Solidity](https://github.com/AmazingAng/WTF-Solidity)
-
----
-
 In this lecture, we will learn about `WETH` - the wrapped version of `ETH`.
 
 ## What is `WETH`?

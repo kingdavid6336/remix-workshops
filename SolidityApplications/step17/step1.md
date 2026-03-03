@@ -1,24 +1,3 @@
----
-title: 47. Upgradeable Contract
-tags:
-  - solidity
-  - proxy
-  - OpenZeppelin
-
----
-
-# WTF Solidity Crash Course: 47. Upgradeable Contract
-
-I have recently been revising Solidity to consolidate the details, and am writing a "WTF Simplified Introduction to Solidity" for beginners to use (programming experts can find other tutorials), with weekly updates of 1-3 lectures.
-
-Twitter: [@0xAA_Science](https://twitter.com/0xAA_Science)
-
-Community: [Discord](https://discord.gg/5akcruXrsk)｜[WeChat group](https://docs.google.com/forms/d/e/1FAIpQLSe4KGT8Sh6sJ7hedQRuIYirOoZK_85miz3dw7vA1-YjodgJ-A/viewform?usp=sf_link)｜[Official website wtf.academy](https://wtf.academy)
-
-All code and tutorials are open source on GitHub: [github.com/AmazingAng/WTF-Solidity](https://github.com/AmazingAng/WTF-Solidity)
-
------
-
 in this lesson, we'll introduce Upgradeable Contract, the sample contracts used for teaching are simplified from `OpenZeppelin` contracts, they may pose security issues, DO NOT USE IN PRODUCTION.
 
 ## Upgradeable Contract

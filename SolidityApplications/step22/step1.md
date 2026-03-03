@@ -1,24 +1,3 @@
----
-title: 52. EIP712 Typed Data Signature
-tags:
-   - solidity
-   - erc20
-   - eip712
-   - openzepplin
----
-
-# WTF Solidity Minimalist Introduction: 52. EIP712 Typed Data Signature
-
-I'm recently re-learning solidity, consolidating the details, and writing a "WTF Solidity Minimalist Introduction" for novices (programming experts can find another tutorial), updating 1-3 lectures every week.
-
-Twitter: [@0xAA_Science](https://twitter.com/0xAA_Science)
-
-Community: [Discord](https://discord.gg/5akcruXrsk)｜[WeChat Group](https://docs.google.com/forms/d/e/1FAIpQLSe4KGT8Sh6sJ7hedQRuIYirOoZK_85miz3dw7vA1-YjodgJ-A/viewform?usp=sf_link) |[Official website wtf.academy](https://wtf.academy)
-
-All codes and tutorials are open source on github: [github.com/AmazingAng/WTF-Solidity](https://github.com/AmazingAng/WTF-Solidity)
-
------
-
 In this lecture, we introduce a more advanced and secure signature method, EIP712 typed data signature.
 
 ## EIP712

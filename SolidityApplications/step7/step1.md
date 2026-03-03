@@ -1,25 +1,3 @@
----
-title: 37. Digital Signature
-tags:
-  - Solidity
-  - Application
-  - WTF Academy
-  - ERC721
-  - Signature
----
-
-# WTF Solidity QuickStart: Lesson 37 Digital Signature
-
-I'm currently relearning Solidity to consolidate some details and write a 'WTF Solidity QuickStart' for newbies to use (programming experts can find other tutorials), with 1-3 updates per week.
-
-Welcome to follow my Twitter: [@0xAA_Science](https://twitter.com/0xAA_Science)
-
-Welcome to join the WTF Scientist community, where you can find instructions to join our WeChat group: [link](https://discord.gg/5akcruXrsk)
-
-All code and tutorials are open-sourced on GitHub (course certification with 1024 stars, community NFT with 2048 stars): [github.com/AmazingAng/WTF-Solidity](https://github.com/AmazingAng/WTF-Solidity)
- 
------
-
 In this lecture, we will briefly introduce the digital signature `ECDSA` in Ethereum and how to use it to issue an `NFT` whitelist. The `ECDSA` library used in the code is simplified from the library of the same name from `OpenZeppelin`.
 
 ## Digital Signature

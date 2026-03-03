@@ -1,22 +1,3 @@
----
-tags:
-  - solidity
-  - application
-  - ERC20
----
-
-# WTF Solidity Crash Course: 44. Token Lock
-
-I have been relearning Solidity recently to solidify my understanding of the language and to create a "WTF Solidity Crash Course" for beginners (advanced programmers can find other tutorials). I will update it weekly with 1-3 lessons.
-
-Feel free to follow me on Twitter: [@0xAA_Science](https://twitter.com/0xAA_Science)
-
-You are also welcome to join the WTF Scientists community and find information on how to join the WeChat group: [link](https://discord.gg/5akcruXrsk)
-
-All of the code and tutorials are open source and can be found on GitHub (I will provide a course certification for 1024 stars and a community NFT for 2048 stars): [github.com/AmazingAng/WTF-Solidity](https://github.com/AmazingAng/WTF-Solidity)
-
----
-
 ### Token Lock
 
 A Token Lock is a simple time-based smart contract that allows one to lock a number of tokens for a certain period of time. After the lock-up period is over, the beneficiary can then withdraw the tokens. A Token Lock is commonly used to lock LP tokens.

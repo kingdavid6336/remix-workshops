@@ -1,23 +1,3 @@
----
-title: 46. Proxy Contract
-tags:
-  - solidity
-  - proxy
-
----
-
-# WTF Solidity Quick Start: 46. Proxy Contract
-
-Recently, I have been re-learning Solidity to review the details and write a "WTF Solidity Quick Start" for beginners to use (programmer gurus can find other tutorials). The tutorial will be updated with 1-3 lectures per week. 
-
-Twitter: [@0xAA_Science](https://twitter.com/0xAA_Science)
-
-Community: [Discord](https://discord.gg/5akcruXrsk) ｜ [WeChat group](https://docs.google.com/forms/d/e/1FAIpQLSe4KGT8Sh6sJ7hedQRuIYirOoZK_85miz3dw7vA1-YjodgJ-A/viewform?usp=sf_link) ｜ [Official website wtf.academy](https://wtf.academy)
-
-All code and tutorials are open source on GitHub: [github.com/AmazingAng/WTF-Solidity](https://github.com/AmazingAng/WTF-Solidity)
-
------
-
 In this lesson, we introduce the Proxy Contract. The teaching code is simplified from the OpenZeppelin Proxy contract.
 
 ## Proxy Pattern
