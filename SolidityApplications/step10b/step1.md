@@ -1,0 +1,1 @@
+This is the `IERC1155MetadataURI` interface, an optional extension of `IERC1155` that adds the `uri()` function for querying token metadata. It is used by the `ERC1155` main contract in the next step.

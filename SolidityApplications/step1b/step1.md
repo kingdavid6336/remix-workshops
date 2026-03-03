@@ -95,7 +95,7 @@ With the `ERC20` standard in place, it is very easy to issue tokens on the `ETH`
 
 Compile the `ERC20` contract in `Remix`, enter the constructor's parameters in the deployment section, set `name_` and `symbol_` to `WTF`, and then click the `transact` button to deploy.
 
-![Deploying the contract](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step1/img/31-1.png)
+![Deploying the contract](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step1b/img/31-1.png)
 
 Now, we have created the `WTF` token. We need to run the `mint()` function to mint some tokens for ourselves. Open up the `ERC20` contract in the `Deployed Contract` section, enter `100` in the `mint` function area, and click the `mint` button to mint `100` `WTF` tokens for ourselves.
 
@@ -108,13 +108,13 @@ There are four key pieces of information:
 - The receiving address `0x5B38Da6a701c568545dCfcB03FcB875f56beddC4`
 - The token amount `100`
 
-![Minting tokens](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step1/img/31-2.png)
+![Minting tokens](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step1b/img/31-2.png)
 
 We use the `balanceOf()` function to check the account balance. By inputting our current account, we can see the balance of our account is `100` which means minting is successful.
 
 The account information is shown on the left like below image, and the details of the function execution are indicated on the right side.
 
-![Check Balance](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step1/img/31-3.png)
+![Check Balance](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step1b/img/31-3.png)
 
 ## Summary
 

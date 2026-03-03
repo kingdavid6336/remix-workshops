@@ -11,12 +11,30 @@ steps:
     path: step1a
   - name: ERC20 Implementation
     path: step1b
+  - name: Token Faucet (IERC20)
+    path: step2a
   - name: Token Faucet
-    path: step2
+    path: step2b
+  - name: Airdrop Contract (IERC20)
+    path: step3a
   - name: Airdrop Contract
-    path: step3
-  - name: ERC721
-    path: step4
+    path: step3b
+  - name: ERC721 (IERC165)
+    path: step4a
+  - name: ERC721 (IERC721)
+    path: step4b
+  - name: ERC721 (IERC721Receiver)
+    path: step4c
+  - name: ERC721 (IERC721Metadata)
+    path: step4d
+  - name: ERC721 (Address)
+    path: step4e
+  - name: ERC721 (String)
+    path: step4f
+  - name: ERC721 Implementation
+    path: step4g
+  - name: WTFApe NFT
+    path: step4h
   - name: Dutch Auction
     path: step5
   - name: Merkle Tree
@@ -25,10 +43,20 @@ steps:
     path: step7
   - name: NFT Exchange
     path: step8
-  - name: Chainlink Randomness
-    path: step9
-  - name: ERC1155
-    path: step10
+  - name: Chainlink Randomness (VRF Consumer)
+    path: step9a
+  - name: Chainlink Randomness (Random NFT)
+    path: step9b
+  - name: ERC1155 (IERC1155)
+    path: step10a
+  - name: ERC1155 (IERC1155MetadataURI)
+    path: step10b
+  - name: ERC1155 (IERC1155Receiver)
+    path: step10c
+  - name: ERC1155 Implementation
+    path: step10d
+  - name: BAYC1155
+    path: step10e
   - name: WETH
     path: step11
   - name: Payment Splitting
@@ -49,9 +77,15 @@ steps:
     path: step19
   - name: Multisignature Wallet
     path: step20
-  - name: ERC4626 Tokenization of Vault Standard
-    path: step21
+  - name: ERC4626 (IERC4626)
+    path: step21a
+  - name: ERC4626 (ERC20 Asset)
+    path: step21b
+  - name: ERC4626 Implementation
+    path: step21c
   - name: EIP712 Typed Data Signature
     path: step22
-  - name: ERC-2612 ERC20Permit
-    path: step23
+  - name: ERC20Permit (IERC20Permit)
+    path: step23a
+  - name: ERC20Permit Implementation
+    path: step23b
