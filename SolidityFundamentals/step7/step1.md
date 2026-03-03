@@ -1,14 +1,3 @@
-# WTF Solidity Tutorial: 7. Mapping
-
-Twitter: [@0xAA_Science](https://twitter.com/0xAA_Science) | [@WTFAcademy_](https://twitter.com/WTFAcademy_)
-
-Community: [Discord](https://discord.gg/5akcruXrsk)｜[Wechat](https://docs.google.com/forms/d/e/1FAIpQLSe4KGT8Sh6sJ7hedQRuIYirOoZK_85miz3dw7vA1-YjodgJ-A/viewform?usp=sf_link)｜[Website wtf.academy](https://wtf.academy)
-
-Codes and tutorials are open source on GitHub: [github.com/AmazingAng/WTF-Solidity](https://github.com/AmazingAng/WTF-Solidity)
-
-
------
-
 In this section, we will introduce the hash table in Solidity: `mapping` type.
 
 ## Mapping
@@ -24,7 +13,7 @@ The format of declaring the `mapping` is `mapping(_KeyType => _ValueType)`, wher
 
 ## Rules of `mapping`
 
-- **Rule 1**: The `_KeyType` should be selected among default types in `solidity` such as ` uint `, `address`, etc. No custom `struct` can be used. However, `_ValueType` can be any custom type. The following example will throw an error, because `_KeyType` uses a custom struct:
+- **Rule 1**: The `_KeyType` should be selected among default types in `solidity` such as `uint`, `address`, etc. No custom `struct` can be used. However, `_ValueType` can be any custom type. The following example will throw an error, because `_KeyType` uses a custom struct:
 
 ```solidity
       // define a struct
@@ -59,17 +48,15 @@ The format of declaring the `mapping` is `mapping(_KeyType => _ValueType)`, wher
 
 - Deploy `Mapping.sol`
 
-    ![7-1_en](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/07_Mapping_en/step1/img/7-1_en.png)
+  ![7-1_en](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step7/img/7-1_en.png)
 
 - Check the initial value of map `idToAddress`.
 
-    ![7-2_en](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/07_Mapping_en/step1/img/7-2_en.png)
+  ![7-2_en](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step7/img/7-2_en.png)
 
 - Write a new key-value pair
 
-    ![7-3_en](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/07_Mapping_en/step1/img/7-3_en.png)
-
-
+  ![7-3_en](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step7/img/7-3_en.png)
 
 ## Summary
 

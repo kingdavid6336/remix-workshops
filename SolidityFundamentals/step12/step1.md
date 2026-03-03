@@ -1,41 +1,26 @@
----
-title: 12. Events
-tags:
-  - solidity
-  - basic
-  - wtfacademy
-  - event
----
-
-# WTF Solidity Tutorial: 12. Events
-
-Twitter: [@0xAA_Science](https://twitter.com/0xAA_Science) | [@WTFAcademy_](https://twitter.com/WTFAcademy_)
-
-Community: [Discord](https://discord.gg/5akcruXrsk)｜[Wechat](https://docs.google.com/forms/d/e/1FAIpQLSe4KGT8Sh6sJ7hedQRuIYirOoZK_85miz3dw7vA1-YjodgJ-A/viewform?usp=sf_link)｜[Website wtf.academy](https://wtf.academy)
-
-Codes and tutorials are open source on GitHub: [github.com/AmazingAng/WTF-Solidity](https://github.com/AmazingAng/WTF-Solidity)
-
------
-
 In this section, we introduce `event` in Solidity, using transfer events in ERC20 tokens as an example.
 
 ## Events
+
 The events in `solidity` are the transaction logs stored on the `EVM` (Ethereum Virtual Machine). They can be emitted during function calls and are accessible with the contract address. Events have two characteristics：
 
 - Responsive: Applications (e.g. [`ether.js`](https://learnblockchain.cn/docs/ethers.js/api-contract.html#id18)) can subscribe and listen to these events through `RPC` interface and respond at frontend.
 - Economical: It is cheap to store data in events, costing about 2,000 `gas` each. In comparison, storing a new variable on-chain takes at least 20,000 `gas`.
 
 ### Declare events
+
 The events are declared with the `event` keyword, followed by the event name, and then the type and name of each parameter to be recorded. Let's take the `Transfer` event from the `ERC20` token contract as an example：
+
 ```solidity
 event Transfer(address indexed from, address indexed to, uint256 value);
 ```
-`Transfer` event records three parameters: `from`，`to`, and `value`， which correspond to the address where the tokens are sent, the receiving address, and the number of tokens being transferred. Parameters `from` and `to` are marked with `indexed` keywords, which will be stored in a special data structure known as `topics` and easily queried by programs.
 
+`Transfer` event records three parameters: `from`，`to`, and `value`， which correspond to the address where the tokens are sent, the receiving address, and the number of tokens being transferred. Parameters `from` and `to` are marked with `indexed` keywords, which will be stored in a special data structure known as `topics` and easily queried by programs.
 
 ### Emit events
 
 We can emit events in functions. In the following example, each time the `_transfer()` function is called, `Transfer` events will be emitted and corresponding parameters will be recorded.
+
 ```solidity
     // define _transfer function， execute transfer logic
     function _transfer(
@@ -58,7 +43,7 @@ We can emit events in functions. In the following example, each time the `_trans
 
 EVM uses `Log` to store Solidity events. Each log contains two parts: `topics` and `data`.
 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/12_Event_en/step1/img/12-3.jpg)
+![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step12/img/12-3.jpg)
 
 ### `Topics`
 
@@ -79,17 +64,18 @@ Besides event hash, `topics` can include 3 `indexed` parameters, such as the `fr
 Non-indexed parameters will be stored in the `data` section of the log. They can be interpreted as the "value" of the event and can't be retrieved directly. But they can store data with larger sizes. Therefore, the `data` section can be used to store complex data structures, such as `array` and `string`. Moreover, `data` consumes less gas compared to `topic`.
 
 ## Remix Demo
+
 Let's take `Event.sol` contract as an example.
 
 1. Deploy the `Event` contract.
 
 2. Call `_transfer` function to emit `Transfer` event.
 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/12_Event_en/step1/img/12-1_en.jpg)
+![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step12/img/12-1_en.jpg)
 
 3. Check transaction details to check the emitted event.
 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/12_Event_en/step1/img/12-2_en.jpg)
+![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step12/img/12-2_en.jpg)
 
 ### Query event on etherscan
 
@@ -102,4 +88,5 @@ Click `Logs` button to check the details of the event：
 There are 3 elements in `Topics`: `[0]` is the hash of the event, `[1]` and `[2]` are the `indexed` parameters defined in the `Transfer` event (`from` and `to`). The element in `Data` is the non-indexed parameter `amount`.
 
 ## Summary
+
 In this lecture, we introduced how to use and query events in `solidity`. Many on-chain analysis tools are based on solidity events, such as `Dune Analytics`.

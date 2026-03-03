@@ -1,14 +1,3 @@
-# WTF Solidity Tutorial: 10. Control Flow
-
-Twitter: [@0xAA_Science](https://twitter.com/0xAA_Science) | [@WTFAcademy_](https://twitter.com/WTFAcademy_)
-
-Community: [Discord](https://discord.gg/5akcruXrsk)｜[Wechat](https://docs.google.com/forms/d/e/1FAIpQLSe4KGT8Sh6sJ7hedQRuIYirOoZK_85miz3dw7vA1-YjodgJ-A/viewform?usp=sf_link)｜[Website wtf.academy](https://wtf.academy)
-
-Codes and tutorials are open source on GitHub: [github.com/AmazingAng/WTF-Solidity](https://github.com/AmazingAng/WTF-Solidity)
-
-
------
-
 In this section, we will introduce control flow in Solidity, and write an insertion sort (`InsertionSort`), a program that looks simple but is actually bug-prone.
 
 ## Control Flow
@@ -69,7 +58,7 @@ function doWhileTest() public pure returns(uint256){
 
 5. Conditional (`ternary`) operator
 
-The `ternary` operator is the only operator in Solidity that accepts three operands： a condition followed by a question mark (`?`), then an expression `x` to execute if the condition is true followed by a colon (`:`), and finally the expression `y` to execute if the condition is false: `condition ? x : y`. 
+The `ternary` operator is the only operator in Solidity that accepts three operands： a condition followed by a question mark (`?`), then an expression `x` to execute if the condition is true followed by a colon (`:`), and finally the expression `y` to execute if the condition is false: `condition ? x : y`.
 
 This operator is frequently used as an alternative to an `if-else` statement.
 
@@ -77,7 +66,7 @@ This operator is frequently used as an alternative to an `if-else` statement.
 // ternary/conditional operator
 function ternaryTest(uint256 x, uint256 y) public pure returns(uint256){
     // return the max of x and y
-    return x >= y ? x: y; 
+    return x >= y ? x: y;
 }
 ```
 
@@ -89,9 +78,9 @@ In addition, there are `continue` (immediately enter the next loop) and `break` 
 
 ### Insertion Sort
 
-The sorting algorithm solves the problem of arranging an unordered set of numbers from small to large, for example, sorting `[2, 5, 3, 1]` to `[1, 2, 3, 5]`. Insertion Sort (`InsertionSort`) is the simplest and first sorting algorithm that most developers learn in their computer science class. The logic of `InsertionSort`: 
+The sorting algorithm solves the problem of arranging an unordered set of numbers from small to large, for example, sorting `[2, 5, 3, 1]` to `[1, 2, 3, 5]`. Insertion Sort (`InsertionSort`) is the simplest and first sorting algorithm that most developers learn in their computer science class. The logic of `InsertionSort`:
 
-1. from the beginning of the array `x` to the end, compare the element `x[i]` with the element in front of it `x[i-1]`; if `x[i]` is smaller, switch their positions, compare it with `x[i-2]`, and continue this process. 
+1. from the beginning of the array `x` to the end, compare the element `x[i]` with the element in front of it `x[i-1]`; if `x[i]` is smaller, switch their positions, compare it with `x[i-2]`, and continue this process.
 
 The schematic of insertion sort:
 
@@ -118,7 +107,7 @@ def insertionSort(arr):
 
 Python version of Insertion Sort takes up 9 lines. Let's rewrite it into Solidity by replacing `functions`, `variables`, and `loops` with solidity syntax accordingly. It only takes up 9 lines of code:
 
-``` solidity
+```solidity
     // Insertion Sort (Wrong version）
     function insertionSortWrong(uint[] memory a) public pure returns(uint[] memory) {
         for (uint i = 1;i < a.length;i++){
@@ -134,11 +123,11 @@ Python version of Insertion Sort takes up 9 lines. Let's rewrite it into Solidit
     }
 ```
 
-But when we compile the modified version and try to sort `[2, 5, 3, 1]`. *BOOM!* There are bugs! After 3-hour debugging, I still could not find where the bug was. I googled "Solidity insertion sort", and found that all the insertion algorithms written with Solidity are all wrong, such as [Sorting in Solidity without Comparison](https://medium.com/coinmonks/sorting-in-solidity-without-comparison-4eb47e04ff0d)
+But when we compile the modified version and try to sort `[2, 5, 3, 1]`. _BOOM!_ There are bugs! After 3-hour debugging, I still could not find where the bug was. I googled "Solidity insertion sort", and found that all the insertion algorithms written with Solidity are all wrong, such as [Sorting in Solidity without Comparison](https://medium.com/coinmonks/sorting-in-solidity-without-comparison-4eb47e04ff0d)
 
 Errors occurred in `Remix decoded output`:
 
-![10-1](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/10_InsertionSort_en/step1/img/10-1.jpg)
+![10-1](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step10/img/10-1.jpg)
 
 ### Solidity Implementation (Correct)
 
@@ -165,7 +154,7 @@ So, we need to add `1` to `j` so it can never take a negative value. The correct
 
 Result:
 
-   !["Input [2,5,3,1] Output[1,2,3,5]"](https://images.mirror-media.xyz/publication-images/S-i6rwCMeXoi8eNJ0fRdB.png?height=300&width=554)
+!["Input [2,5,3,1] Output[1,2,3,5]"](https://images.mirror-media.xyz/publication-images/S-i6rwCMeXoi8eNJ0fRdB.png?height=300&width=554)
 
 ## Summary
 

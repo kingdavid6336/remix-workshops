@@ -1,26 +1,7 @@
----
-title: 11. constructor and modifier
-tags:
-  - solidity
-  - basic
-  - wtfacademy
-  - constructor
-  - modifier
----
-
-# WTF Solidity Tutorial: 11. Constructor & Modifier
-
-Twitter: [@0xAA_Science](https://twitter.com/0xAA_Science) | [@WTFAcademy_](https://twitter.com/WTFAcademy_)
-
-Community: [Discord](https://discord.gg/5akcruXrsk)｜[Wechat](https://docs.google.com/forms/d/e/1FAIpQLSe4KGT8Sh6sJ7hedQRuIYirOoZK_85miz3dw7vA1-YjodgJ-A/viewform?usp=sf_link)｜[Website wtf.academy](https://wtf.academy)
-
-Codes and tutorials are open source on GitHub: [github.com/AmazingAng/WTF-Solidity](https://github.com/AmazingAng/WTF-Solidity)
-
------
-
 In this section, we will introduce `constructor` and `modifier` in Solidity, using an access control contract (`Ownable`) as an example.
 
 ## Constructor
+
 `constructor` is a special function, which will automatically run once during contract deployment. Each contract can have one `constructor`. It can be used to initialize parameters of a contract, such as an `owner` address:
 
 ```solidity
@@ -44,12 +25,13 @@ contract Parents {
 ```
 
 ## Modifier
-`modifier` is similar to `decorator` in object-oriented programming, which is used to declare dedicated properties of functions and reduce code redundancy. `modifier` is Iron Man Armor for functions: the function with `modifier` will have some magic properties. The popular use case of `modifier` is restricting access to functions.
 
+`modifier` is similar to `decorator` in object-oriented programming, which is used to declare dedicated properties of functions and reduce code redundancy. `modifier` is Iron Man Armor for functions: the function with `modifier` will have some magic properties. The popular use case of `modifier` is restricting access to functions.
 
 ![Iron Man's modifier](https://images.mirror-media.xyz/publication-images/nVwXsOVmrYu8rqvKKPMpg.jpg?height=630&width=1200)
 
 Let's define a modifier called `onlyOwner`, functions with it can only be called by `owner`:
+
 ```solidity
    // define modifier
    modifier onlyOwner {
@@ -67,18 +49,21 @@ Next, let us define a `changeOwner` function, which can change the `owner` of th
 ```
 
 ### OpenZeppelin's implementation of Ownable：
+
 `OpenZeppelin` is an organization that maintains a standardized code base for `Solidity`, Their standard implementation of `Ownable` is in [this link](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol).
 
 ## Remix Demo example
+
 Here, we take `Owner.sol` as an example.
+
 1. compile and deploy the code in Remix.
 2. click the `owner` button to view the current owner.
-    ![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/11_Modifier_en/step1/img/11-2_en.jpg)
+   ![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step11/img/11-2_en.jpg)
 3. The transaction succeeds when the `changeOwner` function is called by the owner address user.
-    ![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/11_Modifier_en/step1/img/11-3_en.jpg)
+   ![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step11/img/11-3_en.jpg)
 4. The transaction fails when the `changeOwner` function is called by other addresses.
-    ![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/11_Modifier_en/step1/img/11-4_en.jpg)
-
+   ![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step11/img/11-4_en.jpg)
 
 ## Summary
+
 In this lecture, we introduced `constructor` and `modifier` in Solidity, and wrote an `Ownable` contract that controls access of the contract.

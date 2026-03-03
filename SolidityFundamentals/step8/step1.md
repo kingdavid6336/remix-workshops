@@ -1,14 +1,3 @@
-# WTF Solidity Tutorial: 8. Initial Value
-
-Twitter: [@0xAA_Science](https://twitter.com/0xAA_Science) | [@WTFAcademy_](https://twitter.com/WTFAcademy_)
-
-Community: [Discord](https://discord.gg/5akcruXrsk)｜[Wechat](https://docs.google.com/forms/d/e/1FAIpQLSe4KGT8Sh6sJ7hedQRuIYirOoZK_85miz3dw7vA1-YjodgJ-A/viewform?usp=sf_link)｜[Website wtf.academy](https://wtf.academy)
-
-Codes and tutorials are open source on GitHub: [github.com/AmazingAng/WTF-Solidity](https://github.com/AmazingAng/WTF-Solidity)
-
-
------
-
 ## Initial values of variables
 
 In Solidity, variables declared but not assigned have their initial/default values. In this tutorial, we will introduce the initial values of common variable types.
@@ -19,11 +8,11 @@ In Solidity, variables declared but not assigned have their initial/default valu
 - `string`: `""`
 - `int`: `0`
 - `uint`: `0`
-- `enum`: first element in enumeration 
+- `enum`: first element in enumeration
 - `address`: `0x0000000000000000000000000000000000000000` (or `address(0)`)
 - `function`
-    - `internal`: blank function
-    - `external`: blank function
+  - `internal`: blank function
+  - `external`: blank function
 
 You can use the `getter` function of `public` variables to confirm the above initial values:
 
@@ -47,8 +36,8 @@ You can use the `getter` function of `public` variables to confirm the above ini
 - `struct`: a `struct` which all members set to their default values
 
 - `array`
-    - dynamic array: `[]`
-    - static array（fixed-length): a static array where all members are set to their default values.
+  - dynamic array: `[]`
+  - static array（fixed-length): a static array where all members are set to their default values.
 
 You can use the `getter` function of `public` variables to confirm initial values:
 
@@ -60,7 +49,7 @@ You can use the `getter` function of `public` variables to confirm initial value
     // a struct in which all members are set to their default values of 0, 0
     struct Student{
         uint256 id;
-        uint256 score; 
+        uint256 score;
     }
     Student public student;
 ```
@@ -71,7 +60,7 @@ You can use the `getter` function of `public` variables to confirm initial value
 
 ```solidity
     // delete operator
-    bool public _bool2 = true; 
+    bool public _bool2 = true;
     function d() external {
         delete _bool2; // delete will make _bool2 change to default(false)
     }
@@ -81,11 +70,11 @@ You can use the `getter` function of `public` variables to confirm initial value
 
 - Deploy `InitialValue.sol` and check the initial values of the different types.
 
-    ![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/08_InitialValue_en/step1/img/8-1_en.jpg)
+  ![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step8/img/8-1_en.jpg)
 
 - After using the `delete` operator, the values of the variables are reset to their initial values.
 
-    ![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/08_InitialValue_en/step1/img/8-2_en.jpg)
+  ![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step8/img/8-2_en.jpg)
 
 ## Summary
 

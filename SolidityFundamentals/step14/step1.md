@@ -1,23 +1,3 @@
----
-title: 14. Abstract and Interface
-tags:
-  - solidity
-  - basic
-  - wtfacademy
-  - abstract
-  - interface
----
-
-# WTF Solidity Tutorial: 14. Abstract and Interface
-
-Twitter: [@0xAA_Science](https://twitter.com/0xAA_Science) | [@WTFAcademy_](https://twitter.com/WTFAcademy_)
-
-Community: [Discord](https://discord.gg/5akcruXrsk)｜[Wechat](https://docs.google.com/forms/d/e/1FAIpQLSe4KGT8Sh6sJ7hedQRuIYirOoZK_85miz3dw7vA1-YjodgJ-A/viewform?usp=sf_link)｜[Website wtf.academy](https://wtf.academy)
-
-Codes and tutorials are open source on GitHub: [github.com/AmazingAng/WTF-Solidity](https://github.com/AmazingAng/WTF-Solidity)
-
------
-
 In this section, we will introduce the `abstract` and `interface` contracts in Solidity, using the interface of `ERC721` as an example. They are used to write contract templates and reduce code redundancy.
 
 ## Abstract contract
@@ -127,9 +107,9 @@ contract interactBAYC {
 
 ## Remix demo
 1. Abstract example:
-  ![14-1](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/14_Interface_en/step1/img/14-1.png)
+  ![14-1](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step14/img/14-1.png)
 2. Interface example:
-  ![14-2](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/14_Interface_en/step1/img/14-2.png)
+  ![14-2](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step14/img/14-2.png)
 
 ## Summary
 In this chapter, we introduced the `abstract` and `interface` contracts in Solidity, which are used to write contract templates and reduce code redundancy.

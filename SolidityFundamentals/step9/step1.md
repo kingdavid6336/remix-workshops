@@ -1,14 +1,3 @@
-# WTF Solidity Tutorial: 9. Constant and Immutable
-
-Twitter: [@0xAA_Science](https://twitter.com/0xAA_Science) | [@WTFAcademy_](https://twitter.com/WTFAcademy_)
-
-Community: [Discord](https://discord.gg/5akcruXrsk)｜[Wechat](https://docs.google.com/forms/d/e/1FAIpQLSe4KGT8Sh6sJ7hedQRuIYirOoZK_85miz3dw7vA1-YjodgJ-A/viewform?usp=sf_link)｜[Website wtf.academy](https://wtf.academy)
-
-Codes and tutorials are open source on GitHub: [github.com/AmazingAng/WTF-Solidity](https://github.com/AmazingAng/WTF-Solidity)
-
-
------
-
 In this section, we will introduce two keywords to restrict modifications to their state in Solidity: `constant` and `immutable`. If a state variable is declared with `constant` or `immutable`, its value cannot be modified after contract compilation.
 
 Value-typed variables can be declared as `constant` and `immutable`; `string` and `bytes` can be declared as `constant`, but not `immutable`.
@@ -17,9 +6,9 @@ Value-typed variables can be declared as `constant` and `immutable`; `string` an
 
 ### constant
 
-The `constant` variable must be initialized during declaration and cannot be changed afterwards. Any modification attempt will result in an error at compilation. 
+The `constant` variable must be initialized during declaration and cannot be changed afterwards. Any modification attempt will result in an error at compilation.
 
-``` solidity
+```solidity
     // The constant variable must be initialized when declared and cannot be changed after that
     uint256 constant CONSTANT_NUM = 10;
     string constant CONSTANT_STRING = "0xAA";
@@ -31,7 +20,7 @@ The `constant` variable must be initialized during declaration and cannot be cha
 
 The `immutable` variable can be initialized during declaration or in the constructor, which is more flexible.
 
-``` solidity
+```solidity
     // The immutable variable can be initialized in the constructor and cannot be changed later
     uint256 public immutable IMMUTABLE_NUM = 9999999999;
     address public immutable IMMUTABLE_ADDRESS;
@@ -41,7 +30,7 @@ The `immutable` variable can be initialized during declaration or in the constru
 
 You can initialize the `immutable` variable using a global variable such as `address(this)`, `block.number`, or a custom function. In the following example, we use the `test()` function to initialize the `IMMUTABLE_TEST` variable to a value of `9`:
 
-``` solidity
+```solidity
     // The immutable variables are initialized with the constructor, that is:
     constructor(){
         IMMUTABLE_ADDRESS = address(this);
@@ -55,23 +44,20 @@ You can initialize the `immutable` variable using a global variable such as `add
     }
 ```
 
-
 ## Verify on Remix
 
-1. After the contract is deployed, You can obtain the values of the `constant` and `immutable` variables through the `getter` function. 
+1. After the contract is deployed, You can obtain the values of the `constant` and `immutable` variables through the `getter` function.
 
-   ![9-1.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/09_Constant_en/step1/img/9-1.png)   
-   
+   ![9-1.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step9/img/9-1.png)
+
 2. After the `constant` variable is initialized, any attempt to change its value will result. In the example, the compiler throws: `TypeError: Cannot assign to a constant variable.`
 
-   ![9-2.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/09_Constant_en/step1/img/9-2.png)   
-   
+   ![9-2.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step9/img/9-2.png)
+
 3. After the `immutable` variable is initialized, any attempt to change its value will result. In the example, the compiler throws: `TypeError: Immutable state variable already initialized.`
 
-   ![9-3.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/09_Constant_en/step1/img/9-3.png)
+   ![9-3.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step9/img/9-3.png)
 
 ## Summary
 
 In this section, we introduced two keywords to restrict modifications to their state in Solidity: `constant` and `immutable`. They keep the variables that should not be changed unchanged. It will help to save `gas` while improving the contract's security.
-
-

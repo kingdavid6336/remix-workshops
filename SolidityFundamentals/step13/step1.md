@@ -1,25 +1,7 @@
----
-title: 13. Inheritance
-tags:
-  - solidity
-  - basic
-  - wtfacademy
-  - inheritance
----
-
-# WTF Solidity Tutorial: 13. Inheritance
-
-Twitter: [@0xAA_Science](https://twitter.com/0xAA_Science) | [@WTFAcademy_](https://twitter.com/WTFAcademy_)
-
-Community: [Discord](https://discord.gg/5akcruXrsk)｜[Wechat](https://docs.google.com/forms/d/e/1FAIpQLSe4KGT8Sh6sJ7hedQRuIYirOoZK_85miz3dw7vA1-YjodgJ-A/viewform?usp=sf_link)｜[Website wtf.academy](https://wtf.academy)
-
-Codes and tutorials are open source on GitHub: [github.com/AmazingAng/WTF-Solidity](https://github.com/AmazingAng/WTF-Solidity)
-
------
-
 In this section, we introduce `inheritance` in Solidity, including simple inheritance, multiple inheritance, and inheritance of modifiers and constructors.
 
 ## Inheritance
+
 Inheritance is one of the core concepts in object-oriented programming, which can significantly reduce code redundancy. It is a mechanism where you can derive a class from another class for a hierarchy of classes that share a set of attributes and methods. In solidity, smart contracts can be viewed as objects, which support inheritance.
 
 ### Rules
@@ -63,7 +45,6 @@ contract Grandfather {
 
 Let's define another contract called `Father`, which inherits the `Grandfather` contract. The syntax for inheritance is `contract Father is Grandfather`, which is very intuitive. In the `Father` contract, we rewrote the functions `hip()` and `pop()` with the `override` keyword, changing their output to `"Father"`. We also added a new function called `father`, which outputs a string `"Father"`.
 
-
 ```solidity
 contract Father is Grandfather{
     // Apply inheritance to the following 2 functions: hip() and pop()， then change the log value to "Father".
@@ -83,7 +64,6 @@ contract Father is Grandfather{
 
 After deploying the contract, we can see that `Father` contract contains 4 functions. The outputs of `hip()` and `pop()` are successfully rewritten with output `"Father"`, while the output of the inherited `grandfather()` function is still `"Grandfather"`.
 
-
 ### Multiple inheritance
 
 A solidity contract can inherit multiple contracts. The rules are:
@@ -95,6 +75,7 @@ A solidity contract can inherit multiple contracts. The rules are:
 3. When a function exists in multiple parent contracts, you need to put all parent contract names after the `override` keyword. For example: `override(Grandfather, Father)`.
 
 Example：
+
 ```solidity
 contract Son is Grandfather, Father{
     // Apply inheritance to the following 2 functions: hip() and pop()， then change the log value to "Son".
@@ -160,20 +141,21 @@ abstract contract A {
 }
 ```
 
-There are two ways for a child contract to inherit the constructor from its parent `A`: 
-1. Declare the parameters of the parent constructor at inheritance: 
+There are two ways for a child contract to inherit the constructor from its parent `A`:
 
-    ```solidity
-    contract B is A(1){}
-    ```
+1. Declare the parameters of the parent constructor at inheritance:
+
+   ```solidity
+   contract B is A(1){}
+   ```
 
 2. Declare the parameter of the parent constructor in the constructor of the child contract:
 
-    ```solidity
-    contract C is A {
-        constructor(uint _c) A(_c * _c) {}
-    }
-    ```
+   ```solidity
+   contract C is A {
+       constructor(uint _c) A(_c * _c) {}
+   }
+   ```
 
 ### Calling the functions from the parent contracts
 
@@ -181,22 +163,22 @@ There are two ways for a child contract to call the functions of the parent cont
 
 1. Direct calling：The child contract can directly call the parent's function with `parentContractName.functionName()`. For example:
 
-    ```solidity
-        function callParent() public{
-            Grandfather.pop();
-        }
-    ```
+   ```solidity
+       function callParent() public{
+           Grandfather.pop();
+       }
+   ```
 
 2. `super` keyword：The child contract can use the `super.functionName()` to call the function in the neareast parent contract in the inheritance hierarchy. Solidity inheritance is declared in a right-to-left order: for `contract Son is Grandfather, Father`, the `Father` contract is closer than the `Grandfather` contract. Thus, `super.pop()` in the `Son` contract will call `Father.pop()` but not `Grandfather.pop()`.
 
-    ```solidity
-        function callParentSuper() public{
-            // call the function one level higher up in the inheritance hierarchy
-            super.pop();
-        }
-    ```
+   ```solidity
+       function callParentSuper() public{
+           // call the function one level higher up in the inheritance hierarchy
+           super.pop();
+       }
+   ```
 
-### Diamond inheritance 
+### Diamond inheritance
 
 In Object-Oriented Programming, diamond inheritance refers to the scenario in which a derived class has two or more base classes.
 
@@ -259,35 +241,37 @@ In this example, calling the `super.bar()` function in the `people` contract wil
 Although `Eve` and `Adam` are both child contracts of the `God` parent contract, the `God` contract will only be called once in the whole process. This is because Solidity borrows the paradigm from Python, forcing a DAG (directed acyclic graph) composed of base classes to guarantee a specific order based on C3 Linearization. For more information on inheritance and linearization, read the official [Solidity docs here](https://docs.soliditylang.org/en/v0.8.17/contracts.html#multiple-inheritance-and-linearization).
 
 ## Verify on Remix
+
 1. After deploying example contract in Simple Inheritance session, we can see that the `Father` contract has `Grandfather` functions:
 
-  ![13-1](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/13_Inheritance_en/step1/img/13-1.png)
+![13-1](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step13/img/13-1.png)
 
-  ![13-2](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/13_Inheritance_en/step1/img/13-2.png)
+![13-2](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step13/img/13-2.png)
 
 2. Modifier inheritance examples:
 
-  ![13-3](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/13_Inheritance_en/step1/img/13-3.png)
-  
-  ![13-4](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/13_Inheritance_en/step1/img/13-4.png)
-  
-  ![13-5](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/13_Inheritance_en/step1/img/13-5.png)
-  
+![13-3](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step13/img/13-3.png)
+
+![13-4](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step13/img/13-4.png)
+
+![13-5](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step13/img/13-5.png)
+
 3. Inheritance of constructors:
 
-  ![13-6](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/13_Inheritance_en/step1/img/13-6.png)
-  
-  ![13-7](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/13_Inheritance_en/step1/img/13-7.png)
-  
+![13-6](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step13/img/13-6.png)
+
+![13-7](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step13/img/13-7.png)
+
 4. Calling the functions from parent contracts:
 
-  ![13-8](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/13_Inheritance_en/step1/img/13-8.png)
-  
-  ![13-9](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/13_Inheritance_en/step1/img/13-9.png)
-  
+![13-8](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step13/img/13-8.png)
+
+![13-9](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step13/img/13-9.png)
+
 5. Diamond inheritance:
 
-   ![13-10](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/13_Inheritance_en/step1/img/13-10.png)
+   ![13-10](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step13/img/13-10.png)
 
 ## Summary
+
 In this tutorial, we introduced the basic uses of inheritance in Solidity, including simple inheritance, multiple inheritance, inheritance of modifiers and constructors, and calling functions from parent contracts.

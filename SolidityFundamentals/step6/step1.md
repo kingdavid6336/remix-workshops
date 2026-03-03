@@ -1,14 +1,3 @@
-# WTF Solidity Tutorial: 6. Array & Struct
-
-Twitter: [@0xAA_Science](https://twitter.com/0xAA_Science) | [@WTFAcademy_](https://twitter.com/WTFAcademy_)
-
-Community: [Discord](https://discord.gg/5akcruXrsk)｜[Wechat](https://docs.google.com/forms/d/e/1FAIpQLSe4KGT8Sh6sJ7hedQRuIYirOoZK_85miz3dw7vA1-YjodgJ-A/viewform?usp=sf_link)｜[Website wtf.academy](https://wtf.academy)
-
-Codes and tutorials are open source on GitHub: [github.com/AmazingAng/WTF-Solidity](https://github.com/AmazingAng/WTF-Solidity)
-
-
------
-
 In this lecture, we will introduce two important variable types in Solidity: `array` and `struct`.
 
 ## Array
@@ -26,7 +15,7 @@ There are two types of arrays: fixed-sized and dynamically-sized arrays.：
     address[100] array3;
 ```
 
-- Dynamically-sized array（dynamic array）： The length of the array is not specified during declaration.  It uses the format of `T[]`, where `T` is the element type. 
+- Dynamically-sized array（dynamic array）： The length of the array is not specified during declaration. It uses the format of `T[]`, where `T` is the element type.
 
 ```solidity
     // variable-length array
@@ -70,7 +59,7 @@ In Solidity, there are some rules for creating arrays：
 
 **Example:**
 
-![6-1.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/06_ArrayAndStruct_en/step1/img/6-1.png)
+![6-1.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step6/img/6-1.png)
 
 ## Struct
 
@@ -80,13 +69,13 @@ You can define new types in the form of `struct` in Solidity. Elements of `struc
     // struct
     struct Student{
         uint256 id;
-        uint256 score; 
+        uint256 score;
     }
 
     Student student; // Initially a student structure
 ```
 
- There are 4 ways to assign values to `struct`:
+There are 4 ways to assign values to `struct`:
 
 ```solidity
     //  assign value to structure
@@ -100,7 +89,7 @@ You can define new types in the form of `struct` in Solidity. Elements of `struc
 
 **Example:**
 
-![6-2.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/06_ArrayAndStruct_en/step1/img/6-2.png)
+![6-2.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step6/img/6-2.png)
 
 ```solidity
      // Method 2: Directly refer to the struct of the state variable
@@ -112,22 +101,20 @@ You can define new types in the form of `struct` in Solidity. Elements of `struc
 
 **Example:**
 
-![6-3.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/06_ArrayAndStruct_en/step1/img/6-3.png)
+![6-3.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step6/img/6-3.png)
 
 ```solidity
     // Method 3: struct constructor
     function initStudent3() external {
         student = Student(3, 90);
     }
-    
+
     // Method 4: key value
     function initStudent4() external {
         student = Student({id: 4, score: 60});
     }
 ```
 
-
 ## Summary
 
 In this lecture, we introduced the basic usage of `array` and `struct` in Solidity. In the next lecture, we will introduce the hash table in Solidity - `mapping`。
-
