@@ -1,0 +1,43 @@
+id: solidity-basics-part2
+name: Solidity Basics - Part 2 - Advanced Concepts (Lessons 16-30)
+summary: Master advanced Solidity concepts - function overloading, libraries, imports, fallback functions, sending ETH, contract interactions, delegatecall, contract creation, ABI encoding/decoding, hashing, selectors, and error handling with try-catch.
+level: 2
+tags:
+  - Solidity
+  - Advanced
+  - EVM
+  - ABI
+  - Libraries
+  - ETH
+  - Error Handling
+steps:
+  - name: Overloading
+    path: step1
+  - name: Library
+    path: step2
+  - name: Import
+    path: step3
+  - name: Receive ETH
+    path: step4
+  - name: Sending ETH
+    path: step5
+  - name: Interact with Contract
+    path: step6
+  - name: Call
+    path: step7
+  - name: Delegatecall
+    path: step8
+  - name: Create
+    path: step9
+  - name: Create2
+    path: step10
+  - name: DeleteContract
+    path: step11
+  - name: ABI Encoding and Decoding
+    path: step12
+  - name: Hash
+    path: step13
+  - name: Function Selector
+    path: step14
+  - name: Try Catch
+    path: step15
