@@ -29,7 +29,7 @@ After the `Solidity` contract is deployed on the chain, the code is immutable. T
 
 Is there a way to modify or upgrade the contract after it is deployed? The answer is YES, and that is the **Proxy Pattern**.
 
-![Proxy Pattern](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/46_ProxyContract_en/step1/img/46-1.png)
+![Proxy Pattern](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step16/img/46-1.png)
 
 The proxy pattern separates contract data and logic and saves them in different contracts. Taking the simple proxy contract in the above figure as an example, the data (state variable) is stored in the proxy contract, and the logic (function) is stored in another logic contract. The proxy contract (Proxy) delegates the function call to the logic contract (Implementation) through `delegatecall`, and then returns the final result to the caller(Caller).
 
@@ -170,26 +170,26 @@ contract Caller{
 
 1. Deploy the `Logic` contract.
 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/46_ProxyContract_en/step1/img/46-2.jpg)
+![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step16/img/46-2.jpg)
 
 2. Call the `increment()` function of the `Logic` contract, which returns `100`.
 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/46_ProxyContract_en/step1/img/46-3.jpg)
+![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step16/img/46-3.jpg)
 
 3. Deploy the `Proxy` contract and fill in the address of the `Logic` contract during initialization.
 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/46_ProxyContract_en/step1/img/46-4.jpg)
+![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step16/img/46-4.jpg)
 
 4. Call the `increment()` function of the `Proxy` contract, which has no return value.
 
    Call method: click on the `Proxy` contract in the `Remix` deployment panel, fill in the selector of the `increment()` function `0xd09de08a` in the `Low level interaction` at the bottom, and click `Transact`.
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/46_ProxyContract_en/step1/img/46-5.jpg)
+![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step16/img/46-5.jpg)
 
 5. Deploy the `Caller` contract and fill in the `Proxy` contract address during initialization. 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/46_ProxyContract_en/step1/img/46-6.jpg)
+![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step16/img/46-6.jpg)
 
 6. Call the `increment()` function of the `Caller` contract and return `1`. 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/46_ProxyContract_en/step1/img/46-7.jpg)
+![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step16/img/46-7.jpg)
 
 ### Summary
 

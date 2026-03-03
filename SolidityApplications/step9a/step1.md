@@ -30,7 +30,7 @@ We can generate random numbers off-chain and upload them to the chain through or
 
 ### Steps to use `Chainlink VRF`
 
-![Chainlnk VRF](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step9b/img/39-1.png)
+![Chainlnk VRF](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step9a/img/39-1.png)
 
 We will use a simple contract to introduce the steps to use Chainlink VRF. The `RandomNumberConsumer` contract can request a random number from the VRF and store it in the state variable `randomResult`.
 

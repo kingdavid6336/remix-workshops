@@ -25,7 +25,7 @@ in this lesson, we'll introduce Upgradeable Contract, the sample contracts used 
 
 If you understand proxy contracts, it is easy to understand upgradeable contracts. It is a proxy contract that can change the logic contract.
 
-![Upgradeable Contract Pattern](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/47_Upgrade_en/step1/img/47-1.png)
+![Upgradeable Contract Pattern](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step17/img/47-1.png)
 
 ## Simple Implementation
 
@@ -125,20 +125,20 @@ contract Logic2 {
 ## Implementation with `Remix`
 
 1. Deploy the old and new logic contracts `Logic1` and `Logic2`.
-![47-2.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/47_Upgrade_en/step1/img/47-2.png)
-![47-3.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/47_Upgrade_en/step1/img/47-3.png)
+![47-2.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step17/img/47-2.png)
+![47-3.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step17/img/47-3.png)
 
 2. Deploy the upgradeable contract `SimpleUpgrade` and set the `implementation` address to the address of the old logic contract.
-![47-4.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/47_Upgrade_en/step1/img/47-4.png)
+![47-4.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step17/img/47-4.png)
 
 3. Use the selector `0xc2985578` to call the `foo()` function of the old logic contract `Logic1` in the proxy contract and change the value of `words` to `"old"`.
-![47-5.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/47_Upgrade_en/step1/img/47-5.png)
+![47-5.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step17/img/47-5.png)
 
 4. Call `upgrade()` to set the `implementation` address to the address of the new logic contract `Logic2`.
-![47-6.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/47_Upgrade_en/step1/img/47-6.png)
+![47-6.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step17/img/47-6.png)
 
 5. Use the selector `0xc2985578` to call the `foo()` function of the new logic contract `Logic2` in the proxy contract and change the value of `words` to `"new"`.
-![47-7.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/47_Upgrade_en/step1/img/47-7.png)
+![47-7.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step17/img/47-7.png)
 
 ## Summary
 

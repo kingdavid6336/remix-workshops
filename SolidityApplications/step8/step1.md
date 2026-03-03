@@ -168,7 +168,7 @@ function revoke(address _nftAddr, uint256 _tokenId) public {
 ### 1. Deploy the NFT contract
 Refer to the [ERC721](https://github.com/AmazingAng/WTF-Solidity/tree/main/34_ERC721) tutorial to learn about NFTs and deploy the `WTFApe` NFT contract.
 
-![Deploy the NFT contract](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/38_NFTSwap_en/step1/img/38-1.png)
+![Deploy the NFT contract](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step8/img/38-1.png)
 
 Mint the first NFT to yourself. This is done so that you can perform operations such as listing the NFT and modifying its price in the future.
 
@@ -178,7 +178,7 @@ The `mint(address to, uint tokenId)` function takes two parameters:
 
 `tokenId`: Since the `WTFApe` contract defines a total of 10,000 NFTs, the first two NFTs to be minted here have `tokenId` values of `0` and `1`, respectively.
 
-![Mint NFT](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/38_NFTSwap_en/step1/img/38-2.png)
+![Mint NFT](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step8/img/38-2.png)
 
 In the `WTFApe` contract, use `ownerOf` to confirm that you own the NFT with `tokenId` equal to 0.
 
@@ -186,14 +186,14 @@ The `ownerOf(uint tokenId)` function takes one parameter:
 
 `tokenId`: `tokenId` is the unique identifier of the NFT, and in this example, it refers to the `0` id generated during the minting process described above.
 
-![Confirming NFT ownership](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/38_NFTSwap_en/step1/img/38-3.png)
+![Confirming NFT ownership](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step8/img/38-3.png)
 
 Using the above method, mint NFTs with `tokenId` `0` and `1` for yourself. For `tokenId` `0`, execute a purchase update operation, and for `tokenId` `1`, execute a delisting operation.
 
 ### 2. Deploying the `NFTSwap` contract
 Deploy the `NFTSwap` contract.
 
-![Deploying the `NFTSwap` contract](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/38_NFTSwap_en/step1/img/38-4.png)
+![Deploying the `NFTSwap` contract](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step8/img/38-4.png)
 
 ### 3. Authorizing the `NFTSwap` contract to list the NFT for sale
 In the `WTFApe` contract, call the `approve()` authorization function to grant permission for the `NFTSwap` contract to list the `tokenId` `0` NFT that you own for sale.
@@ -204,7 +204,7 @@ The `approve(address to, uint tokenId)` method has 2 parameters:
 
 `tokenId`: `tokenId` is the unique identifier of the NFT, and in this example, it refers to the `0` id generated during the minting process described above.
 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/38_NFTSwap_en/step1/img/38-5.png)
+![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step8/img/38-5.png)
 
 Following the method above authorizes the NFT with `tokenId` of `1` to the `NFTSwap` contract address.
 
@@ -219,7 +219,7 @@ The `list(address _nftAddr, uint256 _tokenId, uint256 _price)` method has 3 para
 
 `_price`: `_price` is the price of the NFT, which in this case is 1 `wei`.
 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/38_NFTSwap_en/step1/img/38-6.png)
+![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step8/img/38-6.png)
 
 Following the above method, list the NFT with `tokenId` of `1` that is held by the caller on the `NFTSwap` and set the price to 1 `wei`.
 
@@ -231,7 +231,7 @@ Call the `nftList()` function of the `NFTSwap` contract to view the listed NFT.
 
 `nftList[_nftAddr][_tokenId]`: Input `_nftAddr` and `_tokenId`, and return an NFT order.
 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/38_NFTSwap_en/step1/img/38-7.png)
+![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step8/img/38-7.png)
 
 ### 6. Update NFT Price
 
@@ -277,7 +277,7 @@ The `purchase(address _nftAddr, uint256 _tokenId, uint256 _wei)` method has thre
 
 `_wei`: `_wei` is the amount of `ETH` to be paid, which is 77 `wei` in this example.
 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/38_NFTSwap_en/step1/img/38-11.png)
+![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step8/img/38-11.png)
 
 ### 7. Verify change of NFT owner.
 

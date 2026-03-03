@@ -132,23 +132,23 @@ There are `2` functions in the `TokenLocker` contract.
 
 ### 1. Deploy the `ERC20` contract in [Lesson 31](../31_ERC20/readme.md), and mint `10000` tokens for yourself
 
-![`Remix` Demonstration](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/44_TokenLocker_en/step1/img/44-2.png)
+![`Remix` Demonstration](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step14/img/44-2.png)
 
 ### 2. Deploy the `TokenLocker` contract with the `ERC20` contract address, set yourself as the beneficiary, and set the lock-up period to `180` seconds
 
-![`Remix` Demonstration](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/44_TokenLocker_en/step1/img/44-3.png)
+![`Remix` Demonstration](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step14/img/44-3.png)
 
 ### 3. Transfer `10000` tokens to the contract
 
-![`Remix` Demonstration](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/44_TokenLocker_en/step1/img/44-4.png)
+![`Remix` Demonstration](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step14/img/44-4.png)
 
 ### 4. Within the lock-up period of `180` seconds, call the `release()` function, but you won't be able to withdraw the tokens
 
-![`Remix` Demonstration](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/44_TokenLocker_en/step1/img/44-5.png)
+![`Remix` Demonstration](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step14/img/44-5.png)
 
 ### 5. After the lock-up period, call the `release()` function again, and successfully withdraw the tokens
 
-![`Remix` Demo](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/44_TokenLocker_en/step1/img/44-6.png)
+![`Remix` Demo](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step14/img/44-6.png)
 
 ## Summary
 

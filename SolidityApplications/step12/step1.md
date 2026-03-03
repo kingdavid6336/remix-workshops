@@ -23,7 +23,7 @@ In this lecture, we'll introduce the payment-splitting contract, which allows th
 
 Payment split is the act of dividing money according to a certain ratio. In real life, it is common to encounter situations where the spoils are not divided equally. However, in the world of blockchain, `Code is Law`, we can write the proportion that each person should get in the smart contract in advance, and let the smart contract handle the split of income.
 
-![Payment Split](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/42_PaymentSplit_en/step1/img/42-1.webp)
+![Payment Split](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step12/img/42-1.webp)
 
 ## Payment Split Contract
 
@@ -195,21 +195,21 @@ There are `6` functions in the revenue-sharing contract:
 
 In the constructor, enter two beneficiary addresses with shares of `1` and `3`.
 
-![Deploying the contract](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/42_PaymentSplit_en/step1/img/42-2.png)
+![Deploying the contract](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step12/img/42-2.png)
 
 ### 2. View beneficiary addresses, shares, and `ETH` to be distributed
 
-![Viewing the first beneficiary](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/42_PaymentSplit_en/step1/img/42-3.png)
+![Viewing the first beneficiary](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step12/img/42-3.png)
 
-![Viewing the second beneficiary](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/42_PaymentSplit_en/step1/img/42-4.png)
+![Viewing the second beneficiary](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step12/img/42-4.png)
 
 ### 3. Call the `release` function to claim `ETH`
 
-![Calling the release function](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/42_PaymentSplit_en/step1/img/42-5.png)
+![Calling the release function](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step12/img/42-5.png)
 
 ### 4. View overall expenses, beneficiary balances, and changes in `ETH` to be distributed
 
-![View](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/42_PaymentSplit_en/step1/img/42-6.png)
+![View](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step12/img/42-6.png)
 
 ## Summary
 

@@ -10,7 +10,7 @@ The vault contract is the foundation of DeFi LEGO blocks. It allows you to stake
 
 ## ERC4626
 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step21c/img/51-1.png)
+![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step21a/img/51-1.png)
 
 Since the vault contract lacks standards, there are various ways of implementation. A yield aggregator needs to write many interfaces to connect with different DeFi projects. The ERC4626 Tokenized Vault Standard has emerged to enable easy expansion of DeFi with the following advantages:
 

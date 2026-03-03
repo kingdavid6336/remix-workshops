@@ -22,7 +22,7 @@ All code and tutorials are open source on Github: [github.com/AmazingAng/WTF-Sol
 
 Vitalik once said that a multisig wallet is safer than a hardware wallet ([tweet](https://twitter.com/VitalikButerin/status/1558886893995134978?s=20&t=4WyoEWhwHNUtAuABEIlcRw)). In this lesson, we'll introduce multisig wallets and write a simple version of a multisig wallet contract. The teaching code (150 lines of code) is simplified from the Gnosis Safe contract (several thousand lines of code).
 
-![Vitalik statement](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/50_MultisigWallet_en/step1/img/50-1.png)
+![Vitalik statement](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step20/img/50-1.png)
 
 ## Multisig Wallet
 
@@ -262,10 +262,10 @@ function signatureSplit(bytes memory signatures, uint256 pos)
     多签地址1: 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4
     多签地址2: 0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2
     ```
-    ![Transfer](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/50_MultisigWallet_en/step1/img/50-2.png)
+    ![Transfer](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step20/img/50-2.png)
 2. Transfer `1 ETH` to the multisig contract address.
 
-    ![Transfer](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/50_MultisigWallet_en/step1/img/50-3.png)
+    ![Transfer](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step20/img/50-3.png)
 
 3. Call `encodeTransactionData()`, encode and calculate the transaction hash for transferring `1 ETH` to the address of the multisig with index 1.
 
@@ -281,7 +281,7 @@ Result
 Transaction hash: 0xb43ad6901230f2c59c3f7ef027c9a372f199661c61beeec49ef5a774231fc39b
 ```
 
-![Calculate transaction hash](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/50_MultisigWallet_en/step1/img/50-4.png)
+![Calculate transaction hash](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step20/img/50-4.png)
 
 4. Use the note icon next to the ACCOUNT in Remix to sign the transaction. Input the above transaction hash and obtain the signature. Both wallets must be signed.
 
@@ -293,13 +293,13 @@ Transaction hash: 0xb43ad6901230f2c59c3f7ef027c9a372f199661c61beeec49ef5a774231f
     将两个签名拼接到一起，得到打包签名:  0x014db45aa753fefeca3f99c2cb38435977ebb954f779c2b6af6f6365ba4188df542031ace9bdc53c655ad2d4794667ec2495196da94204c56b1293d0fbfacbb11cbe2e0e6de5574b7f65cad1b7062be95e7d73fe37dd8e888cef5eb12e964ddc597395fa48df1219e7f74f48d86957f545d0fbce4eee1adfbaff6c267046ade0d81c
     ```
 
-![Signature](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/50_MultisigWallet_en/step1/img/50-5-1.png)
-![Signature](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/50_MultisigWallet_en/step1/img/50-5-2.png)
-![Signature](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/50_MultisigWallet_en/step1/img/50-5-3.png)
+![Signature](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step20/img/50-5-1.png)
+![Signature](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step20/img/50-5-2.png)
+![Signature](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step20/img/50-5-3.png)
 
 5. Call the `execTransaction()` function to execute the transaction, passing in the transaction parameters from step 3 and the packaged signature as parameters. You can see that the transaction was executed successfully and `ETH` was transferred from the multisig wallet.
 
-    ![Executing multisig wallet transaction](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/50_MultisigWallet_en/step1/img/50-6.png)
+    ![Executing multisig wallet transaction](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step20/img/50-6.png)
 
 ## Summary
 

@@ -132,23 +132,23 @@ contract Logic2 {
 ## Implementation with `Remix`
 
 1. Deploy new and old logic contracts `Logic1` and `Logic2`.
-![48-2.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/48_TransparentProxy_en/step1/img/48-2.png)
-![48-3.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/48_TransparentProxy_en/step1/img/48-3.png)
+![48-2.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step18/img/48-2.png)
+![48-3.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step18/img/48-3.png)
 
 2. Deploy a transparent proxy contract `TransparentProxy`, and set the `implementation` address to the address of the old logic contract.
-![48-4.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/48_TransparentProxy_en/step1/img/48-4.png)
+![48-4.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step18/img/48-4.png)
 
 3. Using the selector `0xc2985578`, call the `foo()` function of the old logic contract `Logic1` in the proxy contract. The call will fail because the admin is not allowed to call the logic contract.
-![48-5.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/48_TransparentProxy_en/step1/img/48-5.png)
+![48-5.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step18/img/48-5.png)
 
 4. Switch to a new wallet, use the selector `0xc2985578` to call the `foo()` function of the old logic contract `Logic1` in the proxy contract, and change the value of `words` to `"old"`. The call will be successful.
-![48-6.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/48_TransparentProxy_en/step1/img/48-6.png)
+![48-6.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step18/img/48-6.png)
 
 5. Switch back to the admin wallet and call `upgrade()`, setting the `implementation` address to the new logic contract `Logic2`.
-![48-7.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/48_TransparentProxy_en/step1/img/48-7.png)
+![48-7.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step18/img/48-7.png)
 
 6. Switch to the new wallet, use the selector `0xc2985578` to call the `foo()` function of the new logic contract `Logic2` in the proxy contract, and change the value of `words` to `"new"`.
-![48-8.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/48_TransparentProxy_en/step1/img/48-8.png)
+![48-8.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step18/img/48-8.png)
 
 ## Summary
 

@@ -26,7 +26,7 @@ In this lecture, we will briefly introduce the digital signature `ECDSA` in Ethe
 
 If you have traded `NFT` on `opensea`, you are no stranger to signatures. The following picture shows the window that pops up when the `metamask` wallet signs, which can prove that you own the private key without exposing it to the public.
 
-![metamask signing](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/37_Signature_en/step1/img/37-1.png)
+![metamask signing](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step7/img/37-1.png)
 
 The digital signature algorithm used in Ethereum is called the Elliptic Curve Digital Signature Algorithm (`ECDSA`), which is a digital signature algorithm based on the "private-public key" pair of elliptic curves. It mainly plays [three roles](https://en.wikipedia.org/wiki/Digital_signature):
 
@@ -67,7 +67,7 @@ function getMessageHash(address _account, uint256 _tokenId) public pure returns(
 }
 ```
 
-![Packed message](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/37_Signature_en/step1/img/37-2.png)
+![Packed message](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step7/img/37-2.png)
 
 **2. Calculate Ethereum Signature Message:** The `message` can be an executable transaction or anything else. In order to prevent users from signing malicious transactions by mistake, `EIP191` recommends adding the `"\x19Ethereum Signed Message:\n32"` character before the `message`, and then doing another `keccak256` hash to create the `Ethereum Signature Message`. The message processed by the `toEthSignedMessageHash()` function cannot be used to execute transactions.
 
@@ -91,7 +91,7 @@ The processed message is:
 Ethereum signed message: 0xb42ca4636f721c7a331923e764587e98ec577cea1a185f60dfcc14dbb9bd900b
 ```
 
-![Ethereum Signing Message](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/37_Signature_en/step1/img/37-3.png)
+![Ethereum Signing Message](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step7/img/37-3.png)
 
 **3-1. Sign with wallet:** In daily operations, most users sign messages using this method. After obtaining the message that needs to be signed, we need to use the `Metamask` wallet to sign it. The `personal_sign` method of `Metamask` will automatically convert the `message` into an `Ethereum signed message` and then initiate the signature. So we only need to input the `message` and the `signer wallet account`. It should be noted that the input `signer wallet account` needs to be consistent with the account currently connected by `Metamask`.
 
@@ -110,7 +110,7 @@ The created signature can be seen in the returned result (`PromiseResult`). Diff
 0x390d704d7ab732ce034203599ee93dd5d3cb0d4d1d7c600ac11726659489773d559b12d220f99f41d17651b0c1c6a669d346a397f8541760d6b32a5725378b241c
 ```
 
-![Sign with Metamask through browser console](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/37_Signature_en/step1/img/37-4.jpg)
+![Sign with Metamask through browser console](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step7/img/37-4.jpg)
 
 **3-2. Signing with web3.py:** When it comes to batch calling, signing with code is preferred. The following is an implementation based on web3.py.
 
@@ -164,7 +164,7 @@ _msgHash：0xb42ca4636f721c7a331923e764587e98ec577cea1a185f60dfcc14dbb9bd900b
 _signature：0x390d704d7ab732ce034203599ee93dd5d3cb0d4d1d7c600ac11726659489773d559b12d220f99f41d17651b0c1c6a669d346a397f8541760d6b32a5725378b241c
 ```
 
-![Public key recovery by signature and message](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/37_Signature_en/step1/img/37-8.png)
+![Public key recovery by signature and message](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step7/img/37-8.png)
 
 **5. Compare public keys and verify the signature:** Next, we just need to compare the recovered `public key` with the signer's public key `_signer` to determine if they are equal: if they are, the signature is valid; otherwise, the signature is invalid.
 
@@ -188,7 +188,7 @@ _signature：0x390d704d7ab732ce034203599ee93dd5d3cb0d4d1d7c600ac11726659489773d5
 _signer：0xe16C1623c1AA7D919cd2241d8b36d9E79C1Be2A2
 ```
 
-![Comparing public keys and verifying signatures:](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/37_Signature_en/step1/img/37-9.png)
+![Comparing public keys and verifying signatures:](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step7/img/37-9.png)
 ## Using Signatures to Issue Whitelist for NFTs
 
 The `NFT` project can use the feature of `ECDSA` to issue a whitelist. Since the signature is off-chain and does not require `gas`, this whitelist issuance mode is more economical than the `Merkle Tree` mode. The method is very simple. The project uses the project account to sign the whitelist issuance address (can add the `tokenId` that the address can mint). Then, when `minting`, use `ECDSA` to check if the signature is valid. If it is valid, give it `mint`.
@@ -276,11 +276,11 @@ _tokenId: 0
 _signature: 0x390d704d7ab732ce034203599ee93dd5d3cb0d4d1d7c600ac11726659489773d559b12d220f99f41d17651b0c1c6a669d346a397f8541760d6b32a5725378b241c
 ```
 
-![Deploying SignatureNFT Contract](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/37_Signature_en/step1/img/37-6.png)
+![Deploying SignatureNFT Contract](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step7/img/37-6.png)
 
 - By calling the `ownerOf()` function, we can see that `tokenId = 0` has been successfully minted to the address `_account`, indicating that the contract has been executed successfully!
 
-![The owner of tokenId 0 has been changed, indicating that the contract has been executed successfully!](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/37_Signature_en/step1/img/37-7.png)
+![The owner of tokenId 0 has been changed, indicating that the contract has been executed successfully!](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step7/img/37-7.png)
 
 ## Summary
 

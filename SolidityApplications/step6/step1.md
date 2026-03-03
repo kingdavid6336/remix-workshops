@@ -60,7 +60,7 @@ Select the `Keccak-256`, `hashLeaves`, and `sortPairs` options in the menu, then
       └─ Leaf3：dfbe3e504ac4e35541bebad4d0e7574668e16fefa26cd4172f93e18b59ce9486
 ```
 
-![Generating Merkle Tree](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/36_MerkleTree_en/step1/img/36-3.png)
+![Generating Merkle Tree](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step6/img/36-3.png)
 
 ## Verification of `Merkle Proof`
 Through the website, we can obtain the `proof` of `address 0` as follows, which is the hash value of the blue node in Figure 2:
@@ -186,7 +186,7 @@ symbol = "WTF"
 merkleroot = 0xeeefd63003e0e702cb41cd0043015a6e26ddb38073cc6ffeb0ba3e808ba8c097
 ```
 
-![Deploying MerkleTree contract](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/36_MerkleTree_en/step1/img/36-5.png)
+![Deploying MerkleTree contract](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step6/img/36-5.png)
 
 Next, run the `mint` function to mint an `NFT` for address 0, using three parameters:
 

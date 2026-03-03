@@ -23,7 +23,7 @@ In this lecture, we will learn about `WETH` - the wrapped version of `ETH`.
 
 ## What is `WETH`?
 
-![WETH](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/41_WETH_en/step1/img/41-1.gif)
+![WETH](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step11/img/41-1.gif)
 
 `WETH` (Wrapped ETH) is a wrapped version of `ETH`. The commonly seen `WETH`, `WBTC`, and `WBNB` are all wrapped native tokens. Why do we need to wrap them?
 
@@ -103,35 +103,35 @@ In addition to the `ERC20` standard functions, the `WETH` contract has `5` addit
 
 Deploy the `WETH` contract as shown in the image.
 
-![WETH](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/41_WETH_en/step1/img/41-2.jpg)
+![WETH](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step11/img/41-2.jpg)
 
 ### 2. Execute `deposit` to deposit `1 ETH`, and check the `WETH` balance
 
 Execute the `deposit` function to deposit `1 ETH`, and check the `WETH` balance.
 
-![WETH](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/41_WETH_en/step1/img/41-3.jpg)
+![WETH](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step11/img/41-3.jpg)
 
 At this point, the `WETH` balance is `1 WETH`.
 
-![WETH](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/41_WETH_en/step1/img/41-4.jpg)
+![WETH](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step11/img/41-4.jpg)
 
 ### 3. Transfer `1 ETH` directly to the `WETH` contract, and check the `WETH` balance
 
 Transfer `1 ETH` directly to the `WETH` contract, and check the `WETH` balance.
 
-![WETH](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/41_WETH_en/step1/img/41-5.jpg)
+![WETH](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step11/img/41-5.jpg)
 
 At this point, the `WETH` balance is `2 WETH`.
 
-![WETH](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/41_WETH_en/step1/img/41-6.jpg)
+![WETH](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step11/img/41-6.jpg)
 
 ### 4. Call `withdraw` to withdraw `1.5 ETH`, and check the `WETH` balance
 
-![WETH](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/41_WETH_en/step1/img/41-7.jpg)
+![WETH](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step11/img/41-7.jpg)
 
 At this point, the `WETH` balance is `0.5 WETH`.
 
-![WETH](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/41_WETH_en/step1/img/41-8.jpg)
+![WETH](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step11/img/41-8.jpg)
 
 ## Summary
 

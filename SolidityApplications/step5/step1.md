@@ -24,7 +24,7 @@ In this lecture, I will introduce the Dutch Auction and explain how to issue an 
 
 The Dutch Auction is a special type of auction. Also known as a "descending price auction," it refers to an auction where the bidding for the item being auctioned starts high and decreases sequentially until the first bidder bids (reaches or exceeds the bottom price) and it is sold.
 
-![Dutch Auction](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/35_DutchAuction_en/step1/img/35-1.png)
+![Dutch Auction](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step5/img/35-1.png)
 
 In the cryptocurrency world, many NFTs are sold through Dutch auctions, including `Azuki` and `World of Women`, with `Azuki` raising over `8000` `ETH` through a Dutch auction.
 
@@ -157,13 +157,13 @@ First, the function checks if the auction has started or if the number of `NFTs`
 ## Demo of Remix
 
 1. Contract Deployment: First, deploy the `DutchAuction.sol` contract and set the auction start time through the `setAuctionStartTime()` function. In this example, the start time is March 19, 2023, 14:34 am, corresponding to UTC time 1679207640. You can search for the corresponding time on a tool website (such as [here](https://tool.chinaz.com/tools/unixtime.aspx)) during the experiment.
-![Set auction start time](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/35_DutchAuction_en/step1/img/35-2.png)
+![Set auction start time](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step5/img/35-2.png)
 
 2. Dutch Auction: Then, you can use the `getAuctionPrice()` function to get the **current** auction price. It can be observed that the price before the auction starts is `starting price AUCTION_START_PRICE`. As the auction proceeds, the auction price gradually decreases until it reaches the `reserve price AUCTION_END_PRICE`, after which it no longer changes.
-![Changes in Dutch auction prices](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/35_DutchAuction_en/step1/img/35-3.png)
+![Changes in Dutch auction prices](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step5/img/35-3.png)
 
 3. Mint Operation: Complete mint through the `auctionMint()` function. In this example, because the time has exceeded the auction time, only the `reserve price` was spent to complete the auction.
-![Complete Dutch auction](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/35_DutchAuction_en/step1/img/35-4.png)
+![Complete Dutch auction](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step5/img/35-4.png)
 
 4. Withdrawal of `ETH`: You can directly send the raised `ETH` to the contract creator's address through the `withdrawMoney()` function.
 

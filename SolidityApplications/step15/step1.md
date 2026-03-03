@@ -21,7 +21,7 @@ In this lesson, we introduce time locks and time lock contracts. The code is bas
 
 ## Timelock
 
-![Timelock](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/45_Timelock_en/step1/img/45-1.jpeg)
+![Timelock](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step15/img/45-1.jpeg)
 
 A timelock is a locking mechanism commonly found in bank vaults and other high-security containers. It is a timer designed to prevent a safe or vault from being opened before a predetermined time, even if the person unlocking it knows the correct password.
 
@@ -320,11 +320,11 @@ There are a total of 7 functions in the `Timelock` contract.
 
 ### 1. Deploy the `Timelock` contract with a lockup period of `120` seconds
 
-![`Remix` Demo](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/45_Timelock_en/step1/img/45-1.jpg)
+![`Remix` Demo](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step15/img/45-1.jpg)
 
 ### 2. Calling `changeAdmin()` directly will result in an error
 
-![`Remix` Demo](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/45_Timelock_en/step1/img/45-2.jpg)
+![`Remix` Demo](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step15/img/45-2.jpg)
 
 ### 3. Creating a transaction to change the administrator
 
@@ -342,23 +342,23 @@ address target, uint256 value, string memory signature, bytes memory data, uint2
   ```
 
 - `executeTime`: First, call `getBlockTimestamp()` to obtain the current time of the blockchain, and then add 150 seconds to it and fill it in.
-  ![`Remix` Demo](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/45_Timelock_en/step1/img/45-3.jpg)
+  ![`Remix` Demo](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step15/img/45-3.jpg)
 
 ### 4. Call `queueTransaction` to add the transaction to the time-lock queue
 
-![`Remix` Demo](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/45_Timelock_en/step1/img/45-4.jpg)
+![`Remix` Demo](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step15/img/45-4.jpg)
 
 ### 5. Calling `executeTransaction` within the locking period will fail
 
-![`Remix` Demo](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/45_Timelock_en/step1/img/45-5.jpg)
+![`Remix` Demo](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step15/img/45-5.jpg)
 
 ### 6. Calling `executeTransaction` after the locking period has expired will result in a successful transaction
 
-![`Remix` Demo](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/45_Timelock_en/step1/img/45-6.jpg)
+![`Remix` Demo](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step15/img/45-6.jpg)
 
 ### 7. Check the new `admin` address
 
-![`Remix` Demo](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/45_Timelock_en/step1/img/45-7.jpg)
+![`Remix` Demo](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step15/img/45-7.jpg)
 
 ## Conclusion
 

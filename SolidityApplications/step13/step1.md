@@ -132,21 +132,21 @@ There are `3` functions in the LinearVesting contract.
 
 ### 1. Deploy the `ERC20` contract in [Lesson 31](../31_ERC20/readme.md), and mint yourself `1000` tokens.
 
-![Deploy ERC20](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/43_TokenVesting_en/step1/img/43-2.png)
+![Deploy ERC20](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step13/img/43-2.png)
 
-![Mint 1000 tokens](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/43_TokenVesting_en/step1/img/43-3.png)
+![Mint 1000 tokens](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step13/img/43-3.png)
 
 ### 2. Deploy the `TokenVesting` contract for linear release, set yourself as the beneficiary, and set the vesting period to `100` seconds.
 
-![Deploy TokenVesting](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/43_TokenVesting_en/step1/img/43-4.png)
+![Deploy TokenVesting](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step13/img/43-4.png)
 
 ### 3. Transfer `1000` `ERC20` tokens to the linear release contract.
 
-![Transfer tokens](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/43_TokenVesting_en/step1/img/43-5.png)
+![Transfer tokens](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step13/img/43-5.png)
 
 ### 4. Call the `release()` function to extract the tokens.
 
-![Release tokens](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/43_TokenVesting_en/step1/img/43-6.png)
+![Release tokens](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step13/img/43-6.png)
 
 ## Summary
 

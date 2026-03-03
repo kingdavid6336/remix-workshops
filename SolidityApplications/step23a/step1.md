@@ -13,7 +13,7 @@ EIP-2612 proposes ERC20Permit, which extends the ERC20 standard by adding a `per
 1. The authorization step only requires the user to sign off the chain, reducing one transaction.
 2. After signing, the user can entrust a third party to perform subsequent transactions without holding ETH: User A can send the signature to a third party B who has gas, and entrust B to execute subsequent transactions.
 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step23b/img/53-1.png)
+![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step23a/img/53-1.png)
 
 ## Contract
 
