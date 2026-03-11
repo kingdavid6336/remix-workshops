@@ -3,8 +3,8 @@ name: Decentralized Exchange
 summary: Build a decentralized exchange (DEX) from scratch, learning about automated market makers (AMM), liquidity pools, and token swapping mechanisms.
 level: 2
 tags:
-- solidity
-- erc20
+- Solidity
+- Erc20
 - Defi
 steps:
 - name: Core Concepts
