@@ -4,10 +4,10 @@ summary: Understand selector clash attacks that exploit function signature colli
 level: 2
 priority: 49
 tags:
-- solidity
-- security
-- selector
-- abi encode
+- Solidity
+- Security
+- Selector
+- Abi Encode
 steps:
 - name: Selector Clash
   path: clash

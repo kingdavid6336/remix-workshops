@@ -17,11 +17,11 @@ contract SelectorClash {
         (success, ) = address(this).call(abi.encodePacked(bytes4(keccak256(abi.encodePacked(_method, "(bytes,bytes,uint64)"))), abi.encode(_bytes, _bytes1, _num)));
     }
 
-    function secretSlector() external pure returns(bytes4){
+    function secretSelector() external pure returns(bytes4){
         return bytes4(keccak256("putCurEpochConPubKeyBytes(bytes)"));
     }
 
-    function hackSlector() external pure returns(bytes4){
+    function hackSelector() external pure returns(bytes4){
         return bytes4(keccak256("f1121318093(bytes,bytes,uint64)"));
     }
 }
