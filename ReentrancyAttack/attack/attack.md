@@ -2,17 +2,16 @@ In this lesson, we will introduce the most common type of smart contract attack 
 
 ## Reentrancy Attack
 
-Reentrancy attack is the most common type of attack in smart contracts, where attackers exploit contract vulnerabilities (such as the fallback function) to repeatedly call the contract, transferring or minting a large number of tokens.
+Reentrancy attack is the most common type of attack in smart contracts, where attackers exploit contract vulnerabilities (such as the receive or fallback function) to repeatedly call the contract, transferring or minting a large number of tokens.
 
 Some notable reentrancy attack incidents include:
 
 - In 2016, The DAO contract was subjected to a reentrancy attack, resulting in the theft of 3,600,000 ETH from the contract and the Ethereum fork into the ETH chain and ETC (Ethereum Classic) chain.
-- In 2019, the synthetic asset platform Synthetix suffered a reentrancy attack, resulting in the theft of 3,700,000 sETH.
 - In 2020, the lending platform Lendf.me suffered a reentrancy attack, resulting in a theft of $25,000,000.
 - In 2021, the lending platform CREAM FINANCE suffered a reentrancy attack, resulting in a theft of $18,800,000.
 - In 2022, the algorithmic stablecoin project Fei suffered a reentrancy attack, resulting in a theft of $80,000,000.
 
-It has been 6 years since The DAO was subjected to a reentrancy attack, but there are still several projects each year that suffer multimillion-dollar losses due to reentrancy vulnerabilities. Therefore, understanding this vulnerability is crucial.
+Since The DAO hack in 2016, there are still several projects each year that suffer multimillion-dollar losses due to reentrancy vulnerabilities. Therefore, understanding this vulnerability is crucial.
 
 ## The Story of `0xAA` Robbing the Bank
 
@@ -78,13 +77,13 @@ contract Bank {
 
 ### Attack Contract
 
-One vulnerability point of a reentrancy attack is the transfer of `ETH` in the contract: if the target address of the transfer is a contract, it will trigger the fallback function of the contract, potentially causing a loop. If you are not familiar with fallback functions, you can read [WTF Solidity: 19: Receive ETH](https://github.com/AmazingAng/WTF-Solidity/blob/main/Languages/en/19_Fallback_en/readme.md). The `Bank` contract has an `ETH` transfer in the `withdraw()` function:
+One vulnerability point of a reentrancy attack is the transfer of `ETH` in the contract: if the target address of the transfer is a contract, it will trigger the receive or fallback function of the contract, potentially causing a loop. If you are not familiar with receive and fallback functions, you can read [WTF Solidity: 19: Receive ETH](https://github.com/AmazingAng/WTF-Solidity/blob/main/Languages/en/19_Fallback_en/readme.md). The `Bank` contract has an `ETH` transfer in the `withdraw()` function:
 
 ```
 (bool success, ) = msg.sender.call{value: balance}("");
 ```
 
-If the hacker re-calls the `withdraw()` function of the `Bank` contract in the `fallback()` or `receive()` function of the attack contract, it will cause the same loop as in the story of `0xAA` robbing the bank. The `Bank` contract will continuously transfer funds to the attacker, eventually emptying the contract's ETH balance.
+If the hacker re-calls the `withdraw()` function of the `Bank` contract in the `receive()` function (or a `fallback()` function, if defined) of the attack contract, it will cause the same loop as in the story of `0xAA` robbing the bank. The `Bank` contract will continuously transfer funds to the attacker, eventually emptying the contract's ETH balance.
 
 ```solidity
 receive() external payable {
@@ -92,10 +91,10 @@ receive() external payable {
 }
 ```
 
-Below, let's take a look at the attack contract. Its logic is very simple, which is to repeatedly call the `withdraw()` function of the `Bank` contract through the `receive()` fallback function. It has `1` state variable `bank` to record the address of the `Bank` contract. It includes `4` functions:
+Below, let's take a look at the attack contract. Its logic is very simple, which is to repeatedly call the `withdraw()` function of the `Bank` contract through the `receive()` function. It has `1` state variable `bank` to record the address of the `Bank` contract. It includes `4` functions:
 
 - Constructor: Initializes the `Bank` contract address.
-- `receive()`: The fallback function triggered when receiving ETH, which calls the `withdraw()` function of the `Bank` contract again in a loop for withdrawal.
+- `receive()`: The receive function triggered when the contract receives ETH, which calls the `withdraw()` function of the `Bank` contract again in a loop for withdrawal.
 - `attack()`: The attack function that first deposits funds into the `Bank` contract using the `deposit()` function, then initiates the first withdrawal by calling `withdraw()`. After that, the `withdraw()` function of the `Bank` contract and the `receive()` function of the attack contract will be called in a loop, emptying the ETH balance of the `Bank` contract.
 - `getBalance()`: Retrieves the ETH balance in the attack contract.
 
@@ -139,11 +138,11 @@ contract Attack {
 
 ## How to Prevent
 
-Currently, there are two main methods to prevent potential reentrancy attack vulnerabilities: checks-effect-interaction pattern and reentrant lock.
+Currently, there are two main methods to prevent potential reentrancy attack vulnerabilities: checks-effects-interactions pattern and reentrant lock.
 
-### Checks-Effect-Interaction Pattern
+### Checks-Effects-Interactions Pattern
 
-The "Check-Effects-Interactions" pattern emphasizes that when writing functions, you should first check if state variables meet the requirements, then immediately update the state variables (such as balances), and finally interact with other contracts. If we update the balance in the `withdraw()` function of the `Bank` contract before transferring `ETH`, we can fix the vulnerability.
+The "Checks-Effects-Interactions" pattern emphasizes that when writing functions, you should first check if state variables meet the requirements, then immediately update the state variables (such as balances), and finally interact with other contracts. If we update the balance in the `withdraw()` function of the `Bank` contract before transferring `ETH`, we can fix the vulnerability.
 
 ```solidity
 function withdraw() external {
@@ -193,4 +192,4 @@ function withdraw() external nonReentrant{
 
 ## Summary
 
-In this lesson, we introduced the most common attack in Ethereum - the reentrancy attack and made a story of robbing a bank with `0xAA` to help understand it. Finally, we discussed two methods to prevent reentrancy attacks: the checks-effect-interaction pattern and the reentrant lock. In the example, the hacker exploited the fallback function to perform a reentrancy attack during the `ETH` transfer in the target contract. In real-world scenarios, the `safeTransfer()` and `safeTransferFrom()` functions of `ERC721` and `ERC1155`, as well as the fallback function of `ERC777`, can also potentially trigger reentrancy attacks. For beginners, my suggestion is to use a reentrant lock to protect all `external` functions that can change the contract state. Although it may consume more `gas`, it can prevent greater losses.
+In this lesson, we introduced the most common attack in Ethereum - the reentrancy attack and made a story of robbing a bank with `0xAA` to help understand it. Finally, we discussed two methods to prevent reentrancy attacks: the checks-effects-interactions pattern and the reentrant lock. In the example, the hacker exploited the receive function to perform a reentrancy attack during the `ETH` transfer in the target contract. In real-world scenarios, the `safeTransfer()` and `safeTransferFrom()` functions of `ERC721` and `ERC1155`, as well as the receive/fallback hooks of `ERC777`, can also potentially trigger reentrancy attacks. For beginners, my suggestion is to use a reentrant lock to protect all `external` functions that can change the contract state. Although it may consume more `gas`, it can prevent greater losses.

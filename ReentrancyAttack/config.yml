@@ -4,10 +4,10 @@ summary: Learn about the most common type of smart contract attack - reentrancy 
 level: 2
 priority: 48
 tags:
-- solidity
-- security
-- fallback
-- modifier
+- Solidity
+- Security
+- Fallback
+- Modifier
 steps:
 - name: Reentrancy Attack
   path: attack
