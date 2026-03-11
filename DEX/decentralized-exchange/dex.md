@@ -64,8 +64,9 @@ function addLiquidity(uint amount0Desired, uint amount1Desired) public returns(u
      } else {
          // If it is not the first time to add liquidity, LP will be minted in proportion to the number of added tokens, and the smaller ratio of the two tokens will be used.
          liquidity = min(amount0Desired * _totalSupply / reserve0, amount1Desired * _totalSupply /reserve1);
+     }
 
-   // Check the amount of LP minted
+     // Check the amount of LP minted
      require(liquidity > 0, 'INSUFFICIENT_LIQUIDITY_MINTED');
 
      // Update reserve
@@ -92,7 +93,7 @@ The following `removeLiquidity()` function implements the function of removing l
 4. Destroy LP shares.
 5. Transfer the corresponding tokens to the user.
 6. Update reserves.
-5. Release the `Burn` event.
+7. Release the `Burn` event.
 
 ```solidity
 // Remove liquidity, destroy LP, and transfer tokens
@@ -131,7 +132,6 @@ According to the constant product formula, before trading:
 
 ```text
 $$k=x*y$$
-
 ```
 
 After the transaction, there are:
@@ -174,7 +174,7 @@ With this core formula in place, we can start implementing the trading function.
 // @param tokenIn token contract address used for exchange
 // @param amountOutMin the minimum amount to exchange for another token
 function swap(uint amountIn, IERC20 tokenIn, uint amountOutMin) external returns (uint amountOut, IERC20 tokenOut){
-    require(amountIn > 0, 'INSUFFICIENT_OUTPUT_AMOUNT');
+    require(amountIn > 0, 'INSUFFICIENT_INPUT_AMOUNT');
     require(tokenIn == token0 || tokenIn == token1, 'INVALID_TOKEN');
     
     uint balance0 = token0.balanceOf(address(this));
@@ -185,16 +185,16 @@ function swap(uint amountIn, IERC20 tokenIn, uint amountOutMin) external returns
          tokenOut = token1;
          // Calculate the number of token1 that can be exchanged
          amountOut = getAmountOut(amountIn, balance0, balance1);
-         require(amountOut > amountOutMin, 'INSUFFICIENT_OUTPUT_AMOUNT');
+         require(amountOut >= amountOutMin, 'INSUFFICIENT_OUTPUT_AMOUNT');
          //Exchange
          tokenIn.transferFrom(msg.sender, address(this), amountIn);
          tokenOut.transfer(msg.sender, amountOut);
      }else{
          // If token1 is exchanged for token0
          tokenOut = token0;
-         // Calculate the number of token1 that can be exchanged
+         // Calculate the number of token0 that can be exchanged
         amountOut = getAmountOut(amountIn, balance1, balance0);
-        require(amountOut > amountOutMin, 'INSUFFICIENT_OUTPUT_AMOUNT');
+        require(amountOut >= amountOutMin, 'INSUFFICIENT_OUTPUT_AMOUNT');
         //Exchange
          tokenIn.transferFrom(msg.sender, address(this), amountIn);
          tokenOut.transfer(msg.sender, amountOut);

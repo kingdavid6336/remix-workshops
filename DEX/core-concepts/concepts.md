@@ -5,7 +5,7 @@ In this lecture, we will introduce the Constant Product Automated Market Maker (
 
 An Automated Market Maker (AMM) is an algorithm or a smart contract that runs on the blockchain, which allows decentralized transactions between digital assets. The introduction of AMM has created a new trading method that does not require traditional buyers and sellers to match orders. Instead, a liquidity pool is created through a preset mathematical formula (such as a constant product formula), allowing users to trade at any time. Trading.
 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/DEX/img/56-1.png)
+![A traditional order book from a centralized exchange, where buyers and sellers manually match orders — AMMs replace this mechanism with a liquidity pool and a mathematical formula.](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/DEX/img/56-1.png)
 
 Next, we will introduce AMM to you, taking the markets of Coke ($COLA) and US Dollar ($USD) as examples. For convenience, we specify the symbols: $x$ and $y$ respectively represent the total amount of cola and dollars in the market, $\Delta x$ and $\Delta y$ respectively represent the changes in cola and dollars in a transaction, $L$ and $\Delta L$ represent total liquidity and changes in liquidity.
 

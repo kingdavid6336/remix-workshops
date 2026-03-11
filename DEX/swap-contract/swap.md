@@ -18,4 +18,4 @@ The complete code of `SimpleSwap` is as follows:
 
 ## Summary
 
-In this lecture, we introduced the constant product automatic market maker and wrote a minimalist decentralized exchange. In the minimalist Swap contract, we have many parts that we have not considered, such as transaction fees and governance parts. If you are interested in decentralized exchanges, it is recommended that you read [Programming DeFi: Uniswap V2](https://jeiwan.net/posts/programming-defi-uniswapv2-1/) and [Uniswap v3 book](https: //y1cunhui.github.io/uniswapV3-book-zh-cn/) for more in-depth learning.
+In this lecture, we introduced the constant product automatic market maker and wrote a minimalist decentralized exchange. In the minimalist Swap contract, we have many parts that we have not considered, such as transaction fees and governance parts. If you are interested in decentralized exchanges, it is recommended that you read [Programming DeFi: Uniswap V2](https://jeiwan.net/posts/programming-defi-uniswapv2-1/) and [Uniswap v3 book](https://y1cunhui.github.io/uniswapV3-book-zh-cn/) for more in-depth learning.

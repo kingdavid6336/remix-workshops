@@ -123,7 +123,7 @@ contract SimpleSwap is ERC20 {
      // @param tokenIn token contract address used for exchange
      // @param amountOutMin the minimum amount to exchange for another token
     function swap(uint amountIn, IERC20 tokenIn, uint amountOutMin) external returns (uint amountOut, IERC20 tokenOut){
-        require(amountIn > 0, 'INSUFFICIENT_OUTPUT_AMOUNT');
+        require(amountIn > 0, 'INSUFFICIENT_INPUT_AMOUNT');
         require(tokenIn == token0 || tokenIn == token1, 'INVALID_TOKEN');
         
         uint balance0 = token0.balanceOf(address(this));
@@ -134,16 +134,16 @@ if(tokenIn == token0){
              tokenOut = token1;
              // Calculate the number of token1 that can be exchanged
              amountOut = getAmountOut(amountIn, balance0, balance1);
-             require(amountOut > amountOutMin, 'INSUFFICIENT_OUTPUT_AMOUNT');
+             require(amountOut >= amountOutMin, 'INSUFFICIENT_OUTPUT_AMOUNT');
              //Exchange
              tokenIn.transferFrom(msg.sender, address(this), amountIn);
              tokenOut.transfer(msg.sender, amountOut);
          }else{
              // If token1 is exchanged for token0
              tokenOut = token0;
-             // Calculate the number of token1 that can be exchanged
+             // Calculate the number of token0 that can be exchanged
              amountOut = getAmountOut(amountIn, balance1, balance0);
-             require(amountOut > amountOutMin, 'INSUFFICIENT_OUTPUT_AMOUNT');
+             require(amountOut >= amountOutMin, 'INSUFFICIENT_OUTPUT_AMOUNT');
              //Exchange
              tokenIn.transferFrom(msg.sender, address(this), amountIn);
              tokenOut.transfer(msg.sender, amountOut);
