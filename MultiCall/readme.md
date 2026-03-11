@@ -1,3 +1,3 @@
-# WTF Minimalist introduction to Solidity: Multiple calls
+# An introduction to Multiple calls in Solidity
 
-In this lecture, we will introduce the MultiCall multi-call contract, which is designed to execute multiple function calls in one transaction, which can significantly reduce transaction fees and improve efficiency.
+In this lecture, we will introduce the MultiCall contract, which is designed to execute multiple function calls in one transaction, which can significantly reduce transaction fees and improve efficiency. Original tutorial by the [WTF academy](https://www.wtf.academy/en).

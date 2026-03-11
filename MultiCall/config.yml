@@ -4,8 +4,8 @@ summary: Learn how to aggregate multiple contract calls into a single transactio
 level: 2
 priority: 55
 tags:
-- solidity
-- erc20
+- Solidity
+- Erc20
 steps:
 - name: Introduction to Solidity Multi calls
   path: intro
