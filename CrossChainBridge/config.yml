@@ -4,10 +4,10 @@ summary: Understand how cross-chain bridges work and learn to implement secure b
 level: 2
 priority: 50
 tags:
-- solidity
-- erc20
-- eip712
-- openzepplin
+- Solidity
+- Erc20
+- Eip712
+- Openzeppelin
 steps:
 - name: Introduction to Cross-chain bridges
   path: intro
