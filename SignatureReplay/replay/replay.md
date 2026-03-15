@@ -75,6 +75,7 @@ contract SigReplay is ERC20 {
     function verify(bytes32 _msgHash, bytes memory _signature) public view returns (bool){
         return ECDSA.recover(_msgHash, _signature) == signer;
     }
+}
 ```
 
 **Note:** The `badMint()` function does not check for duplicate `signature`, allowing the same signature to be used multiple times, resulting in unlimited token minting.

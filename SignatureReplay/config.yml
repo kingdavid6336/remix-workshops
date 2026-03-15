@@ -3,9 +3,9 @@ name: Signature Replay
 summary: Learn about signature replay attacks where valid signatures can be reused maliciously. Understand nonces, chain IDs, and other techniques to prevent signature replay vulnerabilities.
 level: 2
 tags:
-- solidity
-- security
-- signature
+- Solidity
+- Security
+- Signature
 steps:
 - name: Signature Replay
   path: replay

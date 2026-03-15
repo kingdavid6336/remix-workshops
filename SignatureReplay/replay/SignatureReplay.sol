@@ -3,10 +3,9 @@
 pragma solidity ^0.8.21;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
 
-// Access control bad example
+// Signature replay vulnerable contract example
 contract SigReplay is ERC20 {
 
     address public signer;
