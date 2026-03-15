@@ -1,13 +1,8 @@
-## Vulnerable Contract Example
-
-### Vulnerable Contract
-
 Let's take a look at an example of a vulnerable contract. The `SelectorClash` contract has one state variable `solved`, initialized as `false`, which the attacker needs to change to `true`. The contract has `2` main functions, named after the Poly Network vulnerable contract.
 
 1. `putCurEpochConPubKeyBytes()`: After calling this function, the attacker can change `solved` to `true` and complete the attack. However, this function checks `msg.sender == address(this)`, so the caller must be the contract itself. We need to look at other functions.
 
 2. `executeCrossChainTx()`: This function allows calling functions within the contract, but the function parameters are slightly different from the target function: the target function takes `(bytes)` as parameters, while this function takes `(bytes, bytes, uint64)`.
-
 
 ### How to Attack
 
