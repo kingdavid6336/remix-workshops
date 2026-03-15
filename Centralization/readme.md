@@ -1,3 +1,1 @@
-# Centralization Risks
-
-In this lesson, we will discuss the risks of centralization and pseudo-decentralization in smart contracts. The `Ronin` bridge and `Harmony` bridge were hacked due to these vulnerabilities, resulting in the theft of $624 million and $100 million, respectively.
+In this lesson, we will discuss the risks of centralization and pseudo-decentralization in smart contracts. The `Ronin` bridge and `Harmony` bridge were hacked due to these vulnerabilities, resulting in the theft of $624 million and $100 million, respectively. Original tutorial by the [WTF Academy](https://www.wtf.academy/en).
