@@ -2,7 +2,7 @@
 pragma solidity ^0.8.20;
 
 import "forge-std/Test.sol";
-import "../src/UniswapV2Flashloan.sol";
+import "../uniswap-v2/UniswapV2Flashloan.sol"; // from the "Uniswap V2" step
 
 address constant WETH = 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2;
 

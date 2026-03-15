@@ -35,8 +35,8 @@ contract UniswapV3Flashloan is IUniswapV3FlashCallback {
 
      function getPool(
          address _token0,
-         address_token1,
-         uint24_fee
+         address _token1,
+         uint24 _fee
      ) public pure returns (address) {
          PoolAddress.PoolKey memory poolKey = PoolAddress.getPoolKey(
              _token0,
@@ -52,13 +52,13 @@ contract UniswapV3Flashloan is IUniswapV3FlashCallback {
          IUniswapV3Pool(pool).flash(address(this), 0, wethAmount, data);
      }
 
-     // Flash loan callback function can only be called by the DAI/WETH pair contract
+     // Flash loan callback function can only be called by the DAI/WETH pool contract
      function uniswapV3FlashCallback(
          uint fee0,
          uint fee1,
          bytes calldata data
      ) external {
-         // Confirm that the call is DAI/WETH pair contract
+         // Confirm that the call is from the DAI/WETH pool contract
          require(msg.sender == address(pool), "not authorized");
         
          //Decode calldata

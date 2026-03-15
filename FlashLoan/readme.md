@@ -1,3 +1,3 @@
-# WTF Minimalist introduction to Solidity: 57. Flash loan
+# Flash loan
 
-You must have heard the term “flash loan attack”, but what is a flash loan? How to write a flash loan contract? In this lecture, we will introduce flash loans in the blockchain, implement flash loan contracts based on Uniswap V2, Uniswap V3, and AAVE V3, and use Foundry for testing.
+You must have heard the term “flash loan attack”, but what is a flash loan? How to write a flash loan contract? In this lecture, we will introduce flash loans in the blockchain, implement flash loan contracts based on Uniswap V2, Uniswap V3, and AAVE V3, and use Foundry for testing. Original tutorial by the [WTF Academy](https://www.wtf.academy/en).

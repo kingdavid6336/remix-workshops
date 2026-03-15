@@ -2,11 +2,11 @@
 pragma solidity ^0.8.20;
 
 import "forge-std/Test.sol";
-import "../src/AaveV3Flashloan.sol";
+import "../aave-v3/AaveV3Flashloan.sol"; // from the "Aave v3" step
 
 address constant WETH = 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2;
 
-contract UniswapV2FlashloanTest is Test {
+contract AaveV3FlashloanTest is Test {
      IWETH private weth = IWETH(WETH);
 
      AaveV3Flashloan private flashloan;

@@ -47,7 +47,7 @@ contract AaveV3Flashloan {
          external
          returns (bool)
      {
-         // Confirm that the call is DAI/WETH pair contract
+         // Confirm that the call is from the AAVE V3 Pool contract
          require(msg.sender == AAVE_V3_POOL, "not authorized");
          // Confirm that the initiator of the flash loan is this contract
          require(initiator == address(this), "invalid initiator");
@@ -55,7 +55,7 @@ contract AaveV3Flashloan {
          // flashloan logic, omitted here
 
          // Calculate flashloan fees
-         // fee = 5/1000 * amount
+         // fee = 5/10000 * amount
          uint fee = (amount * 5) / 10000 + 1;
          uint amountToRepay = amount + fee;
 

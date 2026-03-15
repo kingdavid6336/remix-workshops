@@ -1,4 +1,4 @@
-AAVE is a decentralized lending platform. Its [Pool contract](https://github.com/aave/aave-v3-core/blob/master/contracts/protocol/pool/Pool.sol#L424) passes `flashLoan The two functions ()` and `flashLoanSimple()` support single-asset and multi-asset flash loans. Here, we only use `flashLoan()` to implement a flash loan of a single asset (`WETH`).
+AAVE is a decentralized lending platform. Its [Pool contract](https://github.com/aave/aave-v3-core/blob/master/contracts/protocol/pool/Pool.sol#L424) supports flash loans via `flashLoan()` (multi-asset) and `flashLoanSimple()` (single-asset). Here, we use `flashLoanSimple()` to implement a flash loan of a single asset (`WETH`).
 
 Next, we complete the flash loan contract `AaveV3Flashloan.sol`. We let it inherit `IFlashLoanSimpleReceiver` and write the core logic of flash loan in the callback function `executeOperation`.
 
