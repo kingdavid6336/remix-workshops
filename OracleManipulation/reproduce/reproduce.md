@@ -1,3 +1,7 @@
+# Reproduce on Foundry
+
+> **Note:** This step requires running Foundry locally on your machine. It cannot be run inside Remix. Install Foundry from [https://getfoundry.sh](https://getfoundry.sh) before proceeding.
+
 We will use Foundry to reproduce the manipulation attack on the Oracle because it is fast and allows us to create a local fork of the mainnet for testing. If you are not familiar with Foundry, you can read [WTF Solidity Tools T07: Foundry](https://github.com/AmazingAng/WTF-Solidity/blob/main/Topics/Tools/TOOL07_Foundry/readme.md).
 
 1. After installing Foundry, start a new project and install the OpenZeppelin library by running the following command in the command line:
@@ -14,16 +18,18 @@ forge install Openzeppelin/openzeppelin-contracts
 MAINNET_RPC_URL= https://rpc.ankr.com/eth
 ```
 
-3. Copy the code from this lesson, `Oracle.sol` and `Oracle.t.sol`, to the `src` and `test` folders respectively in the root directory, and then start the attack script with the following command:
+3. Copy the code from this lesson, `Vulnerability.sol` and `OracleTest.sol`, to the `src` and `test` folders respectively in the root directory, and then start the attack script with the following command:
 
-```
+```shell
 forge test -vv --match-test testOracleAttack
 ```
 
-4. We can see the attack result in the terminal. Before the attack, the oracle `getPrice()` gave a price of `1216 USD` for `ETH`, which is normal. However, after we bought `WETH` in the `WETH-BUSD` pool on UniswapV2 with `1,000,000` BUSD, the price given by the oracle was manipulated to `17,979,841,782,699 USD`. At this point, we can easily exchange `1 ETH` for 17 trillion `oUSD` and complete the attack.
+4. We can see the attack result in the terminal. Before the attack, the oracle `getPrice()` gave a price of `1216 USD` for `ETH`, which is normal. However, after we bought `WETH` in the `WETH-BUSD` pool on UniswapV2 with `1,000,000` BUSD, the price given by the oracle was manipulated to `17,979,841,782,699 USD`. At this point, we can easily exchange `1 ETH` for trillions of `oUSD` and complete the attack.
 
-```shell
-Running 1 test for test/Oracle.t.sol:OracleTest
+> **Note:** The exact output values may differ slightly depending on your environment and RPC block state.
+
+```
+Running 1 test for test/OracleTest.sol:OracleTest
 [PASS] testOracleAttack() (gas: 356524)
 Logs:
   1. ETH Price (before attack): 1216
