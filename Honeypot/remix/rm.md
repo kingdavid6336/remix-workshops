@@ -1,6 +1,6 @@
 We will deploy the `Pixiu` contract on the `Sepolia` testnet and demonstrate it on the `Uniswap V3` exchange.
 
-1. Deploy the `Pixiu` contract.
+1. Deploy the `HoneyPot` contract.
    ![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/Honeypot/img/S10-2.png)
 
 2. Call the `mint()` function to mint `100000` Pixiu tokens for yourself.
