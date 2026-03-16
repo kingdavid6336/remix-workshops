@@ -1,8 +1,8 @@
-**1.** Set the `value` to 10ETH, then deploy the `Bank` contract, and the owner address `owner` is initialized as the deployed contract address.
+**1.** Set the `value` to 10ETH, then deploy the `Bank` contract, and the owner address `owner` is initialized as the deployer's wallet address.
 
 ![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/TxOrigin/img/S12-2.jpg)
 
-**2.** Switch to another wallet as the hacker wallet, fill in the address of the bank contract to be attacked, and then deploy the `Attack` contract. The hacker address `hacker` is initialized as the deployed contract address.
+**2.** Switch to another wallet as the hacker wallet, fill in the address of the bank contract to be attacked, and then deploy the `Attack` contract. The hacker address `hacker` is initialized as the deployer's wallet address.
 
 ![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/TxOrigin/img/S12-3.jpg)
 

@@ -3,9 +3,9 @@ name: tx.origin Phishing Attack
 summary: Learn why using tx.origin for authentication is dangerous and how attackers exploit it for phishing. Understand the difference between tx.origin and msg.sender.
 level: 2
 tags:
-- solidity
-- security
-- tx.origin
+- Solidity
+- Security
+- Tx.origin
 steps:
 - name: tx.origin Phishing Attack
   path: intro

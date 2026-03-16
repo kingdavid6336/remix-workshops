@@ -1,3 +1,8 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.21;
+
+import "../bank/Bank.sol";
+
 contract Attack {
     // Beneficiary address
     address payable public hacker;
