@@ -4,7 +4,7 @@ Many logic errors can lead to denial of service in smart contracts, so developer
 2. Contracts should not unexpectedly self-destruct.
 3. Contracts should not enter infinite loops.
 4. Parameters for `require` and `assert` should be set correctly.
-5. When refunding, allow users to claim funds from the contract (push) instead of sending funds to users in batch (pull).
+5. When refunding, allow users to claim funds from the contract (pull) instead of sending funds to users in batch (push).
 6. Ensure that callback functions do not interfere with the normal operation of the contract.
 7. Ensure that the main business of the contract can still function properly even when participants (e.g., `owner`) are absent.
 

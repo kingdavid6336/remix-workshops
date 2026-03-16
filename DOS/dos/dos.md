@@ -56,7 +56,7 @@ contract DoSGame {
 
 The vulnerability here lies in the `refund()` function, where a loop is used to refund the players using the `call` function, which triggers the fallback function of the target address. If the target address is a malicious contract and contains malicious logic in its fallback function, the refund process will not be executed properly.
 
-```
+```solidity
 (bool success, ) = player.call{value: refundETH}("");
 ```
 
