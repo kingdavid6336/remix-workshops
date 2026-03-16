@@ -1,4 +1,8 @@
-If you learn front-running, you can consider yourself an entry-level crypto scientist. Next, let's practice front-running a transaction for minting an NFT. The tools we will use are:
+If you learn front-running, you can consider yourself an entry-level crypto scientist. Next, let's practice front-running a transaction for minting an NFT.
+
+> **Note:** This practice requires running tools **locally on your device**. It cannot be done entirely inside Remix IDE. You will need [Foundry](https://book.getfoundry.sh/getting-started/installation) installed to run the local test chain, and Node.js to run the `frontrun.js` script.
+
+The tools we will use are:
 
 - `Foundry`'s `anvil` tool to set up a local test chain. Please install [foundry](https://book.getfoundry.sh/getting-started/installation) in advance.
 - `Remix` for deploying and minting the NFT contract.
@@ -36,7 +40,7 @@ contract FreeMint is ERC721 {
 }
 ```
 
-**4. Run the ethers.js front-running script:** In simple terms, the `frontrun.js` script listens to pending transactions in the test chain's mempool, filters out transactions that call `mint()`, and then duplicates and increases the gas to front-run them. If you are not familiar with `ether.js`, you can read the [WTF Ethers](https://github.com/WTFAcademy/WTF-Ethers) tutorial.
+**4. Run the ethers.js front-running script:** In simple terms, the `frontrun.js` script listens to pending transactions in the test chain's mempool, filters out transactions that call `mint()`, and then duplicates and increases the gas to front-run them. If you are not familiar with `ethers.js`, you can read the [WTF Ethers](https://github.com/WTFAcademy/WTF-Ethers) tutorial.
 
 **5. Call the `mint()` function:** Call the `mint()` function of the Freemint contract on the deployment page of Remix to mint an NFT.
 
