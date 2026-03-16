@@ -1,3 +1,5 @@
+> **Note:** This step uses [Foundry](https://book.getfoundry.sh/getting-started/installation) and cannot be run inside Remix. You must run it locally on your machine.
+
 Attackers only need to manipulate the block timestamp and set it to a number that can be divided by 170, and they can successfully mint NFTs. We chose Foundry to reproduce this attack because it provides a cheat code to modify the block timestamp. If you are not familiar with Foundry/cheatcode, you can read the [Foundry tutorial](https://github.com/AmazingAng/WTF-Solidity/blob/main/Topics/Tools/TOOL07_Foundry/readme.md) and [Foundry Book](https://book.getfoundry.sh/forge/cheatcodes).
 
 1. Create a `TimeManipulation` contract variable `nft`.
@@ -8,8 +10,8 @@ Attackers only need to manipulate the block timestamp and set it to a number tha
 After installing Foundry, start a new project and install the openzeppelin library by entering the following command on the command line:
 
 ```shell
-forge init TimeMnipulation
-cd TimeMnipulation
+forge init TimeManipulation
+cd TimeManipulation
 forge install Openzeppelin/openzeppelin-contracts
 ```
 
