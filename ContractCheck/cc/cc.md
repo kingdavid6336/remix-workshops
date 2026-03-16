@@ -89,14 +89,14 @@ If what we mentioned earlier is correct, calling `mint()` in the constructor can
 
 ## How to Prevent
 
-You can use `(tx.origin == msg.sender)` to check if the caller is a contract. If the caller is an EOA, `tx.origin` and `msg.sender` will be equal; if they are not equal, the caller is a contract.
+You can use `(tx.origin == msg.sender)` to check if the caller is a contract. If the caller is an EOA, `tx.origin` and `msg.sender` will be equal; if they are not equal, the caller is a contract. Below is an example helper function:
 
-```
-function realContract(address account) public view returns (bool) {
+```solidity
+function isEOA() public view returns (bool) {
     return (tx.origin == msg.sender);
 }
 ```
 
 ## Summary
 
-In this lecture, we introduced a vulnerability where the contract length check can be bypassed, and we discussed methods to prevent it. If the `extcodesize` of an address is greater than 0, then the address is definitely a contract. However, if `extcodesize` is 0, the address could be either an externally owned account (`EOA`) or a contract in the process of being created.
+In this lesson, we introduced a vulnerability where the contract length check can be bypassed, and we discussed methods to prevent it. If the `extcodesize` of an address is greater than 0, then the address is definitely a contract. However, if `extcodesize` is 0, the address could be either an externally owned account (`EOA`) or a contract in the process of being created.

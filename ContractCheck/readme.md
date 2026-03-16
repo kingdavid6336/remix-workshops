@@ -1,14 +1,3 @@
----
-title: S08. Contract Check Bypassing
-tags:
-    - solidity
-    - security
-    - constructor
----
+# Contract Check Bypassing
 
-# WTF Solidity S08. Contract Length Check Bypassing
-
-In this lesson, we will discuss contract length checks bypassing and introduce how to prevent it.
-
-
-
+In this lesson, we will discuss contract length checks bypassing and introduce how to prevent it. Original tutorial by the [WTF Academy](https://www.wtf.academy/en).
