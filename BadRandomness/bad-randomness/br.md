@@ -32,7 +32,7 @@ contract BadRandomness is ERC721 {
 
 It has a main minting function called `luckyMint()`, where users input a number between `0-99`. If the input number matches the pseudorandom number `randomNumber` generated on the blockchain, the user can mint a lucky NFT. The pseudorandom number is claimed to be generated using `blockhash` and `block.timestamp`. The vulnerability lies in the fact that users can perfectly predict the generated random number and mint NFTs.
 
-Now let's write an attack contract called `Attack.sol`.
+The `Attack` contract is also included in `BadRandomness.sol`. Here's how it works:
 
 ```solidity
 contract Attack {
