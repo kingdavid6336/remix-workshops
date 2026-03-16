@@ -3,7 +3,7 @@ You can use the following methods to prevent the unchecked low-level call vulner
 1. Check the return value of the low-level call. In the bank contract above, we can correct `withdraw()`:
     ```solidity
     bool success = payable(msg.sender).send(balance);
-    require(success, "Failed Sending ETH!")
+    require(success, "Failed Sending ETH!");
     ```
 
 2. When transferring `ETH` in the contract, use `call()` and do reentrancy protection.

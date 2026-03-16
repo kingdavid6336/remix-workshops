@@ -1,3 +1,8 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.21;
+
+import "../bank/Bank.sol";
+
 contract Attack {
     UncheckedBank public bank; // Bank contract address
 
@@ -5,7 +10,7 @@ contract Attack {
     constructor(UncheckedBank _bank) {
         bank = _bank;
     }
-    
+
     // Callback function, transfer will fail
     receive() external payable {
         revert();
