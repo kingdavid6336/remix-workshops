@@ -2,7 +2,7 @@ If you learn front-running, you can consider yourself an entry-level crypto scie
 
 - `Foundry`'s `anvil` tool to set up a local test chain. Please install [foundry](https://book.getfoundry.sh/getting-started/installation) in advance.
 - `Remix` for deploying and minting the NFT contract.
-- `etherjs` script to listen to the Mempool and perform front-running.
+- `ethers.js` script to listen to the Mempool and perform front-running.
 
 **1. Start the Foundry Local Test Chain:** After installing `foundry`, enter `anvil --chain-id 1234 -b 10` in the command line to set up a local test chain with a chain ID of 1234 and a block produced every 10 seconds. Once set up, it will display the addresses and private keys of some test accounts, each with 10000 ETH. You can use them for testing.
 
@@ -36,7 +36,7 @@ contract FreeMint is ERC721 {
 }
 ```
 
-**4. Deploy the ethers.js front-running script:** In simple terms, the `frontrun.js` script listens to pending transactions in the test chain's mempool, filters out transactions that call `mint()`, and then duplicates and increases the gas to front-run them. If you are not familiar with `ether.js`, you can read the [WTF Ethers](https://github.com/WTFAcademy/WTF-Ethers) tutorial.
+**4. Run the ethers.js front-running script:** In simple terms, the `frontrun.js` script listens to pending transactions in the test chain's mempool, filters out transactions that call `mint()`, and then duplicates and increases the gas to front-run them. If you are not familiar with `ether.js`, you can read the [WTF Ethers](https://github.com/WTFAcademy/WTF-Ethers) tutorial.
 
 **5. Call the `mint()` function:** Call the `mint()` function of the Freemint contract on the deployment page of Remix to mint an NFT.
 

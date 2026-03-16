@@ -4,7 +4,7 @@
 import { ethers, utils } from "ethers";
 
 // 1. Create provider
-var url = "http://127.0.0.1:8545";
+var url = "ws://127.0.0.1:8545";
 const provider = new ethers.providers.WebSocketProvider(url);
 let network = provider.getNetwork();
 network.then(res =>
@@ -67,8 +67,8 @@ const main = async () => {
   });
 
   provider._websocket.on("error", async () => {
-    console.log(`Unable to connect to ${ep.subdomain} retrying in 3s...`);
-    setTimeout(init, 3000);
+    console.log(`Unable to connect to ${url} retrying in 3s...`);
+    setTimeout(main, 3000);
   });
 
   provider._websocket.on("close", async code => {
@@ -76,7 +76,7 @@ const main = async () => {
       `Connection lost with code ${code}! Attempting reconnect in 3s...`,
     );
     provider._websocket.terminate();
-    setTimeout(init, 3000);
+    setTimeout(main, 3000);
   });
 };
 

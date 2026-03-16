@@ -3,9 +3,9 @@ name: Front-running
 summary: Understand front-running attacks where malicious actors exploit transaction ordering. Learn about MEV, sandwich attacks, and techniques to protect your contracts and users.
 level: 2
 tags:
-- solidity
-- security
-- erc721
+- Solidity
+- Security
+- ERC721
 steps:
 - name: Traditional Front-running
   path: intro
