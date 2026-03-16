@@ -7,23 +7,25 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
 // Simple Honeypot ERC20 token, can only be bought, not sold
 contract HoneyPot is ERC20, Ownable {
-    address public pair;
+    address public pool;
+    uint24 private constant poolFee = 3000; // 0.3% fee tier
+
     // Constructor: Initialize token name and symbol
-    constructor() ERC20("HoneyPot", "Pi Xiu") {
-        address factory = 0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f; // goerli uniswap v2 factory
+    constructor() ERC20("HoneyPot", "Pi Xiu") Ownable(msg.sender) {
+        address factory = 0x0227628f3F023bb0B980b67D528571c95c6DaC1c; // Uniswap V3 factory on Sepolia
         address tokenA = address(this); // Honeypot token address
-        address tokenB = 0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6; // goerli WETH
+        address tokenB = 0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14; // Sepolia WETH
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA); // Sort tokenA and tokenB in ascending order
-        bytes32 salt = keccak256(abi.encodePacked(token0, token1));
-        // calculate pair address
-        pair = address(uint160(uint(keccak256(abi.encodePacked(
-        hex'ff',
-        factory,
-        salt,
-        hex'96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f'
+        bytes32 salt = keccak256(abi.encodePacked(token0, token1, poolFee));
+        // calculate pool address
+        pool = address(uint160(uint256(keccak256(abi.encodePacked(
+            hex'ff',
+            factory,
+            salt,
+            bytes32(0xe34f199b19b2b4f47f68442619d555527d244f78a3297ea89325f843f87b8b54) // Uniswap V3 pool initcode hash
         )))));
     }
-    
+
     /**
      * Mint function, can only be called by the contract owner
      */
@@ -32,18 +34,18 @@ contract HoneyPot is ERC20, Ownable {
     }
 
     /**
-     * @dev See {ERC20-_beforeTokenTransfer}.
+     * @dev See {ERC20-_update}.
      * Honeypot function: Only the contract owner can sell
      */
-    function _beforeTokenTransfer(
+    function _update(
         address from,
         address to,
         uint256 amount
     ) internal virtual override {
-        super._beforeTokenTransfer(from, to, amount);
-        // Revert if the transfer target address is the LP contract
-        if(to == pair){
+        // Revert if the transfer target address is the pool contract
+        if(to == pool){
             require(from == owner(), "Can not Transfer");
         }
+        super._update(from, to, amount);
     }
 }

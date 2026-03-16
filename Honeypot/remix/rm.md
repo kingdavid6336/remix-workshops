@@ -1,4 +1,4 @@
-We will deploy the `Pixiu` contract on the `Goerli` testnet and demonstrate it on the `uniswap` exchange.
+We will deploy the `Pixiu` contract on the `Sepolia` testnet and demonstrate it on the `Uniswap V3` exchange.
 
 1. Deploy the `Pixiu` contract.
    ![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/Honeypot/img/S10-2.png)
@@ -6,7 +6,7 @@ We will deploy the `Pixiu` contract on the `Goerli` testnet and demonstrate it o
 2. Call the `mint()` function to mint `100000` Pixiu tokens for yourself.
    ![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/Honeypot/img/S10-3.png)
 
-3. Go to the [uniswap](https://app.uniswap.org/#/add/v2/ETH) exchange, create liquidity for Pixiu tokens (v2), and provide `10000` Pixiu tokens and `0.1` ETH.
+3. Go to the [Uniswap V3](https://app.uniswap.org/#/add/ETH) exchange on Sepolia, create a liquidity pool for Pixiu tokens, and provide `10000` Pixiu tokens and `0.1` ETH.
    ![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/Honeypot/img/S10-4.png)
 
 4. Sell `100` Pixiu tokens, the operation is successful.
