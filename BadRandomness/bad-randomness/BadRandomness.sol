@@ -2,7 +2,7 @@
 // By 0xAA
 // english translation by 22X
 pragma solidity ^0.8.21;
-import "../34_ERC721/ERC721.sol";
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
 contract BadRandomness is ERC721 {
     uint256 totalSupply;

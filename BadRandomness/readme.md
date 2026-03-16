@@ -1,3 +1,3 @@
-# WTF Solidity: Bad Randomness
+# Bad Randomness
 
-In this lesson, we will discuss the Bad Randomness vulnerability in smart contracts and methods to prevent. This vulnerability is commonly found in NFT and GameFi projects, including Meebits, Loots, Wolf Game, etc.
+In this lesson, we will discuss the Bad Randomness vulnerability in smart contracts and methods to prevent it. This vulnerability is commonly found in NFT and GameFi projects, including Meebits, Loots, Wolf Game, etc. Original tutorial by the [WTF Academy](https://www.wtf.academy/en).

@@ -4,9 +4,9 @@ summary: Understand the dangers of using predictable randomness sources in smart
 level: 2
 priority: 37
 tags:
-  - solidity
-  - security
-  - random
+  - Solidity
+  - Security
+  - Random
 steps:
   - name: Bad Randomness
     path: bad-randomness
