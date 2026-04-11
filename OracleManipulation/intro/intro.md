@@ -1,4 +1,4 @@
-In this lesson, we will introduce the oracle manipulation attack on smart contracts and reproduce it using Foundry. In the example, we use `1 ETH` to exchange for 17 trillion stablecoins. In 2021, oracle manipulation attacks caused user asset losses of more than 200 million U.S. dollars.
+In this lesson, we will introduce the oracle manipulation attack on smart contracts. In the example, we demonstrate how an attacker can use `1 ETH` to mint trillions of tokens by exploiting a vulnerable price oracle. In 2021, oracle manipulation attacks caused user asset losses of more than 200 million U.S. dollars.
 
 ## Price Oracle
 
@@ -12,7 +12,7 @@ One of the most commonly used oracles is a price oracle, which refers to any dat
 - Synthetic asset platforms (Synthetix) use it to determine the latest asset prices and support 0-slippage trades.
 - MakerDAO uses it to determine the price of collateral and mint the corresponding stablecoin, DAI.
 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/OracleManipulation/img/S15-1.png)
+![Diagram showing how a price oracle feeds off-chain data into on-chain smart contracts](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/OracleManipulation/img/S15-1.png)
 
 ## Oracle Vulnerabilities
 

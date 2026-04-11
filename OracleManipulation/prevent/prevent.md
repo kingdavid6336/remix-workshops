@@ -8,4 +8,4 @@ Renowned blockchain security expert `samczsun` summarized how to prevent oracle 
 
 ## Conclusion
 
-In this lesson, we introduced the manipulation of price oracles and attacked a vulnerable synthetic stablecoin contract, exchanging `1 ETH` for 17 trillion stablecoins, making us the richest person in the world (not really).
+In this lesson, we introduced the manipulation of price oracles and attacked a vulnerable synthetic stablecoin contract, minting trillions of `oUSD` tokens with just `1 ETH`, making us the richest person in the world (not really).

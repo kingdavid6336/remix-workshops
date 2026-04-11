@@ -3,7 +3,7 @@
 pragma solidity ^0.8.21;
 import "forge-std/Test.sol";
 import "forge-std/console.sol";
-import "../vulnerability-example/Vulnerability.sol"; // from the "Oracle Vulnerabilities" step
+import "../src/Vulnerability.sol"; // from the "Oracle Vulnerabilities" step
 
 interface IBUSD is IERC20 {}
 

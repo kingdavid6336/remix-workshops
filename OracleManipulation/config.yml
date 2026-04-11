@@ -1,17 +1,22 @@
+---
 id: oracle-manipulation
 name: Oracle Manipulation
-summary: Study oracle manipulation attacks that exploit price feed vulnerabilities. Learn how flash loans enable these attacks and discover secure oracle integration patterns.
+summary: Study oracle manipulation attacks that exploit on-chain price feed vulnerabilities. Learn how attackers inflate spot prices to mint trillions of tokens with minimal capital, and discover secure oracle integration patterns.
 level: 2
+priority: 30
 tags:
-- Solidity
-- Security
-- Oracle
+  - Solidity
+  - Security
+  - Oracle
 steps:
-- name: Oracle Manipulation
-  path: intro
-- name: Oracle Vulnerabilities
-  path: vulnerability-example
-- name: Reproduce on Foundry
-  path: reproduce
-- name: How to Prevent Oracle Manipulation
-  path: prevent
+  - name: Introduction to Oracle Manipulation
+    path: intro
+
+  - name: Oracle Vulnerabilities
+    path: vulnerability-example
+
+  - name: Reproduce with Foundry
+    path: reproduce
+
+  - name: How to Prevent Oracle Manipulation
+    path: prevent
