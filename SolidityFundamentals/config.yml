@@ -1,7 +1,8 @@
 id: solidity-basics-part1
-name: Solidity Basics - Part 1 - Fundamentals (Lessons 1-15)
+name: "Solidity Basics: WTF Academy - Part 1 Fundamentals (Lessons 1-15)"
 summary: Learn Solidity fundamentals from scratch - value types, functions, data storage, arrays, structs, mappings, control flow, modifiers, events, inheritance, interfaces, and error handling. This comprehensive tutorial covers the essential building blocks of Solidity programming.
 level: 1
+priority: 70
 tags:
   - solidity
   - basics
@@ -10,7 +11,7 @@ steps:
     path: step1
   - name: Value Types
     path: step2
-  - name: Function
+  - name: Functions
     path: step3
   - name: Function Output (return/returns)
     path: step4
@@ -26,7 +27,7 @@ steps:
     path: step9
   - name: Control Flow
     path: step10
-  - name: constructor and modifier
+  - name: Constructor and Modifier
     path: step11
   - name: Events
     path: step12

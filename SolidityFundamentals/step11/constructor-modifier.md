@@ -58,11 +58,11 @@ Here, we take `Owner.sol` as an example.
 
 1. compile and deploy the code in Remix.
 2. click the `owner` button to view the current owner.
-   ![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step11/img/11-2_en.jpg)
+   ![Remix showing the owner address after deploying Owner.sol](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step11/img/11-2_en.jpg)
 3. The transaction succeeds when the `changeOwner` function is called by the owner address user.
-   ![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step11/img/11-3_en.jpg)
+   ![Remix showing a successful changeOwner transaction called by the owner](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step11/img/11-3_en.jpg)
 4. The transaction fails when the `changeOwner` function is called by other addresses.
-   ![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step11/img/11-4_en.jpg)
+   ![Remix showing a failed changeOwner transaction called by a non-owner address](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step11/img/11-4_en.jpg)
 
 ## Summary
 

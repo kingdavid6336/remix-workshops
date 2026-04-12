@@ -2,7 +2,7 @@ In this section, we will introduce two keywords to restrict modifications to the
 
 Value-typed variables can be declared as `constant` and `immutable`; `string` and `bytes` can be declared as `constant`, but not `immutable`.
 
-## constant and immutable
+## Constant and Immutable
 
 ### constant
 
@@ -18,7 +18,7 @@ The `constant` variable must be initialized during declaration and cannot be cha
 
 ### Immutable
 
-The `immutable` variable can be initialized during declaration or in the constructor, which is more flexible.
+The `immutable` variable can be initialized during declaration or in the constructor (a special function that runs once at deployment, covered in step 11), which is more flexible.
 
 ```solidity
     // The immutable variable can be initialized in the constructor and cannot be changed later

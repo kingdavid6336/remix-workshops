@@ -11,8 +11,6 @@ In this tutorial, we will be using `Remix` to run `solidity` contracts. `Remix` 
 
 Website: [remix.ethereum.org](https://remix.ethereum.org)
 
-Upon entering `Remix`, you can see that the menu on the left-hand side has three buttons, corresponding to the file (where you write the code), compile (where you run the code), and deploy (where you deploy to the chain). By clicking the "Create New File" button, you can create a blank `solidity` contract.
-
 Within Remix, we can see that there are four buttons on the leftmost vertical menu, corresponding to FILE EXPLORER (where to write code), SEARCH IN FILES (find and replace files), SOLIDITY COMPILER (to run code), and DEPLOY & RUN TRANSACTIONS (on-chain deployment). We can create a blank Solidity contract by clicking the `Create New File` button.
 
 ![Remix Menu](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step1/img/1-1.png)
@@ -58,11 +56,11 @@ In the code editor, press CTRL+S to compile the code.
 
 After compilation, click the `Deploy` button on the left menu to enter the deployment page.
 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step1/img/1-2.png)
+![Remix deploy page showing the Deploy button and test accounts with ETH](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step1/img/1-2.png)
 
 By default, Remix uses the JavaScript virtual machine to simulate the Ethereum chain and run smart contracts, similar to running a testnet on the browser. Remix will allocate several test accounts to you, each with 100 ETH (test tokens). You can click `Deploy` (yellow button) to deploy the contract.
 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step1/img/1-3.png)
+![HelloWeb3 contract deployed showing the _string variable returning Hello Web3!](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step1/img/1-3.png)
 
 After a successful deployment, you will see a contract named `HelloWeb3` below. By clicking on the variable `_string`, it will print its value: `"Hello Web3!"`.
 

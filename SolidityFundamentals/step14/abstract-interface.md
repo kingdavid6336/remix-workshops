@@ -69,7 +69,7 @@ interface IERC721 is IERC165 {
 - `ApprovalForAll` event: emitted during batch approval, records the owner address `owner` of batch approval, the approved address `operator`, and whether the approve is enabled or disabled `approved`.
 
 ### IERC721 Function
-`IERC721` contains 3 events.
+`IERC721` contains 9 functions.
 - `balanceOf`: Count all NFTs held by an owner.
 - `ownerOf`: Find the owner of an NFT (`tokenId`).
 - `transferFrom`: Transfer ownership of an NFT with `tokenId` from `from` to `to`.
@@ -87,6 +87,7 @@ If we know that a contract implements the `IERC721` interface, we can interact w
 The Bored Ape Yacht Club `BAYC` is an `ERC721` NFT, which implements all functions in the `IERC721` interface. We can interact with the `BAYC` contract with the `IERC721` interface and its contract address, without knowing its source code.
 For example, we can use `balanceOf()` to query the `BAYC` balance of an address or use `safeTransferFrom()` to transfer a `BAYC` NFT.
 
+> **Note:** The `interactBAYC` contract below uses the BAYC contract address on Ethereum Mainnet. It cannot be deployed to Remix VM — you must select **Injected Provider** in Remix and connect to Ethereum Mainnet (or a fork of it) for the calls to work.
 
 ```solidity
 contract interactBAYC {

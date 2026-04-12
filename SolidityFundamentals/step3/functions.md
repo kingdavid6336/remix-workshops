@@ -27,7 +27,7 @@ It may seem complex, but let's break it down piece by piece (square brackets ind
 
      **Note 2**: `public|private|internal` can be also used on state variables. Public variables will automatically generate `getter` functions for querying values.
 
-     **Note 2**: The default visibility for state variables is `internal`.
+     **Note 3**: The default visibility for state variables is `internal`.
 
 5. `[pure|view|payable]`: Keywords that dictate a Solidity functions behavior. `payable` is easy to understand. One can send `ETH` to the contract via `payable` functions. `pure` and `view` are introduced in the next section.
 
@@ -142,11 +142,11 @@ Here we defined an `internal minus()` function, `number` will decrease 1 each ti
 
 We defined an `external payable minusPayable()` function, which calls `minus()` and return `ETH` balance of the current contract (`this` keyword can let us query the current contract address). Since the function is `payable`, we can send 1 `ETH` to the contract when calling `minusPayable()`.
 
-![](https://images.mirror-media.xyz/publication-images/ETDPN8myq7jFfAL8CUAFt.png?height=148&width=588)
+![Remix transaction input showing 1 ETH sent to minusPayable](https://images.mirror-media.xyz/publication-images/ETDPN8myq7jFfAL8CUAFt.png?height=148&width=588)
 
 We can see that the contract balance is 1 `ETH` in the return message.
 
-![](https://images.mirror-media.xyz/publication-images/nGZ2pz0MvzgXuKrENJPYf.png?height=128&width=1130)
+![Remix transaction output showing contract balance of 1 ETH](https://images.mirror-media.xyz/publication-images/nGZ2pz0MvzgXuKrENJPYf.png?height=128&width=1130)
 
 **Example:**
 ![3-2.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step3/img/3-2.png)

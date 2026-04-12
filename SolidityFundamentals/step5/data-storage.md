@@ -134,7 +134,7 @@ Below are some commonly used global variables:
 - `msg.data` : (`bytes calldata`) Complete calldata
 - `msg.sender` : (`address payable`) Message sender (current caller)
 - `msg.sig` : (`bytes4`) first four bytes of the calldata (i.e. function identifier)
-- `msg.value` : (`bytes4`) number of wei sent with the message
+- `msg.value` : (`uint256`) number of wei sent with the message
 
 **Example:**
 ![5-4.png](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step5/img/5-4.png)

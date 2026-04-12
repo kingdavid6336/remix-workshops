@@ -43,14 +43,14 @@ We can emit events in functions. In the following example, each time the `_trans
 
 EVM uses `Log` to store Solidity events. Each log contains two parts: `topics` and `data`.
 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step12/img/12-3.jpg)
+![EVM log structure showing topics and data fields](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step12/img/12-3.jpg)
 
 ### `Topics`
 
 `Topics` is used to describe events. Each event contains a maximum of 4 `topics`. Typically, the first `topic` is the event hash: the hash of the event signature. The event hash of the `Transfer` event is calculated as follows:
 
 ```solidity
-keccak256("Transfer(addrses,address,uint256)")
+keccak256("Transfer(address,address,uint256)")
 
 //0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
 ```
@@ -71,15 +71,15 @@ Let's take `Event.sol` contract as an example.
 
 2. Call `_transfer` function to emit `Transfer` event.
 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step12/img/12-1_en.jpg)
+![Remix console showing the Transfer event emitted after calling _transfer](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step12/img/12-1_en.jpg)
 
 3. Check transaction details to check the emitted event.
 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step12/img/12-2_en.jpg)
+![Remix transaction details showing the decoded Transfer event topics and data](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step12/img/12-2_en.jpg)
 
 ### Query event on etherscan
 
-Etherscan is a block explorer that lets you view public data on transactions, smart contracts, and more on the Ethereum blockchain. First, I deployed the contract to an Ethereum testnet (Rinkeby or Goerli). Second, I called the `_transfer` function to transfer 100 tokens. After that, you can check the transaction details on `etherscan`：[URL](https://rinkeby.etherscan.io/tx/0x8cf87215b23055896d93004112bbd8ab754f081b4491cb48c37592ca8f8a36c7)
+Etherscan is a block explorer that lets you view public data on transactions, smart contracts, and more on the Ethereum blockchain. To try this yourself: deploy the contract to an Ethereum testnet (e.g. Sepolia), call the `_transfer` function to transfer 100 tokens, then look up the transaction on [Sepolia Etherscan](https://sepolia.etherscan.io) to inspect the emitted event.
 
 Click `Logs` button to check the details of the event：
 

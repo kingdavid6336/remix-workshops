@@ -70,11 +70,11 @@ You can use the `getter` function of `public` variables to confirm initial value
 
 - Deploy `InitialValue.sol` and check the initial values of the different types.
 
-  ![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step8/img/8-1_en.jpg)
+  ![Remix showing initial default values for all variable types after deploying InitialValue.sol](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step8/img/8-1_en.jpg)
 
 - After using the `delete` operator, the values of the variables are reset to their initial values.
 
-  ![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step8/img/8-2_en.jpg)
+  ![Remix showing _bool2 reset to false after calling the delete operator](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityFundamentals/step8/img/8-2_en.jpg)
 
 ## Summary
 

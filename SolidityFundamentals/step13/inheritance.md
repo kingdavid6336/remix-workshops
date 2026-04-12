@@ -130,6 +130,8 @@ contract Identifier is Base1 {
 
 Constructors can also be inherited. Let first consider a parent contract `A` with a state variable `a`, which is initialized in its constructor:
 
+> **Note:** The `abstract` keyword marks a contract that has at least one unimplemented function and therefore cannot be deployed on its own. It is covered in detail in the next step.
+
 ```solidity
 // Applying inheritance to the constructor functions
 abstract contract A {
@@ -209,7 +211,7 @@ contract God {
 contract Adam is God {
     function foo() public virtual override {
         emit Log("Adam.foo called");
-        Adam.foo();
+        super.foo();
     }
     function bar() public virtual override {
         emit Log("Adam.bar called");
@@ -219,7 +221,7 @@ contract Adam is God {
 contract Eve is God {
     function foo() public virtual override {
         emit Log("Eve.foo called");
-        Eve.foo();
+        super.foo();
     }
     function bar() public virtual override {
         emit Log("Eve.bar called");

@@ -11,7 +11,7 @@ There are two types of arrays: fixed-sized and dynamically-sized arrays.：
 ```solidity
     // fixed-length array
     uint[8] array1;
-    byte[5] array2;
+    bytes1[5] array2;
     address[100] array3;
 ```
 
@@ -20,7 +20,7 @@ There are two types of arrays: fixed-sized and dynamically-sized arrays.：
 ```solidity
     // variable-length array
     uint[] array4;
-    byte[] array5;
+    bytes1[] array5;
     address[] array6;
     bytes array7;
 ```
