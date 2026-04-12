@@ -1,5 +1,3 @@
-## IERC721Metadata
-
 `IERC721Metadata` is an extended interface of `ERC721`, which implements `3` commonly used functions for querying `metadata`:
 
 - `name()`: Returns the name of the token.

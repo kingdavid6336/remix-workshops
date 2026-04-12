@@ -1,5 +1,3 @@
-## `BAYC`, but as `ERC1155`
-
 We have made some modifications to the boring apes `BAYC` by changing it to `BAYC1155` which now follows the `ERC1155` standard and allows for free minting. The `_baseURI()` function has been modified to ensure that the `uri` for `BAYC1155` is the same as the `tokenURI` for `BAYC`. This means that `BAYC1155` metadata will be identical to that of boring apes.
 
 ```solidity

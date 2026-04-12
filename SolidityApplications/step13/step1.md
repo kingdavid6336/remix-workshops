@@ -1,6 +1,6 @@
 In this lesson, we will introduce token vesting clauses and write a contract for linearly releasing ERC20 tokens. The code is simplified from OpenZeppelin's VestingWallet contract.
 
-## Token Vesting Clauses
+## Token Vesting
 
 In traditional finance, some companies provide equity to employees and management. However, a large amount of equity released at the same time can create selling pressure in the short term, dragging down the stock price. Therefore, companies typically introduce a vesting period to delay ownership of committed assets. Similarly, in the blockchain field, Web3 startups allocate tokens to their teams and also sell tokens at a low price to venture capital and private equity. If they simultaneously bring these low-cost tokens to the exchange for liquidity, the token price will be crushed, making retail investors the bag holders.
 

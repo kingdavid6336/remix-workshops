@@ -8,7 +8,7 @@ Since there are usually a large number of users receiving an airdrop, it is not 
 
 ### Airdrop Token Contract
 
-The logic of the airdrop contract is simple: by using a loop, a single transaction sends `ERC20` tokens to multiple addresses. The contract contains `2` functions:
+The logic of the airdrop contract is simple: by using a loop, a single transaction sends `ERC20` tokens to multiple addresses. The contract contains `3` functions:
 
 - The `getSum()` function: returns the sum of a `uint` array.
 

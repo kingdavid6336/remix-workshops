@@ -1,6 +1,6 @@
 In this lecture, we will introduce the ERC20 token standard on Ethereum and issue our test tokens.
 
-## ERC20
+## ERC20 Interface (IERC20)
 
 ERC20 is a token standard on Ethereum, which originated from the `EIP20` proposed by Vitalik Buterin in November 2015. It implements the basic logic of token transfer:
 

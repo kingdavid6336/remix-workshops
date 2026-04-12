@@ -1,5 +1,3 @@
-## `tokenId` Randomly Minted `NFT`
-
 In this section, we will use on-chain and off-chain random numbers to create a `tokenId` randomly minted `NFT`. The `Random` contract inherits from both the `ERC721` and `VRFConsumerBase` contracts.
 
 ```Solidity

@@ -1,15 +1,15 @@
 In this lecture, I will introduce the `Merkle Tree` and how to use it to distribute a `NFT` whitelist.
 
-## `Merkle Tree`
+## Merkle Tree
 `Merkle Tree`, also known as Merkel tree or hash tree, is a fundamental encryption technology in blockchain and is widely used in Bitcoin and Ethereum blockchains. `Merkle Tree` is an encrypted tree constructed from the bottom up, where each leaf corresponds to the hash of the corresponding data, and each non-leaf represents the hash of its two child nodes.
 
-![Merkle Tree] (./img/36-1.png)
+![Merkle Tree](./img/36-1.png)
 
 `Merkle Tree` allows for efficient and secure verification (`Merkle Proof`) of the contents of large data structures. For a `Merkle Tree` with `N` leaf nodes, verifying whether a given data is valid (belonging to a `Merkle Tree` leaf node) only requires `log(N)` data (`proofs`), which is very efficient. If the data is incorrect, or if the `proof` given is incorrect, the root value of the `root` cannot be restored.
 In the example below, the `Merkle proof` of leaf `L1` is `Hash 0-1` and `Hash 1`: Knowing these two values, we can verify whether the value of `L1` is in the leaves of the `Merkle Tree` or not. Why?
 Because through the leaf `L1` we can calculate `Hash 0-0`, we also know `Hash 0-1`, then `Hash 0-0` and `Hash 0-1` can be combined to calculate `Hash 0`, we also know `Hash 1`, and `Hash 0` and `Hash 1` can be combined to calculate `Top Hash`, which is the hash of the root node.
 
-![Merkle Proof] (./img/36-2.png)
+![Merkle Proof](./img/36-2.png)
 
 ## Generating a `Merkle Tree`
 

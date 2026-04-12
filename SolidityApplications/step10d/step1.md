@@ -1,5 +1,3 @@
-## Main Contract `ERC1155`
-
 The `ERC1155` main contract implements the functions specified by the `IERC1155` interface contract, as well as the functions for minting and burning single/multiple tokens.
 
 ### Variables in `ERC1155`

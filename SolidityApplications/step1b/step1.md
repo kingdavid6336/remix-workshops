@@ -1,5 +1,3 @@
-## Implementation of ERC20
-
 Now we will write an `ERC20` contract and implement the functions defined in the `IERC20` interface.
 
 ### State Variables

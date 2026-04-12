@@ -1,5 +1,3 @@
-### ERC20Permit Contract
-
 Next, let us write a simple ERC20Permit contract, which implements all interfaces defined by IERC20Permit. The contract contains 2 state variables:
 
 - `_nonces`: `address -> uint` mapping, records the current nonce values of all users.
@@ -79,11 +77,11 @@ contract ERC20Permit is ERC20, IERC20Permit, EIP712 {
     private_key: 503f38a9c967ed597e47fe25643985f032b072db8075426a92110f82df48dfcb
     ```
 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step23b/img/53-2.png)
+![Signing the ERC20Permit authorization with owner, spender, and value fields visible](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step23b/img/53-2.png)
 
 3. Call the `permit()` method of the contract, enter the corresponding parameters, and authorize.
 
-4. Call the `allance()` method of the contract, enter the corresponding `owner` and `spender`, and you can see that the authorization is successful.
+4. Call the `allowance()` method of the contract, enter the corresponding `owner` and `spender`, and you can see that the authorization is successful.
 
 ## Safety Note
 

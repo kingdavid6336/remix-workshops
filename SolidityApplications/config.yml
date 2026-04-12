@@ -1,11 +1,12 @@
 id: solidity-basics-part3
-name: Solidity Basics - Part 3 - Applications & Standards (Lessons 31-53)
+name: "Solidity Basics Part 3: WTF Academy - Applications & Standards (Lessons 31-53)"
 summary: "Build real-world Solidity applications: ERC20, ERC721, ERC1155 tokens, NFT auctions, Merkle trees, digital signatures, WETH, payment splitting, token vesting, timelocks, proxy patterns, upgradeable contracts, multisig wallets, ERC4626 vaults, EIP712 signatures, and ERC20 Permit."
 level: 2
+priority: 3
 tags:
-  - solidity
-  - applications
-  - token-standards
+  - Solidity
+  - Applications
+  - Token-standards
 steps:
   - name: ERC20 Interface (IERC20)
     path: step1a
@@ -59,13 +60,13 @@ steps:
     path: step10e
   - name: WETH
     path: step11
-  - name: Payment Splitting
+  - name: Payment Split
     path: step12
   - name: Linear Release
     path: step13
   - name: Token Lock
     path: step14
-  - name: Time Lock
+  - name: Timelock
     path: step15
   - name: Proxy Contract
     path: step16
@@ -75,7 +76,7 @@ steps:
     path: step18
   - name: UUPS
     path: step19
-  - name: Multisignature Wallet
+  - name: Multisig Wallet
     path: step20
   - name: ERC4626 (IERC4626)
     path: step21a

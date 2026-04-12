@@ -1,6 +1,6 @@
 "Opensea" is the largest NFT trading platform on Ethereum with a total trading volume of $30 billion. Opensea charges a fee of 2.5% on transactions, meaning it has made at least $750 million in profits through user transactions. Additionally, its operation is not decentralized, and it has no plans to issue coins to compensate users. NFT players have been frustrated with Opensea for a long time. Today, we use smart contracts to build a zero-fee decentralized NFT exchange: NFTSwap.
 
-## Design Logic
+## NFT Exchange
 
 - Seller: The party selling the NFT can list the item, revoke the listing, and update the price.
 - Buyer: The party buying the NFT can purchase the item.
@@ -182,7 +182,7 @@ The `approve(address to, uint tokenId)` method has 2 parameters:
 
 `tokenId`: `tokenId` is the unique identifier of the NFT, and in this example, it refers to the `0` id generated during the minting process described above.
 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step8/img/38-5.png)
+![Approving NFTSwap contract to transfer tokenId 0](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step8/img/38-5.png)
 
 Following the method above authorizes the NFT with `tokenId` of `1` to the `NFTSwap` contract address.
 
@@ -197,11 +197,11 @@ The `list(address _nftAddr, uint256 _tokenId, uint256 _price)` method has 3 para
 
 `_price`: `_price` is the price of the NFT, which in this case is 1 `wei`.
 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step8/img/38-6.png)
+![Listing NFT with tokenId 0 at price 1 wei](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step8/img/38-6.png)
 
 Following the above method, list the NFT with `tokenId` of `1` that is held by the caller on the `NFTSwap` and set the price to 1 `wei`.
 
-### 5. View Listed NFTs.
+### 5. View Listed NFTs
 
 Call the `nftList()` function of the `NFTSwap` contract to view the listed NFT.
 
@@ -209,7 +209,7 @@ Call the `nftList()` function of the `NFTSwap` contract to view the listed NFT.
 
 `nftList[_nftAddr][_tokenId]`: Input `_nftAddr` and `_tokenId`, and return an NFT order.
 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step8/img/38-7.png)
+![Viewing listed NFT order details](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step8/img/38-7.png)
 
 ### 6. Update NFT Price
 
@@ -225,7 +225,7 @@ The `update(address _nftAddr, uint256 _tokenId, uint256 _newPrice)` method has t
 
 After executing `update()`, call `nftList` to view the updated price.
 
-### 5. Dismantle NFT
+### 7. Dismantle NFT
 
 Call the `revoke()` function of the `NFTSwap` contract to dismantle the NFT.
 
@@ -241,7 +241,7 @@ Call the `nftList()` function of the `NFTSwap` contract to see that the NFT has 
 
 **Note that after taking down the NFT, you need to start again from step 3, authorize and relist the NFT before purchasing.**
 
-### 6. Purchase `NFT`
+### 8. Purchase `NFT`
 
 Switch to another account and call the `purchase()` function of the `NFTSwap` contract to buy an NFT. When purchasing, you need to input the `NFT` contract address, `tokenId`, and the amount of `ETH` you want to pay.
 

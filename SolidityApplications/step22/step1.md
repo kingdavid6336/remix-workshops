@@ -4,11 +4,11 @@ In this lecture, we introduce a more advanced and secure signature method, EIP71
 
 Previously we introduced [EIP191 signature standard (personal sign)](https://github.com/AmazingAng/WTF-Solidity/blob/main/37_Signature/readme.md), which can sign a message. But it is too simple. When the signature data is complex, the user can only see a string of hexadecimal strings (the hash of the data) and cannot verify whether the signature content is as expected.
 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step22/img/52-1.png)
+![EIP191 signature showing only a hex string in the wallet prompt](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step22/img/52-1.png)
 
 [EIP712 Typed Data Signature](https://eips.ethereum.org/EIPS/eip-712) is a more advanced and more secure signature method. When an EIP712-enabled Dapp requests a signature, the wallet displays the original data of the signed message and the user can sign after verifying that the data meets expectations.
 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step22/img/52-2.png)
+![EIP712 signature showing readable structured data in the wallet prompt](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step22/img/52-2.png)
 
 ## How to use EIP712
 
@@ -56,7 +56,7 @@ The application of EIP712 generally includes two parts: off-chain signature (fro
         number: "100",
     };
     ```
-    ![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step22/img/52-3.png)
+    ![Signing the EIP712 typed message with spender address and number value](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step22/img/52-3.png)
 
 4. Call the `signTypedData()` method of the wallet object, passing in the `domain`, `types`, and `message` variables from the previous step for signature (`ethersjs v6` is used here).
 
@@ -67,7 +67,7 @@ The application of EIP712 generally includes two parts: off-chain signature (fro
      const signature = await signer.signTypedData(domain, types, message);
      console.log("Signature:", signature);
      ```
-     ![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step22/img/52-4.png)
+     ![Resulting signature from signTypedData call shown in browser console](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step22/img/52-4.png)
 
 ### On-chain verification
 

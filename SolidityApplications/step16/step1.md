@@ -122,7 +122,7 @@ contract Logic {
 
 The `Caller` contract demonstrates how to call a proxy contract, it's very simple. However, to understand it, you need to first learn about [Lesson 22: Call](https://github.com/AmazingAng/WTF-Solidity/tree/main/Languages/en/22_Call_en/readme.md) and [Lesson 27: ABI encoding](https://github.com/AmazingAng/WTF-Solidity/tree/main/Languages/en/27_ABIEncode_en/readme.md) in this tutorial.
 
-There are 1 variable and 2 functions:
+There is 1 variable and 2 functions:
 - `proxy`: a state variable that records the proxy contract address.
 - Constructor: initializes the `proxy` variable when the contract is deployed.
 - `increase()`: calls the proxy contract's `increment()` function using `call` and returns a `uint`. When calling, we use `abi.encodeWithSignature()` to obtain the `selector` of the `increment()` function. When returning, `abi.decode()` is used to decode the return value as a `uint` type.
@@ -150,26 +150,26 @@ contract Caller{
 
 1. Deploy the `Logic` contract.
 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step16/img/46-2.jpg)
+![Deploying the Logic contract](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step16/img/46-2.jpg)
 
 2. Call the `increment()` function of the `Logic` contract, which returns `100`.
 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step16/img/46-3.jpg)
+![Calling increment() on Logic contract returns 100](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step16/img/46-3.jpg)
 
 3. Deploy the `Proxy` contract and fill in the address of the `Logic` contract during initialization.
 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step16/img/46-4.jpg)
+![Deploying Proxy contract with Logic contract address](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step16/img/46-4.jpg)
 
 4. Call the `increment()` function of the `Proxy` contract, which has no return value.
 
    Call method: click on the `Proxy` contract in the `Remix` deployment panel, fill in the selector of the `increment()` function `0xd09de08a` in the `Low level interaction` at the bottom, and click `Transact`.
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step16/img/46-5.jpg)
+![Calling increment() on Proxy contract via low-level interaction](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step16/img/46-5.jpg)
 
 5. Deploy the `Caller` contract and fill in the `Proxy` contract address during initialization. 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step16/img/46-6.jpg)
+![Deploying Caller contract with Proxy contract address](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step16/img/46-6.jpg)
 
 6. Call the `increment()` function of the `Caller` contract and return `1`. 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step16/img/46-7.jpg)
+![Calling increment() on Caller contract returns 1](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step16/img/46-7.jpg)
 
 ### Summary
 

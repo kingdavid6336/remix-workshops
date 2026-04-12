@@ -1,5 +1,3 @@
-## `ERC1155` Receive Contract
-
 Similar to the `ERC721` standard, to prevent tokens from being sent to a "black hole" contract, `ERC1155` requires token receiving contracts to inherit from `IERC1155Receiver` and implement two receiving functions:
 
 - `onERC1155Received()`: function called when receiving a single token transfer, must implement and return the selector `0xf23a6e61`.

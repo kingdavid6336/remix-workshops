@@ -1,5 +1,3 @@
-## ERC721 Main Contract
-
 The `ERC721` main contract implements all the functionalities defined by `IERC721`, `IERC165` and `IERC721Metadata`. It includes `4` state variables and `17` functions. The implementation is rather simple, the functionality of each function is explained in the code comments:
 
 ```solidity

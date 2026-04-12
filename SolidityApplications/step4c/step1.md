@@ -1,5 +1,3 @@
-## IERC721Receiver
-
 If a contract does not implement the relevant functions of `ERC721`, the incoming NFT will be stuck and unable to be transferred out, causing a loss of the token. In order to prevent accidental transfers, `ERC721` implements the `safeTransferFrom()` function, and the target contract must implement the `IERC721Receiver` interface in order to receive `ERC721` tokens, otherwise, it will `revert`. The `IERC721Receiver` interface only includes an `onERC721Received()` function.
 
 ```solidity

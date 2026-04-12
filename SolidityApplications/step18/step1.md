@@ -1,6 +1,6 @@
 In this lesson, we will introduce the selector clash issue in proxy contracts, and the solution to this problem: transparent proxies. The teaching code is simplified from `OpenZeppelin's` [TransparentUpgradeableProxy](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/proxy/transparent/TransparentUpgradeableProxy.sol) and SHOULD NOT BE APPLIED IN PRODUCTION.
 
-## Selector Clash
+## Transparent Proxy
 
 In smart contracts, a function selector is the hash of a function signature's first 4 bytes. For example, the selector of function `mint(address account)` is `bytes4(keccak256("mint(address)"))`, which is `0x6a627842`. For more about function selectors see [WTF Solidity Tutorial #29: Function Selectors](https://github.com/AmazingAng/WTF-Solidity/blob/main/Languages/en/29_Selector_en/readme.md).
 

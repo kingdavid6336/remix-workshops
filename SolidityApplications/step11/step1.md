@@ -1,6 +1,6 @@
 In this lecture, we will learn about `WETH` - the wrapped version of `ETH`.
 
-## What is `WETH`?
+## WETH
 
 ![WETH](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/SolidityApplications/step11/img/41-1.gif)
 
@@ -65,7 +65,7 @@ contract WETH is ERC20 {
 The `WETH` contract has `2` events:
 
 1. `Deposit`: Triggered when a deposit is made.
-2. `Withdraw`: Triggered when a withdrawal is made.
+2. `Withdrawal`: Triggered when a withdrawal is made.
 
 ### Functions
 

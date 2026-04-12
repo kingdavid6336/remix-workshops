@@ -1,6 +1,6 @@
 In this lecture, we will learn about the `ERC1155` standard, which allows a contract to contain multiple types of tokens. We will also issue a modified version of the Boring Ape Yacht Club (BAYC) called `BAYC1155`, which contains 10,000 types of tokens with metadata identical to BAYC.
 
-## `EIP1155`
+## ERC1155
 
 Both the `ERC20` and `ERC721` standards correspond to a single token contract. For example, if we wanted to create a large game similar to World of Warcraft on Ethereum, we would need to deploy a contract for each piece of equipment. Deploying and managing thousands of contracts is very cumbersome. Therefore, the [Ethereum EIP1155](https://eips.ethereum.org/EIPS/eip-1155) proposes a multi-token standard called `ERC1155`, which allows a contract to contain multiple homogeneous and heterogeneous tokens. `ERC1155` is widely used in GameFi applications, and well-known blockchain games such as Decentraland and Sandbox use it.
 
@@ -19,7 +19,7 @@ interface IERC1155MetadataURI is IERC1155 {
 
 How to distinguish whether a type of token in `ERC1155` is a fungible or a non-fungible token? It's actually simple: if the total amount of a token corresponding to a specific `id` is `1`, then it is a non-fungible token, similar to `ERC721`; if the total amount of a token corresponding to a specific `id` is greater than `1`, then it is a fungible token because these tokens share the same `id`, similar to `ERC20`.
 
-## `IERC1155` Interface Contract
+## ERC1155 (IERC1155)
 
 The `IERC1155` interface contract abstracts the functionalities required for `EIP1155` implementation, which includes `4` events and `6` functions. Unlike `ERC721`, since `ERC1155` includes multiple types of tokens, it implements batch transfer and batch balance query, allowing for simultaneous operation on multiple types of tokens.
 
