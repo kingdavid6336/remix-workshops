@@ -81,7 +81,7 @@ We can also pass the reference of the contract as a parameter, we just change th
 
 Copy the address of `OtherContract`, and pass it as the parameter of `callGetX`, after the transaction succeeds, we can get the value of `x`.
 
-![call contract3 in remix](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/21_CallContract_en/step1/img/21-6.png)
+![call contract3 in remix](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step6/img/21-6.png)
 
 ### 3. Create contract variable
 
@@ -96,7 +96,7 @@ We can create a contract variable and call its functions. The following example 
 
 Copy the address of `OtherContract`, and pass it as the parameter of `callGetX2 `, after the transaction succeeds, we can get the value of `x`.
 
-![call contract4 in remix](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/21_CallContract_en/step1/img/21-7.png)
+![call contract4 in remix](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step6/img/21-7.png)
 
 ### 4. Interact with the contract and send `ETH`
 
@@ -112,11 +112,11 @@ If the target function is `payable`, then we can also send `ETH` to that contrac
 
 Copy the address of `OtherContract`, and pass it as the parameter of `setXTransferETH `, in addition, we send 10ETH.
 
-![call contract5 in remix](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/21_CallContract_en/step1/img/21-8.png)
+![call contract5 in remix](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step6/img/21-8.png)
 
 After the transaction is confirmed, we can check the balance of the contract by reading the `Log` event or by calling `getBalance()`.
 
-![call contract6 in remix](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/21_CallContract_en/step1/img/21-9.png)
+![call contract6 in remix](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step6/img/21-9.png)
 
 ## Summary
 

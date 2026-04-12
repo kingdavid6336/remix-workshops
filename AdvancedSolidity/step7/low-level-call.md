@@ -1,4 +1,4 @@
-Previously in [20: Sending ETH](https://github.com/AmazingAng/WTF-Solidity/tree/main/Languages/en/20_SendETH_en) we talked about sending `ETH` with `call`, in this tutorial we will dive into that.
+Previously in the **Sending ETH** step we talked about sending `ETH` with `call`, in this tutorial we will dive into that.
 
 ## Call
 
@@ -34,7 +34,7 @@ It looks a bit complicated, lets see how to use `call` in examples.
 
 ### Target contract
 
-Let's write and deploy a simple target contract `OtherContract`, the code is mostly the same as chapter 19, only with an extra `fallback` function。
+Let's write and deploy a simple target contract `OtherContract`, the code is mostly the same as the one used in the **Interact with deployed contract** step, only with an extra `fallback` function.
 
 ```solidity
 contract OtherContract {

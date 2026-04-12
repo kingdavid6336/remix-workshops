@@ -69,15 +69,15 @@ If neither `receive()` or `payable fallback()` is declared in the contract, rece
 
 1. First deploy "Fallback.sol" on Remix.
 2. Put the value (in Wei) you want to send to the contract in "VALUE", then click "Transact".
-   ![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step4/img/19-1.jpg)
+   ![Remix UI showing VALUE field and Transact button](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step4/img/19-1.jpg)
 
 3. The transaction succeeded, and the "receivedCalled" event emitted.
-   ![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step4/img/19-2.jpg)
+   ![Transaction log showing receivedCalled event in Remix](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step4/img/19-2.jpg)
 
 4. Put the value you want to send to the contract in "VALUE", and put any valid `msg.data` in "CALLDATA", and click "Transact".
-   ![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step4/img/19-3.jpg)
+   ![Remix UI showing VALUE and CALLDATA fields with Transact button](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step4/img/19-3.jpg)
 5. The transaction succeeded, and the "fallbackCalled" event emitted. "fallbackCalled".
-   ![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step4/img/19-4.jpg)
+   ![Transaction log showing fallbackCalled event in Remix](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step4/img/19-4.jpg)
 
 ## Summary
 

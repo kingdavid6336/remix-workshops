@@ -30,6 +30,10 @@ After deploying `ReceiveETH`, call the `getBalance()` function, we can see the b
 We will implement three ways to send `ETH` to the `ReceiveETH` contract. First thing first, let's make the `constructor` of the `SendETH` contract `payable`, and add the `receive()` function, so we can transfer `ETH` to our contract at deployment and after.
 
 ```solidity
+// Custom errors used by send() and call() methods below
+error SendFailed();
+error CallFailed();
+
 contract SendETH {
     // constructor, make it payable so we can transfer ETH at deployment
     constructor() payable{}
@@ -55,15 +59,15 @@ function transferETH(address payable _to,  uint256 amount) external payable{
 
 After deploying the `SendETH` contract, we can send `ETH` to the `ReceiveETH` contract. If `amount` is 10, and `value` is 0, `amount`>`value`, the transaction fails and gets `reverted`.
 
-![20-2](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step1/img/20-2.png)
+![20-2](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step5/img/20-2.png)
 
 If `amount` is 10, and `value` is 10, `amount`<=`value`, then the transaction will go through.
 
-![20-3](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step1/img/20-3.png)
+![20-3](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step5/img/20-3.png)
 
 In the `ReceiveETH` contract, when we call `getBalance()`, we can see the balance of the contract is `10` Wei.
 
-![20-4](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step1/img/20-4.png)
+![20-4](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step5/img/20-4.png)
 
 ### send
 
@@ -87,11 +91,11 @@ function sendETH(address payable _to,  uint256 amount) external payable{
 
 Now we send `ETH` to the `ReceiveETH` contract, if `amount` is 10, and `value` is 0, `amount`>`value`, the transaction fails, since we handled the return value, the transaction will be `reverted`.
 
-![20-5](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step1/img/20-5.png)
+![20-5](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step5/img/20-5.png)
 
 If `amount` is 10, and `value` is 11, `amount`<=`value`, the transaction is successful.
 
-![20-6](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step1/img/20-6.png)
+![20-6](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step5/img/20-6.png)
 
 ### call
 
@@ -115,11 +119,11 @@ function callETH(address payable _to,  uint256 amount) external payable{
 
 Now we send `ETH` to the `ReceiveETH` contract, if `amount` is 10, and `value` is 0, `amount`>`value`, the transaction fails, since we handled the return value, the transaction will be `reverted`.
 
-![20-7](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step1/img/20-7.png)
+![20-7](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step5/img/20-7.png)
 
 If `amount` is 10, and `value` is 11, `amount`<=`value`, the transaction is successful.
 
-![20-8](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step1/img/20-8.png)
+![20-8](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step5/img/20-8.png)
 
 With any of these three methods, we send `ETH` to the `ReceiveETH` contract successfully.
 

@@ -3,8 +3,8 @@ pragma solidity ^0.8.21;
 
 contract Pair{
     address public factory; // factory contract address
-    address public token0; // token1
-    address public token1; // token2
+    address public token0; // address of the first token
+    address public token1; // address of the second token
 
     constructor() payable {
         factory = msg.sender;

@@ -25,7 +25,7 @@ For the specific content of the function selector, please refer to [WTF Solidity
 Take the `Overloading.sol` contract as an example, after compiling and deploying on Remix.
 After calling the overloading functions `saySomething()` and `saySomething(string memory something)` respectively,
 we can see different results, for the functions are regarded as different ones.
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step1/img/16-1.jpeg)
+![Overloading functions saySomething() and saySomething(string) deployed and called in Remix](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step1/img/16-1.jpeg)
 
 ### Argument Matching
 

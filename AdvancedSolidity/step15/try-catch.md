@@ -2,7 +2,7 @@
 
 In this chapter, we will introduce how to use `try-catch` to handle exceptions in smart contracts.
 
-## `try-catch`
+## Try Catch
 
 In `solidity`, `try-catch` can only be used for `external` function or call `constructor` (considered `external` function) when creating contracts. The basic syntax is as follows:
 
@@ -111,11 +111,11 @@ Then we use `try-catch` in `execute` function to handle exceptions in the call t
 
 When running `execute(0)`, because `0` is even, satisfy `require(b % 2 == 0, "Ups! Reverting");`, so no exception is thrown. The call succeeds and `SuccessEvent` is released.
 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step15/img/30-1_en.jpg)
+![Remix log showing SuccessEvent emitted after calling execute(0)](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step15/img/30-1_en.jpg)
 
 When running `execute(1)`, because `1` is odd, doesn't satisfy `require(b % 2 == 0, "Ups! Reverting");`, so the exception is thrown. The call fails and `CatchEvent` is released.
 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step15/img/30-2_en.jpg)
+![Remix log showing CatchEvent emitted with revert reason after calling execute(1)](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step15/img/30-2_en.jpg)
 
 ### Handle contract creation exceptions
 
@@ -145,15 +145,15 @@ Here we use `try-catch` to handle exceptions when a contract is created. Just ne
 
 When running `executeNew(0)`, because `0` doesn't satisfy `require(a != 0, "invalid number");`, the call will fail and `CatchEvent` is released.
 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step15/img/30-3_en.jpg)
+![Remix log showing CatchEvent emitted with "invalid number" reason after calling executeNew(0)](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step15/img/30-3_en.jpg)
 
 When running `executeNew(1)`, because `1` doesn't satisfy `assert(a != 1);`, the call will fail and `CatchByte` is released.
 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step15/img/30-4_en.jpg)
+![Remix log showing CatchByte emitted after assert failure when calling executeNew(1)](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step15/img/30-4_en.jpg)
 
 When running `executeNew(2)`, because `2` satisfies `require(a != 0, "invalid number");` and `assert(a != 1);`, the call succeeds and `SuccessEvent` is released.
 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step15/img/30-5_en.jpg)
+![Remix log showing SuccessEvent emitted after calling executeNew(2)](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step15/img/30-5_en.jpg)
 
 ## Summary
 

@@ -29,7 +29,7 @@ The result of encoding is`0x0000000000000000000000000000000000000000000000000000
 
 ### `abi.encodePacked`
 
-Encode given parameters according to their minimum required space. It is similar to `abi.encode`, but omits a lot of `0` filled in. For example, only 1 byte is used to encode the `uint` type. You can use `abi.encodePacked` when you want to save space and don't interact with contracts. For example when computing `hash` of some data.
+Encode given parameters according to their minimum required space. It is similar to `abi.encode`, but omits a lot of `0` filled in. For example, a `uint8` is packed into 1 byte instead of 32. Note that `uint256` is still 32 bytes even in `encodePacked` — the saving comes from smaller types and the absence of ABI padding between fields. You can use `abi.encodePacked` when you want to save space and don't interact with contracts. For example when computing `hash` of some data.
 
 ```solidity
     function encodePacked() public view returns(bytes memory result) {
@@ -78,20 +78,20 @@ The result of encoding is`0xe87082f100000000000000000000000000000000000000000000
 
 We input binary encoding of `abi.encode` into `decode`, which will decode the original parameters:
 
-![](https://images.mirror-media.xyz/publication-images/jboRaaq0U57qVYjmsOgbv.png?height=408&width=624)
+![abi.decode output in Remix showing the original uint256, address, string, and uint256[2] values restored](https://images.mirror-media.xyz/publication-images/jboRaaq0U57qVYjmsOgbv.png?height=408&width=624)
 
-## 在remix上验证
+## Verify on Remix
 
 - deploy the contract to check the encoding result of `abi.encode`
-  ![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step12/img/27-1_en.png)
+  ![Remix output showing abi.encode result with 32-byte padded fields](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step12/img/27-1_en.png)
 
 - compare and verify the similarities and differences of the four encoding functions
-  ![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step12/img/27-2_en.png)
+  ![Remix output comparing abi.encode, abi.encodePacked, abi.encodeWithSignature, and abi.encodeWithSelector results](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step12/img/27-2_en.png)
 
 - check the decoding result of `abi.decode`
-  ![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step12/img/27-3_en.png)
+  ![Remix output showing abi.decode restoring the original uint256, address, string, and uint256[2] values](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step12/img/27-3_en.png)
 
-## ABI的使用场景
+## ABI Use Cases
 
 1. In contract development, ABI is often paired with a call to implement a low-level call to contract.
 
@@ -118,10 +118,10 @@ We input binary encoding of `abi.encode` into `decode`, which will decode the or
 3. After decompiling a non-open source contract, some functions cannot find function signatures but can be called through ABI.
 
 - 0x533ba33a() is a function which shows after decompiling, we can only get function-encoded results, and can't find the function signature.
-  ![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step12/img/27-4_en.png)
-  ![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step12/img/27-5_en.png)
+  ![Decompiled contract showing 0x533ba33a function selector without a readable signature](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step12/img/27-4_en.png)
+  ![Remix showing the encoded function selector 0x533ba33a in the contract interface](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step12/img/27-5_en.png)
 - in this case we can't call through constructing an interface or contract
-  ![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step12/img/27-6_en.png)
+  ![Remix error when attempting to call 0x533ba33a through a constructed interface](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step12/img/27-6_en.png)
 
 In this case, we can call through the ABI function selector.
 

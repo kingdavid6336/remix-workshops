@@ -26,8 +26,8 @@ Below we will implement a simplified `Uniswap` with `create`: `Pair` contract is
 ```solidity
 contract Pair{
     address public factory; // factory contract address
-    address public token0; // token1
-    address public token1; // token2
+    address public token0; // address of the first token
+    address public token1; // address of the second token
 
     constructor() payable {
         factory = msg.sender;
@@ -48,7 +48,7 @@ The `constructor` assigns the Factory contract's address to `factory` at the tim
 
 > **Ask**: Why doesn't `Uniswap` set the addresses of `token0` and `token1` in the `constructor`?
 >
-> **Answer**: Because `Uniswap` uses `create2` to create new smart contracts, parameters are not allowed in the constructor when using create2. When using `create`, it is allowed to have parameters in `Pair` contract, and you can set the addresses of `token0` and `token1` in the `constructor`.
+> **Answer**: Because `Uniswap` uses `create2` to create new smart contracts. When constructor parameters are included, they become part of the bytecode hash used to calculate the deployment address, which makes pre-computing the address more complex. Uniswap avoids this by using a parameter-less constructor and calling `initialize` separately. When using `create`, there is no such constraint, so parameters can be set directly in the `constructor`.
 
 ### `PairFactory`
 
@@ -90,15 +90,15 @@ PEOPLE address on BSC: 0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c
 
 1. Call `createPair` with the arguments of the addresses of `WBNB` and `PEOPLE`, we will have the address of `Pair` contract: 0x5C9eb5D6a6C2c1B3EFc52255C0b356f116f6f66D
 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step9/img/24-1.png)
+![Remix showing address of newly created Pair contract after calling createPair](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step9/img/24-1.png)
 
 2. Check the state variables of `Pair` contract
 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step9/img/24-2.png)
+![Remix showing factory, token0, and token1 state variables of the Pair contract](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step9/img/24-2.png)
 
 3. Use debug to check `create` opcode
 
-![](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step9/img/24-3.png)
+![Remix debugger view highlighting the CREATE opcode](https://raw.githubusercontent.com/remix-project-org/remix-workshops/master/AdvancedSolidity/step9/img/24-3.png)
 
 ## Summary
 
