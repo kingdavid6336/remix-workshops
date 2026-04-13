@@ -1,0 +1,1 @@
+We constructed an attack contract, which depicts an unlucky depositor whose withdrawal failed but the bank balance was cleared: the `revert()` in the contract callback function `receive()` will roll back the transaction, so it cannot receive `ETH`; but the withdrawal function `withdraw()` can be called normally and clear the balance.
