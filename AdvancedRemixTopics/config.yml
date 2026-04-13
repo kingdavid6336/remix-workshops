@@ -4,10 +4,7 @@ summary: 'Explore advanced Remix features including upgradeable proxies, static 
 level: 3
 tags:
 - Solidity
-- Remix
-- Advanced
-- Plugins
-- Tutorial
+- Video
 steps:
 - name: Advanced Remix Topics
   path: advanced-remix-topics
