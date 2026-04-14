@@ -44,7 +44,7 @@ contract HoneyPot is ERC20, Ownable {
     ) internal virtual override {
         // Revert if the transfer target address is the pool contract
         if(to == pool){
-            require(from == owner(), "Can not Transfer");
+            require(from == owner(), "Cannot sell: not owner");
         }
         super._update(from, to, amount);
     }
