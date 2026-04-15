@@ -1,0 +1,1 @@
+This example is modified from the contract in [WTF Solidity S07. Bad Randomness](https://github.com/AmazingAng/WTF-Solidity/tree/main/S07_BadRandomness). We changed the condition of the `luckyMint()` minting function: it can only be successfully minted when the block timestamp can be divided by 170
