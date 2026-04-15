@@ -6,8 +6,6 @@ priority: 49
 tags:
 - Solidity
 - Security
-- Selector
-- Abi Encode
 steps:
 - name: Selector Clash
   path: clash
