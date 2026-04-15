@@ -1,0 +1,1 @@
+In this lesson, we will introduce the most common type of smart contract attack - a reentrancy attack, which has led to the Ethereum fork into ETH and ETC (Ethereum Classic), and discuss how to prevent it. Original tutorial by the [WTF Academy](https://www.wtf.academy/en).
