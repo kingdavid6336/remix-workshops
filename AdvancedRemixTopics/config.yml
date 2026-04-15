@@ -1,0 +1,10 @@
+id: advanced-remix-topics
+name: Advanced Remix Topics
+summary: 'Explore advanced Remix features including upgradeable proxies, static analysis, integrating with HardHat and Foundry, Circom for ZKP, and alternative languages like Vyper.'
+level: 3
+tags:
+- Solidity
+- Video
+steps:
+- name: Advanced Remix Topics
+  path: advanced-remix-topics
