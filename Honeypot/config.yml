@@ -1,0 +1,20 @@
+---
+id: honeypot-pixiu
+name: Honeypot (Pixiu)
+summary: "Identify honeypot and Pixiu token scams that trap victims by allowing buys but preventing sells. Learn to recognize malicious contract patterns and protect yourself from these traps."
+level: 2
+priority: 90
+tags:
+  - Solidity
+  - Security
+  - ERC20
+  - Swap
+steps:
+  - name: Introduction to Pixiu
+    path: intro
+  - name: The HoneyPot Contract
+    path: contract
+  - name: Reproducing on Remix
+    path: remix
+  - name: Preventing Honeypots
+    path: prevent
