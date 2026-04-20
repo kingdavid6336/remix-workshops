@@ -12,14 +12,14 @@
     "name": "Unchecked Low-Level Calls",
     "summary": "Discover the risks of unchecked low-level calls that fail silently. Learn why you must always check return values from call, delegatecall, and send operations.",
     "level": 2,
-    "tags": "Solidity, Security, Transfer/Send/Call"
+    "tags": "Solidity, Security, Low-Level Calls"
   },
   {
     "id": "tx-origin-phishing-attack",
     "name": "tx.origin Phishing Attack",
     "summary": "Learn why using tx.origin for authentication is dangerous and how attackers exploit it for phishing. Understand the difference between tx.origin and msg.sender.",
     "level": 2,
-    "tags": "Solidity, Security, Tx.origin"
+    "tags": "Solidity, Security"
   },
   {
     "id": "block-timestamp-manipulation",
@@ -75,20 +75,28 @@
     "tags": "Solidity, Security"
   },
   {
-    "id": "reentrancy-attack",
-    "name": "Reentrancy Attack",
-    "summary": "Learn about the most common type of smart contract attack - reentrancy attacks. Understand how they work, their historical impact on Ethereum, and how to prevent them in your contracts.",
-    "level": 2,
-    "priority": 48,
-    "tags": "Solidity, Security, Fallback, Modifier"
-  },
-  {
     "id": "recorder",
     "name": "Remix's Transaction Recorder",
     "summary": "Save a set of actions and replay and replay and replay",
     "level": 2,
     "priority": 30,
     "tags": "Remix"
+  },
+  {
+    "id": "proxycontract",
+    "name": "All about Proxy Contracts",
+    "summary": "This tutorial gives a short introduction of the web3.js library, querying the block number",
+    "level": 3,
+    "priority": 10,
+    "tags": "Remix, Solidity, Code Patterns"
+  },
+  {
+    "id": "reentrancy-attack",
+    "name": "Reentrancy Attack",
+    "summary": "Learn about the most common type of smart contract attack - reentrancy attacks. Understand how they work, their historical impact on Ethereum, and how to prevent them in your contracts.",
+    "level": 2,
+    "priority": 48,
+    "tags": "Solidity, Security, Fallback, Modifier"
   },
   {
     "id": "integer-overflow",
@@ -127,15 +135,7 @@
     "summary": "Learn how to aggregate multiple contract calls into a single transaction using MultiCall, improving efficiency and reducing gas costs in Solidity applications.",
     "level": 2,
     "priority": 55,
-    "tags": "Solidity, Erc20"
-  },
-  {
-    "id": "multisigCourse",
-    "name": "Multisig Wallet",
-    "summary": "Learn how to create and interact with a multisig wallet. Developed by the p2p learning platform https://dacade.org.",
-    "level": 1,
-    "priority": 80,
-    "tags": "Solidity, Tokens, Multisig"
+    "tags": "Solidity, ERC20"
   },
   {
     "id": "videoIntroRemix",
@@ -146,20 +146,12 @@
     "tags": "Solidity, Remix, Video"
   },
   {
-    "id": "proxycontract",
-    "name": "All about Proxy Contracts",
-    "summary": "This tutorial gives a short introduction of the web3.js library, querying the block number",
-    "level": 3,
-    "priority": 10,
-    "tags": "Remix, Solidity, Code Patterns"
-  },
-  {
-    "id": "honeypot-pixiu",
-    "name": "Honeypot (Pixiu)",
-    "summary": "Identify honeypot and Pixiu token scams that trap victims by allowing buys but preventing sells. Learn to recognize malicious contract patterns and protect yourself from these traps.",
-    "level": 2,
-    "priority": 90,
-    "tags": "Solidity, Security, ERC20, Swap"
+    "id": "multisigCourse",
+    "name": "Multisig Wallet",
+    "summary": "Learn how to create and interact with a multisig wallet. Developed by the p2p learning platform https://dacade.org.",
+    "level": 1,
+    "priority": 80,
+    "tags": "Solidity, Tokens, Multisig"
   },
   {
     "id": "interopCourse",
@@ -168,6 +160,14 @@
     "level": 2,
     "priority": 10,
     "tags": "Solidity, Interoperability, Axelar"
+  },
+  {
+    "id": "honeypot-pixiu",
+    "name": "Honeypot (Pixiu)",
+    "summary": "Identify honeypot and Pixiu token scams that trap victims by allowing buys but preventing sells. Learn to recognize malicious contract patterns and protect yourself from these traps.",
+    "level": 2,
+    "priority": 90,
+    "tags": "Solidity, Security, ERC20, Swap"
   },
   {
     "id": "front-running",
@@ -185,14 +185,6 @@
     "tags": "Solidity, Tokens, NFT"
   },
   {
-    "id": "tokenCourse",
-    "name": "Solidity ERC20 Token Course",
-    "summary": "Learn how to create your own ERC20 tokens. Developed by the p2p learning platform https://dacade.org.",
-    "level": 1,
-    "priority": 40,
-    "tags": "Solidity, Tokens, ERC20"
-  },
-  {
     "id": "flash-loan",
     "name": "Flash loan",
     "summary": "Master flash loans in DeFi by learning how to borrow large amounts without collateral and execute complex arbitrage strategies within a single transaction.",
@@ -201,11 +193,12 @@
     "tags": "Solidity, Flashloan, DeFi, Uniswap, Aave"
   },
   {
-    "id": "denial-of-service",
-    "name": "Denial of Service (DoS)",
-    "summary": "Learn about Denial of Service vulnerabilities that can freeze or break smart contract functionality. Understand common DoS patterns and design strategies to build resilient contracts.",
-    "level": 2,
-    "tags": "Solidity, Security, Fallback"
+    "id": "tokenCourse",
+    "name": "Solidity ERC20 Token Course",
+    "summary": "Learn how to create your own ERC20 tokens. Developed by the p2p learning platform https://dacade.org.",
+    "level": 1,
+    "priority": 40,
+    "tags": "Solidity, Tokens, ERC20"
   },
   {
     "id": "deploylibraries",
@@ -216,18 +209,18 @@
     "tags": "Remix, Solidity"
   },
   {
+    "id": "denial-of-service",
+    "name": "Denial of Service (DoS)",
+    "summary": "Learn about Denial of Service vulnerabilities that can freeze or break smart contract functionality. Understand common DoS patterns and design strategies to build resilient contracts.",
+    "level": 2,
+    "tags": "Solidity, Security, Fallback"
+  },
+  {
     "id": "decentralized-exchange",
     "name": "Decentralized Exchange",
     "summary": "Build a decentralized exchange (DEX) from scratch, learning about automated market makers (AMM), liquidity pools, and token swapping mechanisms.",
     "level": 2,
-    "tags": "Solidity, ERC20, Defi"
-  },
-  {
-    "id": "contract-check-bypassing",
-    "name": "Contract Check Bypassing",
-    "summary": "Explore how attackers can bypass contract existence checks by exploiting constructor behavior. Learn secure patterns for verifying whether an address contains a contract.",
-    "level": 2,
-    "tags": "Solidity, Security, Constructor"
+    "tags": "Solidity, ERC20, DeFi"
   },
   {
     "id": "cross-chain-bridge",
@@ -235,7 +228,14 @@
     "summary": "Understand how cross-chain bridges work and learn to implement secure bridge contracts for transferring assets between different blockchain networks.",
     "level": 2,
     "priority": 50,
-    "tags": "Solidity, Erc20, Eip712, Openzeppelin"
+    "tags": "Solidity, ERC20, EIP712, Openzeppelin"
+  },
+  {
+    "id": "contract-check-bypassing",
+    "name": "Contract Check Bypassing",
+    "summary": "Explore how attackers can bypass contract existence checks by exploiting constructor behavior. Learn secure patterns for verifying whether an address contains a contract.",
+    "level": 2,
+    "tags": "Solidity, Security, Constructor"
   },
   {
     "id": "circom-intro",
@@ -261,12 +261,12 @@
     "tags": "Solidity, Security, Multisig"
   },
   {
-    "id": "solidity-basics-part2",
-    "name": "Advanced Concepts in Solidity by WTF Academy",
-    "summary": "Master advanced Solidity concepts - function overloading, libraries, imports, fallback functions, sending ETH, contract interactions, delegatecall, contract creation, ABI encoding/decoding, hashing, selectors, and error handling with try-catch.",
-    "level": 2,
-    "priority": 20,
-    "tags": "Solidity, EVM, Libraries, Error Handling"
+    "id": "basics",
+    "name": "Basics of Remix",
+    "summary": "A typical workflow in Remix",
+    "level": 1,
+    "priority": 10,
+    "tags": "Remix"
   },
   {
     "id": "bad-randomness",
@@ -289,14 +289,14 @@
     "summary": "Study access control vulnerabilities in smart contracts that led to major exploits like the Poly Network hack. Learn proper access control patterns and security best practices.",
     "level": 2,
     "priority": 53,
-    "tags": "Solidity, Security, Modifier, Erc20"
+    "tags": "Solidity, Security, Modifier, ERC20"
   },
   {
-    "id": "basics",
-    "name": "Basics of Remix",
-    "summary": "A typical workflow in Remix",
-    "level": 1,
-    "priority": 10,
-    "tags": "Remix"
+    "id": "solidity-basics-part2",
+    "name": "Advanced Concepts in Solidity by WTF Academy",
+    "summary": "Master advanced Solidity concepts - function overloading, libraries, imports, fallback functions, sending ETH, contract interactions, delegatecall, contract creation, ABI encoding/decoding, hashing, selectors, and error handling with try-catch.",
+    "level": 2,
+    "priority": 20,
+    "tags": "Solidity, EVM, Libraries, Error Handling"
   }
 ]
