@@ -4,7 +4,7 @@ summary: Build a decentralized exchange (DEX) from scratch, learning about autom
 level: 2
 tags:
 - Solidity
-- Erc20
+- ERC20
 - Defi
 steps:
 - name: Core Concepts
