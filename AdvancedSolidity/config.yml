@@ -1,0 +1,41 @@
+id: solidity-basics-part2
+name: "Advanced Concepts in Solidity by WTF Academy"
+summary: Master advanced Solidity concepts - function overloading, libraries, imports, fallback functions, sending ETH, contract interactions, delegatecall, contract creation, ABI encoding/decoding, hashing, selectors, and error handling with try-catch.
+level: 2
+priority: 20
+tags:
+  - Solidity
+  - EVM
+  - Libraries
+  - Error Handling
+steps:
+  - name: Overloading
+    path: step1
+  - name: Library Functions
+    path: step2
+  - name: Usage of `import`
+    path: step3
+  - name: Receive ETH
+    path: step4
+  - name: Sending ETH
+    path: step5
+  - name: Interact with deployed contract
+    path: step6
+  - name: Call
+    path: step7
+  - name: delegatecall
+    path: step8
+  - name: create and create2
+    path: step9
+  - name: Create2
+    path: step10
+  - name: selfdestruct
+    path: step11
+  - name: ABI Encoding and Decoding
+    path: step12
+  - name: Hash
+    path: step13
+  - name: Function Selector
+    path: step14
+  - name: Try Catch
+    path: step15
