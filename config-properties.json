@@ -2,36 +2,115 @@
   {
     "id": "uniswapSwapCourse",
     "name": "Uniswap Swap Course",
-    "summary": "Go through the Solidity code of the Uniswap V3 Swap contract. Developed by the p2p learning platform https://dacade.org.",
+    "summary": "Review the code of the Uniswap V3 Swap contract. Developed by the p2p learning platform https://dacade.org.",
     "level": 2,
+    "priority": 40,
     "tags": "Solidity, Tokens, Uniswap"
+  },
+  {
+    "id": "unchecked-low-level-calls",
+    "name": "Unchecked Low-Level Calls",
+    "summary": "Discover the risks of unchecked low-level calls that fail silently. Learn why you must always check return values from call, delegatecall, and send operations.",
+    "level": 2,
+    "tags": "Solidity, Security, Transfer/Send/Call"
+  },
+  {
+    "id": "tx-origin-phishing-attack",
+    "name": "tx.origin Phishing Attack",
+    "summary": "Learn why using tx.origin for authentication is dangerous and how attackers exploit it for phishing. Understand the difference between tx.origin and msg.sender.",
+    "level": 2,
+    "tags": "Solidity, Security, Tx.origin"
+  },
+  {
+    "id": "block-timestamp-manipulation",
+    "name": "Block Timestamp Manipulation",
+    "summary": "Explore how miners can manipulate block timestamps and exploit time-dependent contracts. Learn safe practices for using block.timestamp in your smart contracts.",
+    "level": 2,
+    "tags": "Solidity, Security, Timestamp"
+  },
+  {
+    "id": "solidity-basics-part1",
+    "name": "Solidity Fundamentals by WTF Academy",
+    "summary": "Learn Solidity fundamentals from scratch - value types, functions, data storage, arrays, structs, mappings, control flow, modifiers, events, inheritance, interfaces, and error handling. This comprehensive tutorial covers the essential building blocks of Solidity programming.",
+    "level": 1,
+    "priority": 70,
+    "tags": "Solidity"
   },
   {
     "id": "soliditybeginner",
     "name": "Solidity Beginner Course",
     "summary": "Solidity Beginner Course based on the popular https://solidity-by-example.org/ contracts. Developed by the p2p learning platform https://dacade.org.",
     "level": 1,
+    "priority": 30,
     "tags": "Solidity"
   },
   {
+    "id": "solidity-basics-videos",
+    "name": "Solidity Basics Videos",
+    "summary": "Learn Solidity fundamentals through video tutorials covering Hello World, events, functions, payable functions, state variables, gas, and gas price.",
+    "level": "beginner",
+    "tags": "Solidity, Video"
+  },
+  {
+    "id": "solidity-basics-part3",
+    "name": "Applications and Standards in Solidity by WTF Academy",
+    "summary": "Build real-world Solidity applications: ERC20, ERC721, ERC1155 tokens, NFT auctions, Merkle trees, digital signatures, WETH, payment splitting, token vesting, timelocks, proxy patterns, upgradeable contracts, multisig wallets, ERC4626 vaults, EIP712 signatures, and ERC20 Permit.",
+    "level": 2,
+    "priority": 3,
+    "tags": "Solidity, Applications, Token-standards"
+  },
+  {
+    "id": "signature-replay",
+    "name": "Signature Replay",
+    "summary": "Learn about signature replay attacks where valid signatures can be reused maliciously. Understand nonces, chain IDs, and other techniques to prevent signature replay vulnerabilities.",
+    "level": 2,
+    "tags": "Solidity, Security, Signature"
+  },
+  {
+    "id": "selector-clash",
+    "name": "Selector Clash",
+    "summary": "Understand selector clash attacks that exploit function signature collisions. Learn how this vulnerability contributed to major cross-chain bridge hacks and how to protect against it.",
+    "level": 2,
+    "priority": 49,
+    "tags": "Solidity, Security"
+  },
+  {
+    "id": "reentrancy-attack",
+    "name": "Reentrancy Attack",
+    "summary": "Learn about the most common type of smart contract attack - reentrancy attacks. Understand how they work, their historical impact on Ethereum, and how to prevent them in your contracts.",
+    "level": 2,
+    "priority": 48,
+    "tags": "Solidity, Security, Fallback, Modifier"
+  },
+  {
     "id": "recorder",
-    "name": "Recorder",
+    "name": "Remix's Transaction Recorder",
     "summary": "Save a set of actions and replay and replay and replay",
     "level": 2,
+    "priority": 30,
     "tags": "Remix"
   },
   {
-    "id": "proxycontract",
-    "name": "All about Proxy Contracts",
-    "summary": "This tutorial gives a short introduction of the web3.js library, querying the block number",
-    "level": 3,
-    "tags": "Remix, Solidity, Code Patterns"
+    "id": "integer-overflow",
+    "name": "Integer Overflow",
+    "summary": "Discover integer overflow and underflow vulnerabilities in Solidity. Learn how arithmetic operations can be exploited and how to use SafeMath or Solidity 0.8+ to prevent these issues.",
+    "level": 2,
+    "tags": "Solidity, Security"
+  },
+  {
+    "id": "oracle-manipulation",
+    "name": "Oracle Manipulation",
+    "summary": "Study oracle manipulation attacks that exploit on-chain price feed vulnerabilities. Learn how attackers inflate spot prices to mint trillions of tokens with minimal capital, and discover secure oracle integration patterns.",
+    "level": 2,
+    "priority": 30,
+    "tags": "Solidity, Security, Oracle"
   },
   {
     "id": "opcodesdebug",
     "name": "Opcodes in the Debugger",
     "summary": "Using the Debugger, we'll check out what the CODECOPY opcode does and how it is used by the EVM during contract creation.",
     "level": 3,
+    "priority": 30,
     "tags": "Remix, Debugging, EVM, Opcodes"
   },
   {
@@ -39,34 +118,70 @@
     "name": "Solidity NFT Course",
     "summary": "Learn how to create your own NFT tokens. Developed by the p2p learning platform https://dacade.org.",
     "level": 1,
+    "priority": 50,
     "tags": "Solidity, Tokens, NFT"
+  },
+  {
+    "id": "multiple-calls",
+    "name": "Multiple calls",
+    "summary": "Learn how to aggregate multiple contract calls into a single transaction using MultiCall, improving efficiency and reducing gas costs in Solidity applications.",
+    "level": 2,
+    "priority": 55,
+    "tags": "Solidity, Erc20"
   },
   {
     "id": "multisigCourse",
     "name": "Multisig Wallet",
     "summary": "Learn how to create and interact with a multisig wallet. Developed by the p2p learning platform https://dacade.org.",
     "level": 1,
+    "priority": 80,
     "tags": "Solidity, Tokens, Multisig"
   },
   {
     "id": "videoIntroRemix",
-    "name": "Introdution to Remix",
+    "name": "A Video Intro to Remix",
     "summary": "Learn how to use the Remix interface.",
     "level": 1,
+    "priority": 20,
     "tags": "Solidity, Remix, Video"
+  },
+  {
+    "id": "proxycontract",
+    "name": "All about Proxy Contracts",
+    "summary": "This tutorial gives a short introduction of the web3.js library, querying the block number",
+    "level": 3,
+    "priority": 10,
+    "tags": "Remix, Solidity, Code Patterns"
+  },
+  {
+    "id": "honeypot-pixiu",
+    "name": "Honeypot (Pixiu)",
+    "summary": "Identify honeypot and Pixiu token scams that trap victims by allowing buys but preventing sells. Learn to recognize malicious contract patterns and protect yourself from these traps.",
+    "level": 2,
+    "priority": 90,
+    "tags": "Solidity, Security, ERC20, Swap"
   },
   {
     "id": "interopCourse",
     "name": "Multichain Protocols with Axelar",
     "summary": "Learn how to build interoperable smart contracts that can send messages and assets between different blockchains using Axelar technology.",
     "level": 2,
+    "priority": 10,
     "tags": "Solidity, Interoperability, Axelar"
+  },
+  {
+    "id": "front-running",
+    "name": "Front-running",
+    "summary": "Understand front-running attacks where malicious actors exploit transaction ordering. Learn about MEV, sandwich attacks, and techniques to protect your contracts and users.",
+    "level": 2,
+    "tags": "Solidity, Security, ERC721"
   },
   {
     "id": "er721Auction",
     "name": "NFT Auction Contract",
     "summary": "Learn how to write an ERC721 (NFT) auction contract. Developed by the p2p learning platform https://dacade.org.",
     "level": 2,
+    "priority": 20,
     "tags": "Solidity, Tokens, NFT"
   },
   {
@@ -74,34 +189,114 @@
     "name": "Solidity ERC20 Token Course",
     "summary": "Learn how to create your own ERC20 tokens. Developed by the p2p learning platform https://dacade.org.",
     "level": 1,
+    "priority": 40,
     "tags": "Solidity, Tokens, ERC20"
+  },
+  {
+    "id": "flash-loan",
+    "name": "Flash loan",
+    "summary": "Master flash loans in DeFi by learning how to borrow large amounts without collateral and execute complex arbitrage strategies within a single transaction.",
+    "level": 2,
+    "priority": 57,
+    "tags": "Solidity, Flashloan, DeFi, Uniswap, Aave"
+  },
+  {
+    "id": "denial-of-service",
+    "name": "Denial of Service (DoS)",
+    "summary": "Learn about Denial of Service vulnerabilities that can freeze or break smart contract functionality. Understand common DoS patterns and design strategies to build resilient contracts.",
+    "level": 2,
+    "tags": "Solidity, Security, Fallback"
   },
   {
     "id": "deploylibraries",
     "name": "Deploy with Libraries",
     "summary": "Write, Deploy and link a Library to a Contract",
     "level": 3,
+    "priority": 20,
     "tags": "Remix, Solidity"
+  },
+  {
+    "id": "decentralized-exchange",
+    "name": "Decentralized Exchange",
+    "summary": "Build a decentralized exchange (DEX) from scratch, learning about automated market makers (AMM), liquidity pools, and token swapping mechanisms.",
+    "level": 2,
+    "tags": "Solidity, ERC20, Defi"
+  },
+  {
+    "id": "contract-check-bypassing",
+    "name": "Contract Check Bypassing",
+    "summary": "Explore how attackers can bypass contract existence checks by exploiting constructor behavior. Learn secure patterns for verifying whether an address contains a contract.",
+    "level": 2,
+    "tags": "Solidity, Security, Constructor"
+  },
+  {
+    "id": "cross-chain-bridge",
+    "name": "Cross-chain bridge",
+    "summary": "Understand how cross-chain bridges work and learn to implement secure bridge contracts for transferring assets between different blockchain networks.",
+    "level": 2,
+    "priority": 50,
+    "tags": "Solidity, Erc20, Eip712, Openzeppelin"
   },
   {
     "id": "circom-intro",
     "name": "Intro to Circom",
-    "summary": "A intro to using Circom for creating arithmetic circuits.",
+    "summary": "A intro to arithmetic circuits with Circom.",
     "level": 1,
+    "priority": 60,
     "tags": "Circom, Remix-IDE"
+  },
+  {
+    "id": "circom-hash-checker",
+    "name": "The Circom Hash Checker Template",
+    "summary": "A tutorial on creating and understanding a Hash Checker circuit using Remix-IDE templates, including trusted setup and proof generation.",
+    "level": 1,
+    "priority": 70,
+    "tags": "Circom, Remix-IDE"
+  },
+  {
+    "id": "centralization-risks",
+    "name": "Centralization Risks",
+    "summary": "Explore the risks of centralization and pseudo-decentralization in smart contracts. Learn from real-world examples like the Ronin bridge hack and how to design more resilient systems.",
+    "level": 2,
+    "tags": "Solidity, Security, Multisig"
+  },
+  {
+    "id": "solidity-basics-part2",
+    "name": "Advanced Concepts in Solidity by WTF Academy",
+    "summary": "Master advanced Solidity concepts - function overloading, libraries, imports, fallback functions, sending ETH, contract interactions, delegatecall, contract creation, ABI encoding/decoding, hashing, selectors, and error handling with try-catch.",
+    "level": 2,
+    "priority": 20,
+    "tags": "Solidity, EVM, Libraries, Error Handling"
+  },
+  {
+    "id": "bad-randomness",
+    "name": "Bad Randomness",
+    "summary": "Understand the dangers of using predictable randomness sources in smart contracts. Learn why block data is not truly random and explore secure alternatives like Chainlink VRF.",
+    "level": 2,
+    "priority": 37,
+    "tags": "Solidity, Security, Random"
+  },
+  {
+    "id": "advanced-remix-topics",
+    "name": "Advanced Remix Topics",
+    "summary": "Explore advanced Remix features including upgradeable proxies, static analysis, integrating with HardHat and Foundry, Circom for ZKP, and alternative languages like Vyper.",
+    "level": 3,
+    "tags": "Solidity, Video"
+  },
+  {
+    "id": "access-control-exploit",
+    "name": "Access Control Exploit",
+    "summary": "Study access control vulnerabilities in smart contracts that led to major exploits like the Poly Network hack. Learn proper access control patterns and security best practices.",
+    "level": 2,
+    "priority": 53,
+    "tags": "Solidity, Security, Modifier, Erc20"
   },
   {
     "id": "basics",
     "name": "Basics of Remix",
     "summary": "A typical workflow in Remix",
     "level": 1,
+    "priority": 10,
     "tags": "Remix"
-  },
-  {
-    "id": "circom-hash-checker",
-    "name": "Hash Checker Tutorial",
-    "summary": "A tutorial on creating and understanding a Hash Checker circuit using Remix-IDE templates, including trusted setup and proof generation.",
-    "level": 1,
-    "tags": "Circom, Remix-IDE"
   }
 ]
