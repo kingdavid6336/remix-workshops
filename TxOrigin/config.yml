@@ -5,7 +5,6 @@ level: 2
 tags:
 - Solidity
 - Security
-- Tx.origin
 steps:
 - name: tx.origin Phishing Attack
   path: intro

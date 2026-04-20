@@ -5,8 +5,8 @@ level: 2
 priority: 50
 tags:
 - Solidity
-- Erc20
-- Eip712
+- ERC20
+- EIP712
 - Openzeppelin
 steps:
 - name: Introduction to Cross-chain bridges
