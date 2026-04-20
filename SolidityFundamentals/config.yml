@@ -1,5 +1,5 @@
 id: solidity-basics-part1
-name: "Solidity Basics: WTF Academy - Part 1 Fundamentals (Lessons 1-15)"
+name: "Solidity Fundamentals by WTF Academy"
 summary: Learn Solidity fundamentals from scratch - value types, functions, data storage, arrays, structs, mappings, control flow, modifiers, events, inheritance, interfaces, and error handling. This comprehensive tutorial covers the essential building blocks of Solidity programming.
 level: 1
 priority: 70
