@@ -1,5 +1,5 @@
 id: decentralized-exchange
-name: Decentralized Exchange
+name: "Decentralized Exchange"
 summary: Build a decentralized exchange (DEX) from scratch, learning about automated market makers (AMM), liquidity pools, and token swapping mechanisms.
 level: 2
 tags:
