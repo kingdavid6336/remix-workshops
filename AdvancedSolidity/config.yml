@@ -1,15 +1,12 @@
 id: solidity-basics-part2
-name: "Solidity Basics: WTF Academy - Part 2 Advanced Concepts (Lessons 16-30)"
+name: "Advanced Concepts in Solidity by WTF Academy"
 summary: Master advanced Solidity concepts - function overloading, libraries, imports, fallback functions, sending ETH, contract interactions, delegatecall, contract creation, ABI encoding/decoding, hashing, selectors, and error handling with try-catch.
 level: 2
 priority: 20
 tags:
   - Solidity
-  - Advanced
   - EVM
-  - ABI
   - Libraries
-  - ETH
   - Error Handling
 steps:
   - name: Overloading
