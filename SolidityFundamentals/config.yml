@@ -4,8 +4,7 @@ summary: Learn Solidity fundamentals from scratch - value types, functions, data
 level: 1
 priority: 70
 tags:
-  - solidity
-  - basics
+  - Solidity
 steps:
   - name: HelloWeb3 (Solidity in 3 lines)
     path: step1
